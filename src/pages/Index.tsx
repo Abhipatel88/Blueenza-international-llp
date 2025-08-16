@@ -7,13 +7,17 @@ import MeetFoundersSection from "@/components/MeetFoundersSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import ContactSection from "@/components/ContactSection";
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from 'react-i18next';
 
 const Index = () => {
+  const { t, i18n } = useTranslation();
+  
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Bluenza International LLP - Premium Import Export Company</title>
-        <meta name="description" content="Bluenza International LLP - Leading import-export company specializing in food grains, oil seeds, and agricultural products worldwide. Quality products, competitive prices, and reliable service." />
+        <title>Bluenza International LLP - {t('hero.title')}</title>
+        <meta name="description" content={`Bluenza International LLP - ${t('hero.subtitle')}`} />
+        <html lang={i18n.language} dir={i18n.language === 'ar' ? 'rtl' : 'ltr'} />
         <meta name="keywords" content="import export, international trade, food grains, oil seeds, agricultural products, global trade, Bluenza, India export" />
         <meta property="og:title" content="Bluenza International LLP - Premium Import Export Company" />
         <meta property="og:description" content="Leading import-export company specializing in food grains, oil seeds, and agricultural products worldwide. Quality products, competitive prices, and reliable service." />

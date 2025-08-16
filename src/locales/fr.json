@@ -1,0 +1,385 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "products": "Produits",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Bienvenue dans notre entreprise",
+    "subtitle": "Votre partenaire de confiance dans les opérations mondiales d'import-export. Nous nous spécialisons dans les céréales alimentaires de qualité supérieure, les graines oléagineuses et les produits agricoles, reliant les marchés du monde entier avec qualité et fiabilité.",
+    "globalTrade": "Excellence du commerce mondial",
+    "support247": "Support disponible",
+    "qualityAssured": "Qualité assurée",
+    "fastDelivery": "Livraison mondiale rapide"
+  },
+  "about": {
+    "badge": "À propos de Bluenza International",
+    "title": "Stratégies puissantes pour la croissance mondiale",
+    "description1": "Nous aidons les entreprises à élever leurs marques grâce à des campagnes internationales stratégiques. Notre mission est de connecter le meilleur de la fabrication indienne aux marchés mondiaux, en veillant à ce que chaque marque atteigne son potentiel.",
+    "description2": "De l'emballage des produits à la distribution mondiale, nous nous occupons de tout — guidés par la passion et la précision.",
+    "qualityAssurance": "Assurance qualité",
+    "qualityDesc": "Produits de qualité certifiée répondant aux normes internationales",
+    "trustedPartner": "Partenaire de confiance",
+    "trustedDesc": "Plus de 15 ans de service fiable dans le commerce mondial",
+    "globalReach": "Portée mondiale",
+    "globalDesc": "Réseau étendu dans plus de 50 pays dans le monde"
+  },
+  "globalReach": {
+    "badge": "Opérations mondiales",
+    "title": "Portée mondiale, expertise locale",
+    "description1": "Nous sommes fiers d'offrir nos services d'import-export au Canada, aux États-Unis, au Royaume-Uni, en Allemagne et en Australie. Avec une connaissance approfondie du marché et un réseau logistique solide, nous assurons une livraison ponctuelle et sûre à travers les continents.",
+    "description2": "Notre mission est de livrer les meilleurs produits à des prix compétitifs. Qu'il s'agisse de commerce en gros ou d'expéditions de niche, nous garantissons la qualité, la cohérence et la conformité aux normes mondiales.",
+    "description3": "Associez-vous à nous pour une documentation fluide, un emballage stratégique et des opérations de commerce international sans faille."
+  },
+  "whyChoose": {
+    "badge": "Pourquoi choisir Bluenza",
+    "title": "Votre succès est notre priorité",
+    "subtitle": "Nous combinons l'expertise industrielle, la portée mondiale et un engagement inébranlable envers la qualité, faisant de nous le partenaire privilégié des entreprises du monde entier.",
+    "qualityAssurance": "Assurance qualité",
+    "qualityDesc": "Des processus rigoureux de contrôle qualité et des certifications internationales garantissent des produits de qualité supérieure à chaque fois.",
+    "timelyDelivery": "Livraison ponctuelle",
+    "timelyDesc": "Réseau logistique efficace et gestion fiable de la chaîne d'approvisionnement pour des livraisons ponctuelles dans le monde entier.",
+    "globalNetwork": "Réseau mondial",
+    "networkDesc": "Partenariats étendus dans plus de 50 pays avec une expertise locale sur les marchés internationaux.",
+    "industryExperience": "Expérience industrielle",
+    "experienceDesc": "Plus de 15 ans d'expérience prouvée dans le commerce de matières premières agricoles et l'excellence à l'exportation.",
+    "customerSupport": "Support client",
+    "supportDesc": "Équipe dédiée d'experts commerciaux fournissant un service personnalisé et un support complet.",
+    "logisticsExcellence": "Excellence logistique",
+    "logisticsDesc": "Solutions avancées de chaîne d'approvisionnement et partenariats avec les principaux fournisseurs de logistique mondialement."
+  },
+  "founders": {
+    "badge": "Équipe de direction",
+    "title": "Rencontrez nos fondateurs",
+    "subtitle": "Nos dirigeants visionnaires apportent des décennies d'expérience combinée dans le commerce international, stimulant l'innovation et l'excellence dans le commerce mondial.",
+    "founder": "Fondateur",
+    "managingDirector": "Directeur général",
+    "partner": "Partenaire",
+    "from": "De"
+  },
+  "contact": {
+    "badge": "Contactez-nous",
+    "title": "Commençons votre parcours commercial mondial",
+    "subtitle": "Prêt à développer votre entreprise à l'échelle mondiale ? Contactez nos experts commerciaux pour des solutions personnalisées et des devis compétitifs.",
+    "contactInfo": "Informations de contact",
+    "phone": "Téléphone",
+    "email": "Email",
+    "address": "Adresse",
+    "workingHours": "Heures de travail",
+    "findUs": "Trouvez-nous ici",
+    "sendMessage": "Envoyez-nous un message",
+    "fullName": "Nom complet",
+    "phoneNumber": "Numéro de téléphone",
+    "emailAddress": "Adresse email",
+    "message": "Message",
+    "yourFullName": "Votre nom complet",
+    "yourPhone": "Votre numéro de téléphone",
+    "yourEmail": "votre.email@exemple.com",
+    "tellRequirements": "Parlez-nous de vos exigences...",
+    "sendBtn": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "workingHoursText": "Lundi - Samedi : 10h00 - 18h00"
+  },
+  "aboutPage": {
+    "title": "À propos de Bluenza International",
+    "subtitle": "Bienvenue chez Bluenza International, où le commerce mondial rencontre l'excellence. En tant qu'entreprise d'import-export de premier plan, nous relions les marchés du monde entier avec des solutions innovantes et des produits de qualité supérieure. Notre engagement envers la qualité, la durabilité et la satisfaction client nous a établis comme un partenaire de confiance dans le commerce international. Avec notre expertise en bouteilles d'eau, accessoires et solutions personnalisées, nous offrons une valeur qui transcende les frontières.",
+    "badge": "À propos de Bluenza International",
+    "mission": "Notre Mission",
+    "missionDesc": "Connecter les marchés mondiaux grâce à des produits de qualité, des services fiables et des pratiques durables, enrichissant les vies et les économies dans le monde entier.",
+    "vision": "Notre Vision",
+    "visionDesc": "Être un leader mondial dans les services d'import-export, reconnu pour notre engagement envers la qualité, la durabilité et la satisfaction client, touchant les vies et les économies dans le monde entier.",
+    "timeline": {
+      "2008": {
+        "title": "Fondation de l'entreprise",
+        "desc": "Bluenza International LLP a été établie avec une vision de connecter les marchés mondiaux grâce à des produits agricoles de qualité."
+      },
+      "2012": {
+        "title": "Expansion internationale",
+        "desc": "Expansion des opérations pour couvrir plus de 25 pays à travers l'Asie, l'Europe et l'Afrique."
+      },
+      "2016": {
+        "title": "Certifications qualité",
+        "desc": "Obtention de la certification ISO et de diverses normes de qualité internationales."
+      },
+      "2020": {
+        "title": "Transformation numérique",
+        "desc": "Mise en œuvre de solutions technologiques avancées pour une meilleure gestion de la chaîne d'approvisionnement."
+      },
+      "2024": {
+        "title": "Leadership mondial",
+        "desc": "Nous servons maintenant plus de 50 pays avec un réseau de partenaires de confiance dans le monde entier."
+      }
+    },
+    "values": {
+      "qualityFirst": "Qualité d'abord",
+      "qualityFirstDesc": "Nous ne faisons jamais de compromis sur la qualité, nous nous assurons que chaque produit répond aux plus hauts standards internationaux.",
+      "customerFocus": "Focus client",
+      "customerFocusDesc": "Le succès de nos clients est notre succès. Nous construisons des partenariats à long terme basés sur la confiance et la fiabilité.",
+      "globalPerspective": "Perspective mondiale",
+      "globalPerspectiveDesc": "Nous pensons globalement tout en agissant localement, comprenant les besoins diversifiés du marché et les nuances culturelles.",
+      "continuousGrowth": "Croissance continue",
+      "continuousGrowthDesc": "Nous évoluons et innovons constamment pour rester en avance dans l'environnement commercial mondial dynamique."
+    },
+    "missionPoints": {
+      "point1": "Livrer des produits de qualité supérieure",
+      "point2": "Assurer des livraisons ponctuelles et sûres",
+      "point3": "Construire des partenariats durables à travers le monde",
+      "point4": "Stimuler l'innovation dans le commerce"
+    },
+    "visionStats": {
+      "countries": "Pays d'ici 2030",
+      "carbon": "Carbone",
+      "neutralBy": "Neutre d'ici 2028"
+    },
+    "valuesSection": {
+      "title": "Nos Valeurs Fondamentales",
+      "subtitle": "Ces valeurs guident chaque décision que nous prenons et chaque relation que nous construisons."
+    },
+    "ctaSection": {
+      "title": "Prêt à vous associer avec nous ?",
+      "subtitle": "Rejoignez des milliers de clients satisfaits qui font confiance à Bluenza International pour leurs besoins de commerce mondial.",
+      "getStarted": "Commencer aujourd'hui",
+      "contactTeam": "Contacter notre équipe"
+    }
+  },
+  "productsPage": {
+    "title": "Produits",
+    "subtitle": "Explorez notre gamme premium de bouteilles d'eau et d'accessoires. Qualité, durabilité et innovation pour tous les besoins d'hydratation.",
+    "badge": "Nos Produits",
+    "heroTitle": "Collection de Bouteilles d'Eau Premium",
+    "heroSubtitle": "Découvrez notre gamme de bouteilles d'eau de haute qualité conçues pour chaque style de vie et besoin d'hydratation.",
+    "products": {
+      "250ml": {
+        "name": "Bouteille d'Eau 250ml",
+        "description": "Parfaite pour l'hydratation personnelle en déplacement. Design compact et léger idéal pour les enfants, les voyages et les besoins de rafraîchissement rapide.",
+        "specs": {
+          "capacity": "250ml",
+          "material": "Plastique PET de qualité alimentaire",
+          "weight": "50g",
+          "dimensions": "15cm x 5,5cm",
+          "capType": "Bouchon à vis avec sceau de sécurité",
+          "features": "Sans BPA, Étanche, Design facile à tenir",
+          "idealFor": "Enfants, Voyage, Hydratation rapide",
+          "warranty": "Remplacement 30 jours"
+        }
+      },
+      "500ml": {
+        "name": "Bouteille d'Eau 500ml",
+        "description": "Notre taille la plus populaire, parfaite pour les besoins d'hydratation quotidiens. Idéale pour le bureau, la salle de sport et les activités extérieures avec une portabilité optimale.",
+        "specs": {
+          "capacity": "500ml",
+          "material": "Plastique PET de qualité alimentaire",
+          "weight": "100g",
+          "dimensions": "20cm x 6,5cm",
+          "capType": "Bouchon à vis avec sceau de sécurité",
+          "features": "Sans BPA, Étanche, Design facile à tenir",
+          "idealFor": "Usage personnel, Salle de sport, Voyage",
+          "warranty": "Remplacement 30 jours"
+        }
+      },
+      "1L": {
+        "name": "Bouteille d'Eau 1L",
+        "description": "Bouteille de grande capacité pour les besoins d'hydratation prolongés. Parfaite pour le sport, les longs voyages et l'usage familial avec une durabilité supérieure.",
+        "specs": {
+          "capacity": "1000ml (1L)",
+          "material": "Plastique PET de qualité alimentaire",
+          "weight": "150g",
+          "dimensions": "28cm x 8cm",
+          "capType": "Bouchon à vis avec sceau de sécurité",
+          "features": "Sans BPA, Étanche, Design ergonomique",
+          "idealFor": "Sport, Usage familial, Longs voyages",
+          "warranty": "Remplacement 30 jours"
+        }
+      }
+    },
+    "specLabels": {
+      "capacity": "Capacité",
+      "material": "Matériau",
+      "weight": "Poids",
+      "dimensions": "Dimensions",
+      "capType": "Type de Bouchon",
+      "features": "Caractéristiques",
+      "idealFor": "Idéal Pour",
+      "warranty": "Garantie"
+    },
+    "buttons": {
+      "viewDetails": "Voir Détails",
+      "getQuote": "Obtenir Devis",
+      "close": "Fermer"
+    },
+    "certifications": {
+      "title": "Certifications Qualité",
+      "iso": "ISO 9001:2015",
+      "haccp": "Certifié HACCP",
+      "export": "Licence d'Exportation"
+    },
+    "cta": {
+      "title": "Besoin de bouteilles personnalisées ou de commandes en gros ?",
+      "subtitle": "Nous offrons des marques personnalisées et des commandes en gros pour les entreprises. Contactez notre équipe pour discuter de vos exigences spécifiques.",
+      "customQuote": "Demander un devis personnalisé",
+      "viewCatalog": "Voir le catalogue"
+    },
+    "modal": {
+      "specifications": "Spécifications complètes :",
+      "getQuoteNow": "Obtenir un devis maintenant",
+      "productSpecs": "Spécifications du produit :"
+    }
+  },
+  "contactPage": {
+    "title": "Nous Contacter",
+    "subtitle": "Contactez notre équipe pour toute demande, devis ou support. Nous sommes là pour vous aider avec tous vos besoins d'import-export.",
+    "badge": "Contactez-Nous",
+    "heroTitle": "Contactez Notre Équipe d'Experts",
+    "heroSubtitle": "Prêt à commencer votre parcours commercial mondial ? Notre équipe expérimentée est là pour fournir des solutions personnalisées et des devis compétitifs pour tous vos besoins d'import-export.",
+    "contactInfo": "Informations de Contact",
+    "officeHours": "Heures de Bureau",
+    "getDirections": "Obtenir les Directions",
+    "sendMessage": "Envoyez-nous un Message",
+    "formLabels": {
+      "fullName": "Nom Complet",
+      "email": "Adresse Email",
+      "phone": "Numéro de Téléphone",
+      "company": "Nom de l'Entreprise",
+      "subject": "Sujet",
+      "message": "Message",
+      "required": "Requis",
+      "optional": "Optionnel"
+    },
+    "placeholders": {
+      "fullName": "Votre nom complet",
+      "email": "votre.email@exemple.com",
+      "phone": "Votre numéro de téléphone",
+      "company": "Le nom de votre entreprise",
+      "subject": "Comment pouvons-nous vous aider ?",
+      "message": "Parlez-nous de vos exigences, des produits qui vous intéressent, ou de toute question que vous avez..."
+    },
+    "buttons": {
+      "sendMessage": "Envoyer le Message",
+      "sending": "Envoi en cours...",
+      "callNow": "Appeler Maintenant",
+      "emailUs": "Nous Envoyer un Email"
+    },
+    "contactDetails": {
+      "phone": "Téléphone",
+      "email": "Email",
+      "address": "Adresse",
+      "workingHours": "Heures de Travail",
+      "workingHoursText": "Lundi - Samedi : 10h00 - 18h00",
+      "whatsapp": "WhatsApp",
+      "location": "Notre Emplacement"
+    },
+    "success": {
+      "title": "Message Envoyé avec Succès !",
+      "description": "Merci de nous avoir contactés. Nous vous répondrons dans les 24 heures."
+    },
+    "error": {
+      "title": "Échec de l'Envoi du Message",
+      "description": "Veuillez réessayer ou nous contacter directement."
+    },
+    "quickSupport": {
+      "title": "Support Rapide",
+      "emergency": "Support d'Urgence",
+      "emergencyDesc": "24/7 pour les commandes urgentes",
+      "whatsappSupport": "Support WhatsApp",
+      "whatsappDesc": "Réponses rapides",
+      "videoCall": "Appel Vidéo",
+      "videoDesc": "Planifier une réunion",
+      "chatNow": "Chatter Maintenant",
+      "schedule": "Planifier"
+    },
+    "formDescription": "Remplissez le formulaire ci-dessous et notre équipe vous répondra dans les 24 heures.",
+    "selectSubject": "Sélectionnez un sujet",
+    "subjects": {
+      "quote": "Demander un Devis",
+      "partnership": "Demande de Partenariat",
+      "product": "Informations Produit",
+      "logistics": "Support Logistique",
+      "other": "Autre"
+    },
+    "officeType": "Siège Social",
+    "sundayClosed": "Dimanche : Fermé",
+    "gujaratTime": "Heure Standard du Gujarat",
+    "businessInquiries": "Demandes commerciales bienvenues",
+    "respond24h": "Nous répondrons dans les 24 heures",
+    "openAppointments": "Ouvert sur rendez-vous",
+    "available10to6": "Disponible 10h00 - 18h00"
+  },
+  "footer": {
+    "companyDescription": "Votre partenaire de confiance pour les solutions de bouteilles d'eau haut de gamme. Nous offrons qualité, durabilité et innovation dans chaque produit.",
+    "quickLinks": "Liens Rapides",
+    "ourProducts": "Nos Produits",
+    "contactInfo": "Informations de Contact",
+    "businessHours": "Heures d'Ouverture :",
+    "workingHours": "Lun - Sam : 10h00 - 18h00",
+    "allRightsReserved": "Tous droits réservés.",
+    "privacyPolicy": "Politique de Confidentialité",
+    "termsOfService": "Conditions de Service",
+    "cookiePolicy": "Politique des Cookies",
+    "products": {
+      "250ml": "Bouteille d'Eau 250ml",
+      "500ml": "Bouteille d'Eau 500ml",
+      "1L": "Bouteille d'Eau 1L",
+      "custom": "Solutions Personnalisées"
+    },
+    "quickLinksItems": {
+      "home": "Accueil",
+      "about": "À Propos",
+      "products": "Produits",
+      "contact": "Contact"
+    }
+  },
+  "quoteModal": {
+    "title": "Obtenir un Devis",
+    "for": "pour",
+    "personalInfo": "Informations Personnelles",
+    "productDetails": "Détails du Produit",
+    "labels": {
+      "fullName": "Nom Complet",
+      "email": "Adresse Email",
+      "phone": "Numéro de Téléphone",
+      "company": "Nom de l'Entreprise",
+      "product": "Produit",
+      "quantity": "Quantité",
+      "requirements": "Exigences Supplémentaires",
+      "required": "*"
+    },
+    "placeholders": {
+      "fullName": "Votre nom complet",
+      "email": "votre.email@exemple.com",
+      "phone": "Votre numéro de téléphone",
+      "company": "Le nom de votre entreprise",
+      "selectProduct": "Sélectionnez un produit",
+      "quantity": "ex., 1000 pièces",
+      "requirements": "Parlez-nous de vos exigences spécifiques, lieu de livraison, délais, etc."
+    },
+    "products": {
+      "250ml": "Bouteille d'Eau 250ml",
+      "500ml": "Bouteille d'Eau 500ml",
+      "1L": "Bouteille d'Eau 1L",
+      "custom": "Produit Personnalisé"
+    },
+    "buttons": {
+      "back": "Retour",
+      "next": "Suivant",
+      "cancel": "Annuler",
+      "submit": "Soumettre la Demande de Devis",
+      "processing": "Traitement en cours..."
+    },
+    "success": {
+      "title": "Demande de Devis Soumise !",
+      "description": "Nous vous contacterons bientôt avec un devis détaillé."
+    },
+    "error": {
+      "title": "Erreur",
+      "submitFailed": "Échec de la soumission de la demande de devis. Veuillez réessayer.",
+      "connectionFailed": "Échec de la connexion. Veuillez réessayer."
+    }
+  },
+  "common": {
+    "getQuote": "Obtenir un devis",
+    "learnMore": "En savoir plus",
+    "contactUs": "Nous contacter",
+    "getQuoteNow": "Obtenir un devis maintenant"
+  }
+}

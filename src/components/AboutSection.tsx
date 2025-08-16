@@ -1,22 +1,25 @@
 
 import { CheckCircle, Award, Shield, Globe2 } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 const AboutSection = () => {
+  const { t } = useTranslation();
+  
   const features = [
     {
       icon: Award,
-      title: "Quality Assurance",
-      description: "Certified quality products meeting international standards"
+      title: t('about.qualityAssurance'),
+      description: t('about.qualityDesc')
     },
     {
       icon: Shield,
-      title: "Trusted Partner",
-      description: "15+ years of reliable service in global trade"
+      title: t('about.trustedPartner'),
+      description: t('about.trustedDesc')
     },
     {
       icon: Globe2,
-      title: "Global Reach",
-      description: "Extensive network across 50+ countries worldwide"
+      title: t('about.globalReach'),
+      description: t('about.globalDesc')
     }
   ];
 
@@ -29,19 +32,19 @@ const AboutSection = () => {
           {/* Left Content */}
           <div className="animate-slide-in-left">
             <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6">
-              <span className="text-blue-600 font-medium text-sm">About Bluenza International</span>
+              <span className="text-blue-600 font-medium text-sm">{t('about.badge')}</span>
             </div>
             
             <h2 className="font-poppins font-bold text-4xl text-gray-900 mb-6">
-              <span className="text-gradient">Powerful Strategies for Global Growth</span>
+              <span className="text-gradient">{t('about.title')}</span>
             </h2>
             
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              We help companies elevate their brands with strategic international campaigns. Our mission is to connect the best of Indian manufacturing to worldwide markets, ensuring every brand reaches its potential.
+              {t('about.description1')}
             </p>
             
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
-              From product packaging to global distribution, we handle it all — guided by passion and precision.
+              {t('about.description2')}
             </p>
             
             <div className="mb-8">

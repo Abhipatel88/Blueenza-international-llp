@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, X, CheckCircle, User, Phone, Mail, Building, Package, Hash, FileText } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from 'react-i18next';
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -10,6 +11,7 @@ interface QuoteModalProps {
 }
 
 const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps) => {
+  const { t } = useTranslation();
   const [quoteForm, setQuoteForm] = useState({
     fullName: "",
     email: "",
@@ -66,22 +68,22 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
       
       if (response.ok) {
         toast({
-          title: "Quote Request Submitted!",
-          description: "We will contact you soon with a detailed quote.",
+          title: t('quoteModal.success.title'),
+          description: t('quoteModal.success.description'),
         });
         handleClose();
         setQuoteForm({ fullName: "", email: "", phoneNumber: "", companyName: "", quantity: "", product: "", additionalRequirements: "" });
       } else {
         toast({
-          title: "Error",
-          description: "Failed to submit quote request. Please try again.",
+          title: t('quoteModal.error.title'),
+          description: t('quoteModal.error.submitFailed'),
           variant: "destructive"
         });
       }
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Connection failed. Please try again.",
+        title: t('quoteModal.error.title'),
+        description: t('quoteModal.error.connectionFailed'),
         variant: "destructive"
       });
     } finally {
@@ -104,11 +106,11 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
             <div className="flex justify-between items-center">
               <div>
                 <h2 className="font-poppins font-bold text-3xl text-white">
-                  Get Quote
+                  {t('quoteModal.title')}
                 </h2>
                 {prefilledProduct && (
                   <p className="text-blue-100 font-medium mt-1">
-                    for {prefilledProduct}
+                    {t('quoteModal.for')} {prefilledProduct}
                   </p>
                 )}
               </div>
@@ -138,11 +140,11 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
           <form onSubmit={handleSubmit} className="space-y-6">
             {currentStep === 1 && (
               <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-gray-800">Personal Information</h3>
+                <h3 className="text-xl font-semibold text-gray-800">{t('quoteModal.personalInfo')}</h3>
                 
                 <div className="relative">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
+                    {t('quoteModal.labels.fullName')} {t('quoteModal.labels.required')}
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -152,7 +154,7 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
                       type="text"
                       value={quoteForm.fullName}
                       onChange={(e) => setQuoteForm(prev => ({ ...prev, fullName: e.target.value }))}
-                      placeholder="Your full name"
+                      placeholder={t('quoteModal.placeholders.fullName')}
                       required
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                     />
@@ -161,7 +163,7 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
                 
                 <div className="relative">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
+                    {t('quoteModal.labels.email')} {t('quoteModal.labels.required')}
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -171,7 +173,7 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
                       type="email"
                       value={quoteForm.email}
                       onChange={(e) => setQuoteForm(prev => ({ ...prev, email: e.target.value }))}
-                      placeholder="your.email@example.com"
+                      placeholder={t('quoteModal.placeholders.email')}
                       required
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                     />
@@ -180,7 +182,7 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
                 
                 <div className="relative">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number *
+                    {t('quoteModal.labels.phone')} {t('quoteModal.labels.required')}
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -190,7 +192,7 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
                       type="tel"
                       value={quoteForm.phoneNumber}
                       onChange={(e) => setQuoteForm(prev => ({ ...prev, phoneNumber: e.target.value }))}
-                      placeholder="Your phone number"
+                      placeholder={t('quoteModal.placeholders.phone')}
                       required
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                     />
@@ -199,7 +201,7 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
                 
                 <div className="relative">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Company Name
+                    {t('quoteModal.labels.company')}
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -209,7 +211,7 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
                       type="text"
                       value={quoteForm.companyName}
                       onChange={(e) => setQuoteForm(prev => ({ ...prev, companyName: e.target.value }))}
-                      placeholder="Your company name"
+                      placeholder={t('quoteModal.placeholders.company')}
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                     />
                   </div>
@@ -219,11 +221,11 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
             
             {currentStep === 2 && (
               <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-gray-800">Product Details</h3>
+                <h3 className="text-xl font-semibold text-gray-800">{t('quoteModal.productDetails')}</h3>
                 
                 <div className="relative">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Product *
+                    {t('quoteModal.labels.product')} {t('quoteModal.labels.required')}
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -235,18 +237,18 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
                       required
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors appearance-none"
                     >
-                      <option value="">Select a product</option>
-                      <option value="250ml Water Bottle">250ml Water Bottle</option>
-                      <option value="500ml Water Bottle">500ml Water Bottle</option>
-                      <option value="1L Water Bottle">1L Water Bottle</option>
-                      <option value="Custom Product">Custom Product</option>
+                      <option value="">{t('quoteModal.placeholders.selectProduct')}</option>
+                      <option value="250ml Water Bottle">{t('quoteModal.products.250ml')}</option>
+                      <option value="500ml Water Bottle">{t('quoteModal.products.500ml')}</option>
+                      <option value="1L Water Bottle">{t('quoteModal.products.1L')}</option>
+                      <option value="Custom Product">{t('quoteModal.products.custom')}</option>
                     </select>
                   </div>
                 </div>
                 
                 <div className="relative">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Quantity *
+                    {t('quoteModal.labels.quantity')} {t('quoteModal.labels.required')}
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -256,7 +258,7 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
                       type="text"
                       value={quoteForm.quantity}
                       onChange={(e) => setQuoteForm(prev => ({ ...prev, quantity: e.target.value }))}
-                      placeholder="e.g., 1000 pieces"
+                      placeholder={t('quoteModal.placeholders.quantity')}
                       required
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
                     />
@@ -265,7 +267,7 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
                 
                 <div className="relative">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Additional Requirements
+                    {t('quoteModal.labels.requirements')}
                   </label>
                   <div className="relative">
                     <div className="absolute top-3 left-3 flex items-start pointer-events-none">
@@ -274,7 +276,7 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
                     <textarea
                       value={quoteForm.additionalRequirements}
                       onChange={(e) => setQuoteForm(prev => ({ ...prev, additionalRequirements: e.target.value }))}
-                      placeholder="Tell us about your specific requirements, delivery location, timeline, etc."
+                      placeholder={t('quoteModal.placeholders.requirements')}
                       rows={4}
                       className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors resize-none"
                     />
@@ -290,7 +292,7 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
                   onClick={prevStep}
                   className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold px-6 py-3 rounded-full transition-all duration-300 flex-1 flex items-center justify-center"
                 >
-                  Back
+                  {t('quoteModal.buttons.back')}
                 </button>
               )}
               
@@ -300,7 +302,7 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
                   onClick={nextStep}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg flex-1 flex items-center justify-center"
                 >
-                  Next
+                  {t('quoteModal.buttons.next')}
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </button>
               ) : (
@@ -315,11 +317,11 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
-                      Processing...
+                      {t('quoteModal.buttons.processing')}
                     </>
                   ) : (
                     <>
-                      Submit Quote Request
+                      {t('quoteModal.buttons.submit')}
                       <CheckCircle className="ml-2 w-4 h-4" />
                     </>
                   )}
@@ -332,7 +334,7 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
                   onClick={handleClose}
                   className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold px-6 py-3 rounded-full transition-all duration-300 flex-1"
                 >
-                  Cancel
+                  {t('quoteModal.buttons.cancel')}
                 </button>
               )}
             </div>

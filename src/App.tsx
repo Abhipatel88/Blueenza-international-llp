@@ -4,6 +4,9 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
+import './i18n';
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Products from "./pages/Products";
@@ -25,20 +28,29 @@ import AuthGuard from "./components/admin/AuthGuard";
 
 const queryClient = new QueryClient();
 
-const PublicLayout = ({ children }: { children: React.ReactNode }) => (
-  <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-    <header>
-      <Navbar />
-    </header>
-    <main>
-      {children}
-    </main>
-    <footer>
-      <Footer />
-    </footer>
-    <WhatsAppButton />
-  </div>
-);
+const PublicLayout = ({ children }: { children: React.ReactNode }) => {
+  const { i18n } = useTranslation();
+  
+  useEffect(() => {
+    document.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <header>
+        <Navbar />
+      </header>
+      <main>
+        {children}
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+      <WhatsAppButton />
+    </div>
+  );
+};
 
 const App = () => (
   <HelmetProvider>

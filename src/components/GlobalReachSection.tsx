@@ -1,6 +1,7 @@
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF ,Environment  } from '@react-three/drei';
 import { Suspense } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Earth3D = () => {
   const { scene } = useGLTF('/earthdunya.glb');
@@ -8,6 +9,8 @@ const Earth3D = () => {
 };
 
 const GlobalReachSection = () => {
+  const { t } = useTranslation();
+  
   return (
     <section className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-slate-50/50 to-blue-50/50"></div>
@@ -47,23 +50,23 @@ const GlobalReachSection = () => {
           {/* Right Content */}
           <div className="animate-slide-in-right order-1 lg:order-2">
             <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6">
-              <span className="text-blue-600 font-medium text-sm">Global Operations</span>
+              <span className="text-blue-600 font-medium text-sm">{t('globalReach.badge')}</span>
             </div>
             
             <h2 className="font-poppins font-bold text-4xl text-gray-900 mb-6">
-              <span className="text-gradient">Global Reach, Local Expertise</span>
+              <span className="text-gradient">{t('globalReach.title')}</span>
             </h2>
             
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              We proudly offer our import-export services in Canada, USA, UK, Germany, and Australia. With deep market knowledge and a strong logistics network, we ensure timely and safe delivery across continents.
+              {t('globalReach.description1')}
             </p>
             
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              Our mission is to deliver the best products at competitive prices. Whether it's bulk trading or niche shipments, we guarantee quality, consistency, and compliance with global standards.
+              {t('globalReach.description2')}
             </p>
             
             <p className="text-gray-600 text-lg leading-relaxed">
-              Partner with us for smooth documentation, strategic packaging, and seamless international trade operations.
+              {t('globalReach.description3')}
             </p>
           </div>
         </div>

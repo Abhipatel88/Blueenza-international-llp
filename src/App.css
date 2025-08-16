@@ -5,6 +5,34 @@
   text-align: center;
 }
 
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .flex {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .space-x-8 > * + * {
+  margin-left: 0;
+  margin-right: 2rem;
+}
+
+[dir="rtl"] .space-x-2 > * + * {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .ml-2 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +67,11 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Language switcher styles */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }

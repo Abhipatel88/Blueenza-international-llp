@@ -1,0 +1,385 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Welcome to Our Company",
+    "subtitle": "Your trusted partner in global import-export operations. We specialize in premium food grains, oil seeds, and agricultural products, connecting markets worldwide with quality and reliability.",
+    "globalTrade": "Global Trade Excellence",
+    "support247": "Support Available",
+    "qualityAssured": "Quality Assured",
+    "fastDelivery": "Fast Global Delivery"
+  },
+  "about": {
+    "badge": "About Bluenza International",
+    "title": "Powerful Strategies for Global Growth",
+    "description1": "We help companies elevate their brands with strategic international campaigns. Our mission is to connect the best of Indian manufacturing to worldwide markets, ensuring every brand reaches its potential.",
+    "description2": "From product packaging to global distribution, we handle it all — guided by passion and precision.",
+    "qualityAssurance": "Quality Assurance",
+    "qualityDesc": "Certified quality products meeting international standards",
+    "trustedPartner": "Trusted Partner",
+    "trustedDesc": "15+ years of reliable service in global trade",
+    "globalReach": "Global Reach",
+    "globalDesc": "Extensive network across 50+ countries worldwide"
+  },
+  "globalReach": {
+    "badge": "Global Operations",
+    "title": "Global Reach, Local Expertise",
+    "description1": "We proudly offer our import-export services in Canada, USA, UK, Germany, and Australia. With deep market knowledge and a strong logistics network, we ensure timely and safe delivery across continents.",
+    "description2": "Our mission is to deliver the best products at competitive prices. Whether it's bulk trading or niche shipments, we guarantee quality, consistency, and compliance with global standards.",
+    "description3": "Partner with us for smooth documentation, strategic packaging, and seamless international trade operations."
+  },
+  "whyChoose": {
+    "badge": "Why Choose Bluenza",
+    "title": "Your Success is Our Priority",
+    "subtitle": "We combine industry expertise, global reach, and unwavering commitment to quality, making us the preferred partner for businesses worldwide.",
+    "qualityAssurance": "Quality Assurance",
+    "qualityDesc": "Rigorous quality control processes and international certifications ensure premium products every time.",
+    "timelyDelivery": "Timely Delivery",
+    "timelyDesc": "Efficient logistics network and reliable supply chain management for on-time deliveries worldwide.",
+    "globalNetwork": "Global Network",
+    "networkDesc": "Extensive partnerships across 50+ countries with local expertise in international markets.",
+    "industryExperience": "Industry Experience",
+    "experienceDesc": "15+ years of proven track record in agricultural commodity trading and export excellence.",
+    "customerSupport": "Customer Support",
+    "supportDesc": "Dedicated team of trade experts providing personalized service and comprehensive support.",
+    "logisticsExcellence": "Logistics Excellence",
+    "logisticsDesc": "Advanced supply chain solutions and partnerships with leading logistics providers globally."
+  },
+  "founders": {
+    "badge": "Leadership Team",
+    "title": "Meet Our Founders",
+    "subtitle": "Our visionary leaders bring decades of combined experience in international trade, driving innovation and excellence in global commerce.",
+    "founder": "Founder",
+    "managingDirector": "Managing Director",
+    "partner": "Partner",
+    "from": "From"
+  },
+  "contact": {
+    "badge": "Get In Touch",
+    "title": "Let's Start Your Global Trade Journey",
+    "subtitle": "Ready to expand your business globally? Contact our trade experts for personalized solutions and competitive quotes.",
+    "contactInfo": "Contact Information",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "workingHours": "Working Hours",
+    "findUs": "Find Us Here",
+    "sendMessage": "Send us a Message",
+    "fullName": "Full Name",
+    "phoneNumber": "Phone Number",
+    "emailAddress": "Email Address",
+    "message": "Message",
+    "yourFullName": "Your full name",
+    "yourPhone": "Your phone number",
+    "yourEmail": "your.email@example.com",
+    "tellRequirements": "Tell us about your requirements...",
+    "sendBtn": "Send Message",
+    "sending": "Sending...",
+    "workingHoursText": "Monday - Saturday: 10:00 AM - 6:00 PM"
+  },
+  "aboutPage": {
+    "title": "About Bluenza International",
+    "subtitle": "Welcome to Bluenza International, where global trade meets excellence. As a premier import-export company, we bridge markets worldwide with innovative solutions and premium products. Our commitment to quality, sustainability, and customer satisfaction has established us as a trusted partner in international trade. With expertise in water bottles, accessories, and custom solutions, we deliver value that transcends borders.",
+    "badge": "About Bluenza International",
+    "mission": "Our Mission",
+    "missionDesc": "To connect global markets through quality products, reliable services, and sustainable practices, enriching lives and economies worldwide.",
+    "vision": "Our Vision",
+    "visionDesc": "To be a global leader in import-export services, recognized for our commitment to quality, sustainability, and customer satisfaction, touching lives and economies worldwide.",
+    "timeline": {
+      "2008": {
+        "title": "Company Founded",
+        "desc": "Bluenza International LLP was established with a vision to connect global markets through quality agricultural products."
+      },
+      "2012": {
+        "title": "International Expansion",
+        "desc": "Expanded operations to cover 25+ countries across Asia, Europe, and Africa."
+      },
+      "2016": {
+        "title": "Quality Certifications",
+        "desc": "Achieved ISO certification and various international quality standards."
+      },
+      "2020": {
+        "title": "Digital Transformation",
+        "desc": "Implemented advanced technology solutions for better supply chain management."
+      },
+      "2024": {
+        "title": "Global Leadership",
+        "desc": "Now serving 50+ countries with a network of trusted partners worldwide."
+      }
+    },
+    "values": {
+      "qualityFirst": "Quality First",
+      "qualityFirstDesc": "We never compromise on quality, ensuring every product meets the highest international standards.",
+      "customerFocus": "Customer Focus",
+      "customerFocusDesc": "Our customers' success is our success. We build long-term partnerships based on trust and reliability.",
+      "globalPerspective": "Global Perspective",
+      "globalPerspectiveDesc": "We think globally while acting locally, understanding diverse market needs and cultural nuances.",
+      "continuousGrowth": "Continuous Growth",
+      "continuousGrowthDesc": "We constantly evolve and innovate to stay ahead in the dynamic global trade environment."
+    },
+    "missionPoints": {
+      "point1": "Deliver premium quality products",
+      "point2": "Ensure timely and safe deliveries",
+      "point3": "Build lasting partnerships across the globe",
+      "point4": "Drive innovation in trade"
+    },
+    "visionStats": {
+      "countries": "Countries by 2030",
+      "carbon": "Carbon",
+      "neutralBy": "Neutral by 2028"
+    },
+    "valuesSection": {
+      "title": "Our Core Values",
+      "subtitle": "These values guide every decision we make and every relationship we build."
+    },
+    "ctaSection": {
+      "title": "Ready to Partner with Us?",
+      "subtitle": "Join thousands of satisfied clients who trust Bluenza International for their global trade needs.",
+      "getStarted": "Get Started Today",
+      "contactTeam": "Contact Our Team"
+    }
+  },
+  "productsPage": {
+    "title": "Products",
+    "subtitle": "Explore our premium range of water bottles and accessories. Quality, durability, and innovation for every hydration need.",
+    "badge": "Our Products",
+    "heroTitle": "Premium Water Bottles Collection",
+    "heroSubtitle": "Discover our range of high-quality water bottles designed for every lifestyle and hydration need.",
+    "products": {
+      "250ml": {
+        "name": "250ml Water Bottle",
+        "description": "Perfect for personal hydration on-the-go. Compact and lightweight design ideal for kids, travel, and quick refreshment needs.",
+        "specs": {
+          "capacity": "250ml",
+          "material": "Food-grade PET plastic",
+          "weight": "50g",
+          "dimensions": "15cm x 5.5cm",
+          "capType": "Screw-top with safety seal",
+          "features": "BPA-free, Leak-proof, Easy-grip design",
+          "idealFor": "Kids, Travel, Quick hydration",
+          "warranty": "30 days replacement"
+        }
+      },
+      "500ml": {
+        "name": "500ml Water Bottle",
+        "description": "Our most popular size, perfect for daily hydration needs. Ideal for office, gym, and outdoor activities with optimal portability.",
+        "specs": {
+          "capacity": "500ml",
+          "material": "Food-grade PET plastic",
+          "weight": "100g",
+          "dimensions": "20cm x 6.5cm",
+          "capType": "Screw-top with safety seal",
+          "features": "BPA-free, Leak-proof, Easy-grip design",
+          "idealFor": "Personal use, Gym, Travel",
+          "warranty": "30 days replacement"
+        }
+      },
+      "1L": {
+        "name": "1L Water Bottle",
+        "description": "Large capacity bottle for extended hydration needs. Perfect for sports, long journeys, and family use with superior durability.",
+        "specs": {
+          "capacity": "1000ml (1L)",
+          "material": "Food-grade PET plastic",
+          "weight": "150g",
+          "dimensions": "28cm x 8cm",
+          "capType": "Screw-top with safety seal",
+          "features": "BPA-free, Leak-proof, Ergonomic design",
+          "idealFor": "Sports, Family use, Long journeys",
+          "warranty": "30 days replacement"
+        }
+      }
+    },
+    "specLabels": {
+      "capacity": "Capacity",
+      "material": "Material",
+      "weight": "Weight",
+      "dimensions": "Dimensions",
+      "capType": "Cap Type",
+      "features": "Features",
+      "idealFor": "Ideal For",
+      "warranty": "Warranty"
+    },
+    "buttons": {
+      "viewDetails": "View Details",
+      "getQuote": "Get Quote",
+      "close": "Close"
+    },
+    "certifications": {
+      "title": "Quality Certifications",
+      "iso": "ISO 9001:2015",
+      "haccp": "HACCP Certified",
+      "export": "Export License"
+    },
+    "cta": {
+      "title": "Need Custom Bottles or Bulk Orders?",
+      "subtitle": "We offer custom branding and bulk orders for businesses. Contact our team to discuss your specific requirements.",
+      "customQuote": "Request Custom Quote",
+      "viewCatalog": "View Catalog"
+    },
+    "modal": {
+      "specifications": "Complete Specifications:",
+      "getQuoteNow": "Get Quote Now",
+      "productSpecs": "Product Specifications:"
+    }
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team for any inquiries, quotes, or support. We're here to help you with all your import-export needs.",
+    "badge": "Get In Touch",
+    "heroTitle": "Contact Our Expert Team",
+    "heroSubtitle": "Ready to start your global trade journey? Our experienced team is here to provide personalized solutions and competitive quotes for all your import-export needs.",
+    "contactInfo": "Contact Information",
+    "officeHours": "Office Hours",
+    "getDirections": "Get Directions",
+    "sendMessage": "Send us a Message",
+    "formLabels": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company Name",
+      "subject": "Subject",
+      "message": "Message",
+      "required": "Required",
+      "optional": "Optional"
+    },
+    "placeholders": {
+      "fullName": "Your full name",
+      "email": "your.email@example.com",
+      "phone": "Your phone number",
+      "company": "Your company name",
+      "subject": "How can we help you?",
+      "message": "Tell us about your requirements, products of interest, or any questions you have..."
+    },
+    "buttons": {
+      "sendMessage": "Send Message",
+      "sending": "Sending...",
+      "callNow": "Call Now",
+      "emailUs": "Email Us"
+    },
+    "contactDetails": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "workingHours": "Working Hours",
+      "workingHoursText": "Monday - Saturday: 10:00 AM - 6:00 PM",
+      "whatsapp": "WhatsApp",
+      "location": "Our Location"
+    },
+    "success": {
+      "title": "Message Sent Successfully!",
+      "description": "Thank you for contacting us. We'll get back to you within 24 hours."
+    },
+    "error": {
+      "title": "Failed to Send Message",
+      "description": "Please try again or contact us directly."
+    },
+    "quickSupport": {
+      "title": "Quick Support",
+      "emergency": "Emergency Support",
+      "emergencyDesc": "24/7 for urgent orders",
+      "whatsappSupport": "WhatsApp Support",
+      "whatsappDesc": "Quick responses",
+      "videoCall": "Video Call",
+      "videoDesc": "Schedule a meeting",
+      "chatNow": "Chat Now",
+      "schedule": "Schedule"
+    },
+    "formDescription": "Fill out the form below and our team will get back to you within 24 hours.",
+    "selectSubject": "Select a subject",
+    "subjects": {
+      "quote": "Request Quote",
+      "partnership": "Partnership Inquiry",
+      "product": "Product Information",
+      "logistics": "Logistics Support",
+      "other": "Other"
+    },
+    "officeType": "Head Office",
+    "sundayClosed": "Sunday: Closed",
+    "gujaratTime": "Gujarat Standard Time",
+    "businessInquiries": "Business inquiries welcome",
+    "respond24h": "We'll respond within 24 hours",
+    "openAppointments": "Open for appointments",
+    "available10to6": "Available 10:00 AM - 6:00 PM"
+  },
+  "footer": {
+    "companyDescription": "Your trusted partner in premium water bottle solutions. We deliver quality, sustainability, and innovation in every product.",
+    "quickLinks": "Quick Links",
+    "ourProducts": "Our Products",
+    "contactInfo": "Contact Info",
+    "businessHours": "Business Hours:",
+    "workingHours": "Mon - Sat: 10:00 AM - 6:00 PM",
+    "allRightsReserved": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy",
+    "products": {
+      "250ml": "250ml Water Bottle",
+      "500ml": "500ml Water Bottle",
+      "1L": "1L Water Bottle",
+      "custom": "Custom Solutions"
+    },
+    "quickLinksItems": {
+      "home": "Home",
+      "about": "About Us",
+      "products": "Products",
+      "contact": "Contact"
+    }
+  },
+  "quoteModal": {
+    "title": "Get Quote",
+    "for": "for",
+    "personalInfo": "Personal Information",
+    "productDetails": "Product Details",
+    "labels": {
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company Name",
+      "product": "Product",
+      "quantity": "Quantity",
+      "requirements": "Additional Requirements",
+      "required": "*"
+    },
+    "placeholders": {
+      "fullName": "Your full name",
+      "email": "your.email@example.com",
+      "phone": "Your phone number",
+      "company": "Your company name",
+      "selectProduct": "Select a product",
+      "quantity": "e.g., 1000 pieces",
+      "requirements": "Tell us about your specific requirements, delivery location, timeline, etc."
+    },
+    "products": {
+      "250ml": "250ml Water Bottle",
+      "500ml": "500ml Water Bottle",
+      "1L": "1L Water Bottle",
+      "custom": "Custom Product"
+    },
+    "buttons": {
+      "back": "Back",
+      "next": "Next",
+      "cancel": "Cancel",
+      "submit": "Submit Quote Request",
+      "processing": "Processing..."
+    },
+    "success": {
+      "title": "Quote Request Submitted!",
+      "description": "We will contact you soon with a detailed quote."
+    },
+    "error": {
+      "title": "Error",
+      "submitFailed": "Failed to submit quote request. Please try again.",
+      "connectionFailed": "Connection failed. Please try again."
+    }
+  },
+  "common": {
+    "getQuote": "Get Quote",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "getQuoteNow": "Get Quote Now"
+  }
+}

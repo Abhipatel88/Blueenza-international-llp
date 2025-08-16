@@ -6,8 +6,10 @@ import { Phone, Mail, MapPin, Clock, Send, MessageSquare, Globe, HeadphonesIcon,
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t, i18n } = useTranslation();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -32,21 +34,21 @@ const Contact = () => {
       
       if (response.ok) {
         toast({
-          title: "Message Sent Successfully!",
-          description: "Thank you for contacting us. Our team will get back to you within 24 hours.",
+          title: t('contactPage.success.title'),
+          description: t('contactPage.success.description'),
         });
         setFormData({ fullName: "", email: "", phoneNumber: "", companyName: "", subject: "", message: "" });
       } else {
         toast({
-          title: "Error",
-          description: "Failed to send message. Please try again.",
+          title: t('contactPage.error.title'),
+          description: t('contactPage.error.description'),
           variant: "destructive"
         });
       }
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Connection failed. Please try again.",
+        title: t('contactPage.error.title'),
+        description: t('contactPage.error.description'),
         variant: "destructive"
       });
     } finally {
@@ -64,34 +66,34 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Call Us",
+      title: t('contactPage.contactDetails.phone'),
       info: "+91 90063 90094",
-      subInfo: "WhatsApp: +91 90063 90094",
-      description: "Available 10:00 AM - 6:00 PM",
+      subInfo: `${t('contactPage.contactDetails.whatsapp')}: +91 90063 90094`,
+      description: t('contactPage.available10to6'),
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       icon: Mail,
-      title: "Email Us",
+      title: t('contactPage.contactDetails.email'),
       info: "bluenzainternational.llp@gmail.com",
-      subInfo: "Business inquiries welcome",
-      description: "We'll respond within 24 hours",
+      subInfo: t('contactPage.businessInquiries'),
+      description: t('contactPage.respond24h'),
       gradient: "from-purple-500 to-pink-500"
     },
     {
       icon: MapPin,
-      title: "Visit Us",
+      title: t('contactPage.contactDetails.address'),
       info: "C-3, Parishram Park, Dhuliya Chokdi",
       subInfo: "Bardoli, Surat, Gujarat-394601",
-      description: "Open for appointments",
+      description: t('contactPage.openAppointments'),
       gradient: "from-green-500 to-teal-500"
     },
     {
       icon: Clock,
-      title: "Business Hours",
-      info: "Monday - Saturday: 10:00 AM - 6:00 PM",
-      subInfo: "Sunday: Closed",
-      description: "Gujarat Standard Time",
+      title: t('contactPage.contactDetails.workingHours'),
+      info: t('contactPage.contactDetails.workingHoursText'),
+      subInfo: t('contactPage.sundayClosed'),
+      description: t('contactPage.gujaratTime'),
       gradient: "from-amber-500 to-orange-500"
     }
   ];
@@ -108,8 +110,9 @@ const Contact = () => {
   return (
     <div className="min-h-screen pt-16">
       <Helmet>
-        <title>Contact Us | Bluenza International LLP</title>
-        <meta name="description" content="Contact Bluenza International LLP for global trade solutions, quotes, and support. Reach out to our team for personalized assistance." />
+        <title>{t('contactPage.title')} | Bluenza International LLP</title>
+        <meta name="description" content={t('contactPage.subtitle')} />
+        <html lang={i18n.language} dir={i18n.language === 'ar' ? 'rtl' : 'ltr'} />
         <link rel="canonical" href="https://bluenzainternational.com/contact" />
         <script type="application/ld+json">{`
           {
@@ -192,17 +195,15 @@ const Contact = () => {
           <div className="text-center mb-16 animate-fade-in">
             <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6">
               <MessageSquare className="w-4 h-4 text-blue-600 mr-2" />
-              <span className="text-blue-600 font-medium text-sm">Get In Touch</span>
+              <span className="text-blue-600 font-medium text-sm">{t('contactPage.badge')}</span>
             </div>
             
             <h1 className="font-poppins font-bold text-5xl lg:text-6xl text-gray-900 mb-6">
-              Let's Discuss Your
-              <span className="text-gradient block">Global Trade Needs</span>
+              <span className="text-gradient">{t('contactPage.heroTitle')}</span>
             </h1>
             
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Ready to expand your business globally? Our trade experts are here to provide personalized solutions, 
-              competitive quotes, and comprehensive support for all your import-export requirements.
+              {t('contactPage.heroSubtitle')}
             </p>
           </div>
         </div>
@@ -246,10 +247,10 @@ const Contact = () => {
               <div className="glass-card rounded-3xl p-8">
                 <div className="mb-8">
                   <h2 className="font-poppins font-bold text-3xl text-gray-900 mb-4">
-                    Send us a Message
+                    {t('contactPage.sendMessage')}
                   </h2>
                   <p className="text-gray-600">
-                    Fill out the form below and our team will get back to you within 24 hours.
+                    {t('contactPage.formDescription')}
                   </p>
                 </div>
                 
@@ -257,28 +258,28 @@ const Contact = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Full Name *
+                        {t('contactPage.formLabels.fullName')} *
                       </label>
                       <Input
                         type="text"
                         name="fullName"
                         value={formData.fullName}
                         onChange={handleInputChange}
-                        placeholder="Your full name"
+                        placeholder={t('contactPage.placeholders.fullName')}
                         required
                         className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 rounded-xl"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Email Address *
+                        {t('contactPage.formLabels.email')} *
                       </label>
                       <Input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="your.email@example.com"
+                        placeholder={t('contactPage.placeholders.email')}
                         required
                         className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 rounded-xl"
                       />
@@ -288,27 +289,27 @@ const Contact = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Phone Number
+                        {t('contactPage.formLabels.phone')}
                       </label>
                       <Input
                         type="tel"
                         name="phoneNumber"
                         value={formData.phoneNumber}
                         onChange={handleInputChange}
-                        placeholder="Your phone number"
+                        placeholder={t('contactPage.placeholders.phone')}
                         className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 rounded-xl"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Company Name
+                        {t('contactPage.formLabels.company')}
                       </label>
                       <Input
                         type="text"
                         name="companyName"
                         value={formData.companyName}
                         onChange={handleInputChange}
-                        placeholder="Your company name"
+                        placeholder={t('contactPage.placeholders.company')}
                         className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 rounded-xl"
                       />
                     </div>
@@ -316,7 +317,7 @@ const Contact = () => {
                   
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Subject *
+                      {t('contactPage.formLabels.subject')} *
                     </label>
                     <select
                       name="subject"
@@ -325,24 +326,24 @@ const Contact = () => {
                       required
                       className="w-full border border-gray-300 rounded-xl px-3 py-2 focus:border-blue-500 focus:ring-blue-500"
                     >
-                      <option value="">Select a subject</option>
-                      <option value="quote">Request Quote</option>
-                      <option value="partnership">Partnership Inquiry</option>
-                      <option value="product">Product Information</option>
-                      <option value="logistics">Logistics Support</option>
-                      <option value="other">Other</option>
+                      <option value="">{t('contactPage.selectSubject')}</option>
+                      <option value="quote">{t('contactPage.subjects.quote')}</option>
+                      <option value="partnership">{t('contactPage.subjects.partnership')}</option>
+                      <option value="product">{t('contactPage.subjects.product')}</option>
+                      <option value="logistics">{t('contactPage.subjects.logistics')}</option>
+                      <option value="other">{t('contactPage.subjects.other')}</option>
                     </select>
                   </div>
                   
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Message *
+                      {t('contactPage.formLabels.message')} *
                     </label>
                     <Textarea
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Tell us about your requirements, quantities, target markets, or any specific questions..."
+                      placeholder={t('contactPage.placeholders.message')}
                       required
                       className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 min-h-[120px] rounded-xl"
                     />
@@ -356,12 +357,12 @@ const Contact = () => {
                     {isSubmitting ? (
                       <>
                         <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                        Sending...
+                        {t('contactPage.buttons.sending')}
                       </>
                     ) : (
                       <>
                         <Send className="w-5 h-5 mr-2" />
-                        Send Message
+                        {t('contactPage.buttons.sendMessage')}
                       </>
                     )}
                   </Button>
@@ -375,7 +376,7 @@ const Contact = () => {
               <div className="glass-card rounded-3xl p-8">
                 <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-6 flex items-center">
                   <Globe className="w-6 h-6 text-blue-600 mr-3" />
-                  Our Office Locations
+                  {t('contactPage.contactDetails.location')}
                 </h3>
                 
                 <div className="space-y-6">
@@ -384,7 +385,7 @@ const Contact = () => {
                       <div className="flex items-center justify-between mb-2">
                         <h4 className="font-semibold text-gray-900">{office.city}</h4>
                         <span className="text-xs text-blue-600 bg-blue-100 px-2 py-1 rounded-full">
-                          {office.type}
+                          {t('contactPage.officeType')}
                         </span>
                       </div>
                       <p className="text-gray-600 text-sm mb-1">{office.address}</p>
@@ -398,37 +399,37 @@ const Contact = () => {
               <div className="glass-card rounded-3xl p-8">
                 <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-6 flex items-center">
                   <HeadphonesIcon className="w-6 h-6 text-blue-600 mr-3" />
-                  Quick Support
+                  {t('contactPage.quickSupport.title')}
                 </h3>
                 
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 bg-blue-50 rounded-xl">
                     <div>
-                      <div className="font-medium text-gray-900">Emergency Support</div>
-                      <div className="text-sm text-gray-600">24/7 for urgent orders</div>
+                      <div className="font-medium text-gray-900">{t('contactPage.quickSupport.emergency')}</div>
+                      <div className="text-sm text-gray-600">{t('contactPage.quickSupport.emergencyDesc')}</div>
                     </div>
                     <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
-                      Call Now
+                      {t('contactPage.buttons.callNow')}
                     </Button>
                   </div>
                   
                   <div className="flex items-center justify-between p-4 bg-green-50 rounded-xl">
                     <div>
-                      <div className="font-medium text-gray-900">WhatsApp Support</div>
-                      <div className="text-sm text-gray-600">Quick responses</div>
+                      <div className="font-medium text-gray-900">{t('contactPage.quickSupport.whatsappSupport')}</div>
+                      <div className="text-sm text-gray-600">{t('contactPage.quickSupport.whatsappDesc')}</div>
                     </div>
                     <Button size="sm" className="bg-green-600 hover:bg-green-700">
-                      Chat Now
+                      {t('contactPage.quickSupport.chatNow')}
                     </Button>
                   </div>
                   
                   <div className="flex items-center justify-between p-4 bg-purple-50 rounded-xl">
                     <div>
-                      <div className="font-medium text-gray-900">Video Call</div>
-                      <div className="text-sm text-gray-600">Schedule a meeting</div>
+                      <div className="font-medium text-gray-900">{t('contactPage.quickSupport.videoCall')}</div>
+                      <div className="text-sm text-gray-600">{t('contactPage.quickSupport.videoDesc')}</div>
                     </div>
                     <Button size="sm" className="bg-purple-600 hover:bg-purple-700">
-                      Schedule
+                      {t('contactPage.quickSupport.schedule')}
                     </Button>
                   </div>
                 </div>
@@ -438,7 +439,7 @@ const Contact = () => {
               <div className="glass-card rounded-3xl p-6">
                 <h3 className="font-poppins font-bold text-xl text-gray-900 mb-4 flex items-center">
                   <MapPin className="w-5 h-5 text-blue-600 mr-2" />
-                  Find Us Here
+                  {t('contactPage.getDirections')}
                 </h3>
                 <div className="rounded-2xl overflow-hidden">
                   <iframe 

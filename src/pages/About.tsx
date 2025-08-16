@@ -2,59 +2,62 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Award, Shield, Globe2, Users, TrendingUp, Target, Eye } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t, i18n } = useTranslation();
+  
   const timeline = [
     {
       year: "2008",
-      title: "Company Founded",
-      description: "Bluenza International LLP was established with a vision to connect global markets through quality agricultural products."
+      title: t('aboutPage.timeline.2008.title'),
+      description: t('aboutPage.timeline.2008.desc')
     },
     {
       year: "2012",
-      title: "International Expansion",
-      description: "Expanded operations to cover 25+ countries across Asia, Europe, and Africa."
+      title: t('aboutPage.timeline.2012.title'),
+      description: t('aboutPage.timeline.2012.desc')
     },
     {
       year: "2016",
-      title: "Quality Certifications",
-      description: "Achieved ISO certification and various international quality standards."
+      title: t('aboutPage.timeline.2016.title'),
+      description: t('aboutPage.timeline.2016.desc')
     },
     {
       year: "2020",
-      title: "Digital Transformation",
-      description: "Implemented advanced technology solutions for better supply chain management."
+      title: t('aboutPage.timeline.2020.title'),
+      description: t('aboutPage.timeline.2020.desc')
     },
     {
       year: "2024",
-      title: "Global Leadership",
-      description: "Now serving 50+ countries with a network of trusted partners worldwide."
+      title: t('aboutPage.timeline.2024.title'),
+      description: t('aboutPage.timeline.2024.desc')
     }
   ];
 
   const values = [
     {
       icon: Shield,
-      title: "Quality First",
-      description: "We never compromise on quality, ensuring every product meets the highest international standards.",
+      title: t('aboutPage.values.qualityFirst'),
+      description: t('aboutPage.values.qualityFirstDesc'),
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       icon: Users,
-      title: "Customer Focus",
-      description: "Our customers' success is our success. We build long-term partnerships based on trust and reliability.",
+      title: t('aboutPage.values.customerFocus'),
+      description: t('aboutPage.values.customerFocusDesc'),
       gradient: "from-purple-500 to-pink-500"
     },
     {
       icon: Globe2,
-      title: "Global Perspective",
-      description: "We think globally while acting locally, understanding diverse market needs and cultural nuances.",
+      title: t('aboutPage.values.globalPerspective'),
+      description: t('aboutPage.values.globalPerspectiveDesc'),
       gradient: "from-green-500 to-teal-500"
     },
     {
       icon: TrendingUp,
-      title: "Continuous Growth",
-      description: "We constantly evolve and innovate to stay ahead in the dynamic global trade environment.",
+      title: t('aboutPage.values.continuousGrowth'),
+      description: t('aboutPage.values.continuousGrowthDesc'),
       gradient: "from-amber-500 to-orange-500"
     }
   ];
@@ -62,8 +65,9 @@ const About = () => {
   return (
     <div className="min-h-screen pt-16">
       <Helmet>
-        <title>About Us | Bluenza International LLP</title>
-        <meta name="description" content="Learn about Bluenza International LLP, our mission, vision, and journey as a global leader in import-export services." />
+        <title>{t('aboutPage.title')} | Bluenza International LLP</title>
+        <meta name="description" content={t('aboutPage.subtitle')} />
+        <html lang={i18n.language} dir={i18n.language === 'ar' ? 'rtl' : 'ltr'} />
         <link rel="canonical" href="https://bluenzainternational.com/about" />
         <script type="application/ld+json">{`
           {
@@ -133,15 +137,15 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6">
-              <span className="text-blue-600 font-medium text-sm">About Bluenza International</span>
+              <span className="text-blue-600 font-medium text-sm">{t('aboutPage.badge')}</span>
             </div>
             
             <h1 className="font-poppins font-bold text-5xl lg:text-6xl text-gray-900 mb-6">
-              <span className="text-gradient">About Bluenza International</span>
+              <span className="text-gradient">{t('aboutPage.title')}</span>
             </h1>
             
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Welcome to Bluenza International, where global trade meets excellence. As a premier import-export company, we bridge markets worldwide with innovative solutions and premium products. Our commitment to quality, sustainability, and customer satisfaction has established us as a trusted partner in international trade. With expertise in water bottles, accessories, and custom solutions, we deliver value that transcends borders.
+              {t('aboutPage.subtitle')}
             </p>
           </div>
         </div>
@@ -157,17 +161,16 @@ const About = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-4">Our Mission</h3>
+                <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-4">{t('aboutPage.mission')}</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  To connect global markets through quality products, reliable services, and sustainable practices, 
-                  enriching lives and economies worldwide.
+                  {t('aboutPage.missionDesc')}
                 </p>
                 <div className="space-y-3">
                   {[
-                    "Deliver premium quality  products",
-                    "Ensure timely and safe deliveries",
-                    "Build lasting partnerships across the globe",
-                    "Drive innovation in trade"
+                    t('aboutPage.missionPoints.point1'),
+                    t('aboutPage.missionPoints.point2'),
+                    t('aboutPage.missionPoints.point3'),
+                    t('aboutPage.missionPoints.point4')
                   ].map((item, index) => (
                     <div key={index} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-600 mr-3 flex-shrink-0" />
@@ -184,19 +187,18 @@ const About = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mb-6">
                   <Eye className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-4">Our Vision</h3>
+                <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-4">{t('aboutPage.vision')}</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  To be a global leader in import-export services, recognized for our commitment to quality, 
-                  sustainability, and customer satisfaction, touching lives and economies worldwide.
+                  {t('aboutPage.visionDesc')}
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-blue-50 rounded-xl">
                     <div className="text-2xl font-bold text-blue-600 mb-1">100+</div>
-                    <div className="text-sm text-gray-600">Countries by 2030</div>
+                    <div className="text-sm text-gray-600">{t('aboutPage.visionStats.countries')}</div>
                   </div>
                   <div className="text-center p-4 bg-purple-50 rounded-xl">
-                    <div className="text-2xl font-bold text-purple-600 mb-1">Carbon</div>
-                    <div className="text-sm text-gray-600">Neutral by 2028</div>
+                    <div className="text-2xl font-bold text-purple-600 mb-1">{t('aboutPage.visionStats.carbon')}</div>
+                    <div className="text-sm text-gray-600">{t('aboutPage.visionStats.neutralBy')}</div>
                   </div>
                 </div>
               </div>
@@ -259,11 +261,10 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-poppins font-bold text-4xl text-gray-900 mb-6">
-              Our Core
-              <span className="text-gradient block">Values</span>
+              <span className="text-gradient">{t('aboutPage.valuesSection.title')}</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              These values guide every decision we make and every relationship we build.
+              {t('aboutPage.valuesSection.subtitle')}
             </p>
           </div>
 
@@ -299,17 +300,17 @@ const About = () => {
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 animate-fade-in">
           <h2 className="font-poppins font-bold text-4xl text-gray-900 mb-6">
-            Ready to Partner with Us?
+            {t('aboutPage.ctaSection.title')}
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Join thousands of satisfied clients who trust Bluenza International for their global trade needs.
+            {t('aboutPage.ctaSection.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
-              Get Started Today
+              {t('aboutPage.ctaSection.getStarted')}
             </Button>
             <Button variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold px-8 py-3 rounded-full transition-all duration-300">
-              Contact Our Team
+              {t('aboutPage.ctaSection.contactTeam')}
             </Button>
           </div>
         </div>

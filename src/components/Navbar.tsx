@@ -3,13 +3,16 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from 'react-i18next';
 import QuoteModal from "@/components/QuoteModal";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showQuoteModal, setShowQuoteModal] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,10 +24,10 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Products", path: "/products" },
-    { name: "Contact", path: "/contact" },
+    { name: t('nav.home'), path: "/" },
+    { name: t('nav.about'), path: "/about" },
+    { name: t('nav.products'), path: "/products" },
+    { name: t('nav.contact'), path: "/contact" },
   ];
 
   return (
@@ -65,12 +68,13 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            <LanguageSwitcher />
             <Button 
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
               onClick={() => setShowQuoteModal(true)}
             >
               <Phone className="w-4 h-4 mr-2" />
-              Get Quote
+              {t('common.getQuote')}
             </Button>
             <Link to="/admin/login">
               <Button 
@@ -116,6 +120,9 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
+              <div className="mb-4">
+                <LanguageSwitcher />
+              </div>
               <Button 
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-2 rounded-full"
                 onClick={() => {
@@ -124,7 +131,7 @@ const Navbar = () => {
                 }}
               >
                 <Phone className="w-4 h-4 mr-2" />
-                Get Quote
+                {t('common.getQuote')}
               </Button>
               <Link to="/admin" className="block mt-4" onClick={() => setIsOpen(false)}>
                 <Button 

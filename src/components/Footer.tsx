@@ -1,21 +1,23 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Products", path: "/products" },
-    { name: "Contact", path: "/contact" }
+    { name: t('footer.quickLinksItems.home'), path: "/" },
+    { name: t('footer.quickLinksItems.about'), path: "/about" },
+    { name: t('footer.quickLinksItems.products'), path: "/products" },
+    { name: t('footer.quickLinksItems.contact'), path: "/contact" }
   ];
 
   const products = [
-    { name: "250ml Water Bottle", path: "/products" },
-    { name: "500ml Water Bottle", path: "/products" },
-    { name: "1L Water Bottle", path: "/products" },
-    { name: "Custom Solutions", path: "/products" }
+    { name: t('footer.products.250ml'), path: "/products" },
+    { name: t('footer.products.500ml'), path: "/products" },
+    { name: t('footer.products.1L'), path: "/products" },
+    { name: t('footer.products.custom'), path: "/products" }
   ];
 
   const contactInfo = [
@@ -49,8 +51,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Your trusted partner in premium water bottle solutions. We deliver quality, 
-              sustainability, and innovation in every product.
+              {t('footer.companyDescription')}
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -68,7 +69,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-poppins font-bold text-lg mb-6">Quick Links</h3>
+            <h3 className="font-poppins font-bold text-lg mb-6">{t('footer.quickLinks')}</h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -85,7 +86,7 @@ const Footer = () => {
 
           {/* Products */}
           <div>
-            <h3 className="font-poppins font-bold text-lg mb-6">Our Products</h3>
+            <h3 className="font-poppins font-bold text-lg mb-6">{t('footer.ourProducts')}</h3>
             <ul className="space-y-3">
               {products.map((product, index) => (
                 <li key={index}>
@@ -102,7 +103,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-poppins font-bold text-lg mb-6">Contact Info</h3>
+            <h3 className="font-poppins font-bold text-lg mb-6">{t('footer.contactInfo')}</h3>
             <ul className="space-y-4">
               {contactInfo.map((info, index) => (
                 <li key={index} className="flex items-start space-x-3">
@@ -112,8 +113,8 @@ const Footer = () => {
               ))}
             </ul>
             <div className="mt-6">
-              <p className="text-gray-400 text-sm mb-2">Business Hours:</p>
-              <p className="text-gray-300 text-sm">Mon - Sat: 10:00 AM - 6:00 PM</p>
+              <p className="text-gray-400 text-sm mb-2">{t('footer.businessHours')}</p>
+              <p className="text-gray-300 text-sm">{t('footer.workingHours')}</p>
             </div>
           </div>
         </div>
@@ -122,17 +123,17 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © {currentYear} Bluenza International LLP. All rights reserved.
+              © {currentYear} Bluenza International LLP. {t('footer.allRightsReserved')}
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Privacy Policy
+                {t('footer.privacyPolicy')}
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Terms of Service
+                {t('footer.termsOfService')}
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Cookie Policy
+                {t('footer.cookiePolicy')}
               </a>
             </div>
           </div>

@@ -5,8 +5,10 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import QuoteModal from "@/components/QuoteModal";
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from 'react-i18next';
 
 const Products = () => {
+  const { t, i18n } = useTranslation();
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showQuoteModal, setShowQuoteModal] = useState(false);
   const [quoteProduct, setQuoteProduct] = useState(null);
@@ -20,74 +22,76 @@ const Products = () => {
     additionalRequirements: ""
   });
   const { toast } = useToast();
+  
   const products = [
     {
       id: 1,
-      name: "250ml Water Bottle",
-      description: "Perfect for personal hydration on-the-go. Compact and lightweight design ideal for kids, travel, and quick refreshment needs.",
+      name: t('productsPage.products.250ml.name'),
+      description: t('productsPage.products.250ml.description'),
       image: "/b1.jpeg",
       gradient: "from-blue-400 to-cyan-500",
       capacity: "250ml",
       specifications: {
-        "Capacity": "250ml",
-        "Material": "Food-grade PET plastic",
-        "Weight": "50g",
-        "Dimensions": "15cm x 5.5cm",
-        "Cap Type": "Screw-top with safety seal",
-        "Features": "BPA-free, Leak-proof, Easy-grip design",
-        "Ideal For": "Kids, Travel, Quick hydration",
-        "Warranty": "30 days replacement"
+        [t('productsPage.specLabels.capacity')]: t('productsPage.products.250ml.specs.capacity'),
+        [t('productsPage.specLabels.material')]: t('productsPage.products.250ml.specs.material'),
+        [t('productsPage.specLabels.weight')]: t('productsPage.products.250ml.specs.weight'),
+        [t('productsPage.specLabels.dimensions')]: t('productsPage.products.250ml.specs.dimensions'),
+        [t('productsPage.specLabels.capType')]: t('productsPage.products.250ml.specs.capType'),
+        [t('productsPage.specLabels.features')]: t('productsPage.products.250ml.specs.features'),
+        [t('productsPage.specLabels.idealFor')]: t('productsPage.products.250ml.specs.idealFor'),
+        [t('productsPage.specLabels.warranty')]: t('productsPage.products.250ml.specs.warranty')
       }
     },
     {
       id: 2,
-      name: "500ml Water Bottle",
-      description: "Our most popular size, perfect for daily hydration needs. Ideal for office, gym, and outdoor activities with optimal portability.",
+      name: t('productsPage.products.500ml.name'),
+      description: t('productsPage.products.500ml.description'),
       image: "/b2.jpeg",
       gradient: "from-green-400 to-emerald-500",
       capacity: "500ml",
       specifications: {
-        "Capacity": "500ml",
-        "Material": "Food-grade PET plastic",
-        "Weight": "100g",
-        "Dimensions": "20cm x 6.5cm",
-        "Cap Type": "Screw-top with safety seal",
-        "Features": "BPA-free, Leak-proof, Easy-grip design",
-        "Ideal For": "Personal use, Gym, Travel",
-        "Warranty": "30 days replacement"
+        [t('productsPage.specLabels.capacity')]: t('productsPage.products.500ml.specs.capacity'),
+        [t('productsPage.specLabels.material')]: t('productsPage.products.500ml.specs.material'),
+        [t('productsPage.specLabels.weight')]: t('productsPage.products.500ml.specs.weight'),
+        [t('productsPage.specLabels.dimensions')]: t('productsPage.products.500ml.specs.dimensions'),
+        [t('productsPage.specLabels.capType')]: t('productsPage.products.500ml.specs.capType'),
+        [t('productsPage.specLabels.features')]: t('productsPage.products.500ml.specs.features'),
+        [t('productsPage.specLabels.idealFor')]: t('productsPage.products.500ml.specs.idealFor'),
+        [t('productsPage.specLabels.warranty')]: t('productsPage.products.500ml.specs.warranty')
       }
     },
     {
       id: 3,
-      name: "1L Water Bottle",
-      description: "Large capacity bottle for extended hydration needs. Perfect for sports, long journeys, and family use with superior durability.",
+      name: t('productsPage.products.1L.name'),
+      description: t('productsPage.products.1L.description'),
       image: "/b3.jpeg",
       gradient: "from-purple-400 to-blue-500",
       capacity: "1L",
       specifications: {
-        "Capacity": "1000ml (1L)",
-        "Material": "Food-grade PET plastic",
-        "Weight": "150g",
-        "Dimensions": "28cm x 8cm",
-        "Cap Type": "Screw-top with safety seal",
-        "Features": "BPA-free, Leak-proof, Ergonomic design",
-        "Ideal For": "Sports, Family use, Long journeys",
-        "Warranty": "30 days replacement"
+        [t('productsPage.specLabels.capacity')]: t('productsPage.products.1L.specs.capacity'),
+        [t('productsPage.specLabels.material')]: t('productsPage.products.1L.specs.material'),
+        [t('productsPage.specLabels.weight')]: t('productsPage.products.1L.specs.weight'),
+        [t('productsPage.specLabels.dimensions')]: t('productsPage.products.1L.specs.dimensions'),
+        [t('productsPage.specLabels.capType')]: t('productsPage.products.1L.specs.capType'),
+        [t('productsPage.specLabels.features')]: t('productsPage.products.1L.specs.features'),
+        [t('productsPage.specLabels.idealFor')]: t('productsPage.products.1L.specs.idealFor'),
+        [t('productsPage.specLabels.warranty')]: t('productsPage.products.1L.specs.warranty')
       }
     }
   ];
 
   const certifications = [
-    { name: "ISO 9001:2015", icon: Award },
-    { name: "HACCP Certified", icon: Shield },
-    { name: "Export License", icon: Globe }
+    { name: t('productsPage.certifications.iso'), icon: Award },
+    { name: t('productsPage.certifications.haccp'), icon: Shield },
+    { name: t('productsPage.certifications.export'), icon: Globe }
   ];
 
   return (
     <div className="min-h-screen pt-16">
       <Helmet>
-        <title>Products | Bluenza International LLP</title>
-        <meta name="description" content="Explore our premium range of water bottles and accessories. Quality, durability, and innovation for every hydration need." />
+        <title>{t('productsPage.title')} | Bluenza International LLP</title>
+        <meta name="description" content={t('productsPage.subtitle')} />
+        <html lang={i18n.language} dir={i18n.language === 'ar' ? 'rtl' : 'ltr'} />
         <link rel="canonical" href="https://bluenzainternational.com/products" />
         <script type="application/ld+json">{`
           {
@@ -287,17 +291,15 @@ const Products = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-fade-in">
             <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6">
-              <span className="text-blue-600 font-medium text-sm">Our Product Range</span>
+              <span className="text-blue-600 font-medium text-sm">{t('productsPage.badge')}</span>
             </div>
             
             <h1 className="font-poppins font-bold text-5xl lg:text-6xl text-gray-900 mb-6">
-              Premium Quality
-              <span className="text-gradient block">Water Bottles</span>
+              <span className="text-gradient">{t('productsPage.heroTitle')}</span>
             </h1>
             
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Discover our range of premium water bottles designed for every hydration need. 
-              Made with food-grade materials and built to international quality standards.
+              {t('productsPage.heroSubtitle')}
             </p>
           </div>
           
@@ -364,7 +366,7 @@ const Products = () => {
                   
                   {/* Specifications */}
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-4">Product Specifications:</h3>
+                    <h3 className="font-semibold text-gray-900 mb-4">{t('productsPage.modal.productSpecs')}</h3>
                     <div className="bg-gray-50 rounded-2xl p-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {Object.entries(product.specifications).map(([key, value], idx) => (
@@ -387,7 +389,7 @@ const Products = () => {
                         setShowQuoteModal(true);
                       }}
                     >
-                      Get Quote
+                      {t('productsPage.buttons.getQuote')}
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
                     <Button 
@@ -395,7 +397,7 @@ const Products = () => {
                       className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold px-6 py-3 rounded-full transition-all duration-300"
                       onClick={() => setSelectedProduct(product)}
                     >
-                      View Details
+                      {t('productsPage.buttons.viewDetails')}
                     </Button>
                   </div>
                 </div>
@@ -411,10 +413,10 @@ const Products = () => {
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 animate-fade-in">
           <h2 className="font-poppins font-bold text-4xl text-gray-900 mb-6">
-            Need Custom Bottles or Bulk Orders?
+            {t('productsPage.cta.title')}
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            We offer custom branding and bulk orders for businesses. Contact our team to discuss your specific requirements.
+            {t('productsPage.cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -425,10 +427,10 @@ const Products = () => {
                 setShowQuoteModal(true);
               }}
             >
-              Request Custom Quote
+              {t('productsPage.cta.customQuote')}
             </Button>
             <Button variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold px-8 py-3 rounded-full transition-all duration-300">
-              View Catalog
+              {t('productsPage.cta.viewCatalog')}
             </Button>
           </div>
         </div>
@@ -475,7 +477,7 @@ const Products = () => {
 
                   {/* Detailed Specifications */}
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-4 text-xl">Complete Specifications:</h3>
+                    <h3 className="font-semibold text-gray-900 mb-4 text-xl">{t('productsPage.modal.specifications')}</h3>
                     <div className="space-y-3">
                       {Object.entries(selectedProduct.specifications).map(([key, value], idx) => (
                         <div key={idx} className="flex justify-between items-start py-3 border-b border-gray-100 last:border-b-0">
@@ -497,7 +499,7 @@ const Products = () => {
                         setSelectedProduct(null);
                       }}
                     >
-                      Get Quote Now
+                      {t('productsPage.modal.getQuoteNow')}
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
                     <Button 
@@ -505,7 +507,7 @@ const Products = () => {
                       className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold px-6 py-3 rounded-full transition-all duration-300 flex-1"
                       onClick={() => setSelectedProduct(null)}
                     >
-                      Close
+                      {t('productsPage.buttons.close')}
                     </Button>
                   </div>
                 </div>

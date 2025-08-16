@@ -1,0 +1,385 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "products": "Produkte",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Willkommen in unserem Unternehmen",
+    "subtitle": "Ihr vertrauensvoller Partner für globale Import-Export-Operationen. Wir spezialisieren uns auf hochwertige Nahrungsmittelgetreide, Ölsaaten und landwirtschaftliche Produkte und verbinden Märkte weltweit mit Qualität und Zuverlässigkeit.",
+    "globalTrade": "Exzellenz im Welthandel",
+    "support247": "Support verfügbar",
+    "qualityAssured": "Qualität gewährleistet",
+    "fastDelivery": "Schnelle weltweite Lieferung"
+  },
+  "about": {
+    "badge": "Über Bluenza International",
+    "title": "Mächtige Strategien für globales Wachstum",
+    "description1": "Wir helfen Unternehmen dabei, ihre Marken durch strategische internationale Kampagnen zu stärken. Unsere Mission ist es, das Beste der indischen Fertigung mit weltweiten Märkten zu verbinden und sicherzustellen, dass jede Marke ihr Potenzial erreicht.",
+    "description2": "Von der Produktverpackung bis zum globalen Vertrieb — wir kümmern uns um alles, geleitet von Leidenschaft und Präzision.",
+    "qualityAssurance": "Qualitätssicherung",
+    "qualityDesc": "Zertifizierte Qualitätsprodukte, die internationalen Standards entsprechen",
+    "trustedPartner": "Vertrauensvoller Partner",
+    "trustedDesc": "Über 15 Jahre zuverlässiger Service im Welthandel",
+    "globalReach": "Globale Reichweite",
+    "globalDesc": "Umfassendes Netzwerk in über 50 Ländern weltweit"
+  },
+  "globalReach": {
+    "badge": "Globale Operationen",
+    "title": "Globale Reichweite, lokale Expertise",
+    "description1": "Wir sind stolz darauf, unsere Import-Export-Dienstleistungen in Kanada, den USA, Großbritannien, Deutschland und Australien anzubieten. Mit tiefem Marktwissen und einem starken Logistiknetzwerk gewährleisten wir pünktliche und sichere Lieferungen über Kontinente hinweg.",
+    "description2": "Unsere Mission ist es, die besten Produkte zu wettbewerbsfähigen Preisen zu liefern. Ob Großhandel oder Nischensendungen, wir garantieren Qualität, Konsistenz und Einhaltung globaler Standards.",
+    "description3": "Arbeiten Sie mit uns zusammen für reibungslose Dokumentation, strategische Verpackung und nahtlose internationale Handelsoperationen."
+  },
+  "whyChoose": {
+    "badge": "Warum Bluenza wählen",
+    "title": "Ihr Erfolg ist unsere Priorität",
+    "subtitle": "Wir kombinieren Branchenexpertise, globale Reichweite und unerschütterliches Engagement für Qualität und sind damit der bevorzugte Partner für Unternehmen weltweit.",
+    "qualityAssurance": "Qualitätssicherung",
+    "qualityDesc": "Strenge Qualitätskontrollprozesse und internationale Zertifizierungen gewährleisten jedes Mal Premium-Produkte.",
+    "timelyDelivery": "Pünktliche Lieferung",
+    "timelyDesc": "Effizientes Logistiknetzwerk und zuverlässiges Supply-Chain-Management für pünktliche Lieferungen weltweit.",
+    "globalNetwork": "Globales Netzwerk",
+    "networkDesc": "Umfassende Partnerschaften in über 50 Ländern mit lokaler Expertise in internationalen Märkten.",
+    "industryExperience": "Branchenerfahrung",
+    "experienceDesc": "Über 15 Jahre nachgewiesene Erfolgsbilanz im Handel mit landwirtschaftlichen Rohstoffen und Exportexzellenz.",
+    "customerSupport": "Kundensupport",
+    "supportDesc": "Engagiertes Team von Handelsexperten, das personalisierten Service und umfassende Unterstützung bietet.",
+    "logisticsExcellence": "Logistikexzellenz",
+    "logisticsDesc": "Fortschrittliche Supply-Chain-Lösungen und Partnerschaften mit führenden Logistikanbietern weltweit."
+  },
+  "founders": {
+    "badge": "Führungsteam",
+    "title": "Lernen Sie unsere Gründer kennen",
+    "subtitle": "Unsere visionären Führer bringen jahrzehntelange kombinierte Erfahrung im internationalen Handel mit und treiben Innovation und Exzellenz im globalen Handel voran.",
+    "founder": "Gründer",
+    "managingDirector": "Geschäftsführer",
+    "partner": "Partner",
+    "from": "Aus"
+  },
+  "contact": {
+    "badge": "Kontakt aufnehmen",
+    "title": "Beginnen wir Ihre globale Handelsreise",
+    "subtitle": "Bereit, Ihr Unternehmen global zu erweitern? Kontaktieren Sie unsere Handelsexperten für personalisierte Lösungen und wettbewerbsfähige Angebote.",
+    "contactInfo": "Kontaktinformationen",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "address": "Adresse",
+    "workingHours": "Arbeitszeiten",
+    "findUs": "Finden Sie uns hier",
+    "sendMessage": "Senden Sie uns eine Nachricht",
+    "fullName": "Vollständiger Name",
+    "phoneNumber": "Telefonnummer",
+    "emailAddress": "E-Mail-Adresse",
+    "message": "Nachricht",
+    "yourFullName": "Ihr vollständiger Name",
+    "yourPhone": "Ihre Telefonnummer",
+    "yourEmail": "ihre.email@beispiel.com",
+    "tellRequirements": "Erzählen Sie uns von Ihren Anforderungen...",
+    "sendBtn": "Nachricht senden",
+    "sending": "Wird gesendet...",
+    "workingHoursText": "Montag - Samstag: 10:00 - 18:00 Uhr"
+  },
+  "aboutPage": {
+    "title": "Über Bluenza International",
+    "subtitle": "Willkommen bei Bluenza International, wo Welthandel auf Exzellenz trifft. Als führendes Import-Export-Unternehmen verbinden wir Märkte weltweit mit innovativen Lösungen und Premium-Produkten. Unser Engagement für Qualität, Nachhaltigkeit und Kundenzufriedenheit hat uns als vertrauenswürdigen Partner im internationalen Handel etabliert. Mit unserer Expertise in Wasserflaschen, Zubehör und maßgeschneiderten Lösungen liefern wir Wert, der Grenzen überschreitet.",
+    "badge": "Über Bluenza International",
+    "mission": "Unsere Mission",
+    "missionDesc": "Globale Märkte durch Qualitätsprodukte, zuverlässige Dienstleistungen und nachhaltige Praktiken zu verbinden und dabei Leben und Volkswirtschaften weltweit zu bereichern.",
+    "vision": "Unsere Vision",
+    "visionDesc": "Ein globaler Führer in Import-Export-Dienstleistungen zu sein, anerkannt für unser Engagement für Qualität, Nachhaltigkeit und Kundenzufriedenheit, und dabei Leben und Volkswirtschaften weltweit zu berühren.",
+    "timeline": {
+      "2008": {
+        "title": "Unternehmensgründung",
+        "desc": "Bluenza International LLP wurde mit der Vision gegründet, globale Märkte durch hochwertige landwirtschaftliche Produkte zu verbinden."
+      },
+      "2012": {
+        "title": "Internationale Expansion",
+        "desc": "Erweiterung der Operationen auf über 25 Länder in Asien, Europa und Afrika."
+      },
+      "2016": {
+        "title": "Qualitätszertifizierungen",
+        "desc": "Erreichen der ISO-Zertifizierung und verschiedener internationaler Qualitätsstandards."
+      },
+      "2020": {
+        "title": "Digitale Transformation",
+        "desc": "Implementierung fortschrittlicher Technologielösungen für besseres Supply-Chain-Management."
+      },
+      "2024": {
+        "title": "Globale Führung",
+        "desc": "Bedienen jetzt über 50 Länder mit einem Netzwerk vertrauenswürdiger Partner weltweit."
+      }
+    },
+    "values": {
+      "qualityFirst": "Qualität zuerst",
+      "qualityFirstDesc": "Wir machen niemals Kompromisse bei der Qualität und stellen sicher, dass jedes Produkt den höchsten internationalen Standards entspricht.",
+      "customerFocus": "Kundenfokus",
+      "customerFocusDesc": "Der Erfolg unserer Kunden ist unser Erfolg. Wir bauen langfristige Partnerschaften auf, die auf Vertrauen und Zuverlässigkeit basieren.",
+      "globalPerspective": "Globale Perspektive",
+      "globalPerspectiveDesc": "Wir denken global und handeln lokal, verstehen vielfältige Marktbedürfnisse und kulturelle Nuancen.",
+      "continuousGrowth": "Kontinuierliches Wachstum",
+      "continuousGrowthDesc": "Wir entwickeln uns ständig weiter und innovieren, um in der dynamischen globalen Handelsumgebung voraus zu bleiben."
+    },
+    "missionPoints": {
+      "point1": "Premium-Qualitätsprodukte liefern",
+      "point2": "Pünktliche und sichere Lieferungen gewährleisten",
+      "point3": "Dauerhafte Partnerschaften weltweit aufbauen",
+      "point4": "Innovation im Handel vorantreiben"
+    },
+    "visionStats": {
+      "countries": "Länder bis 2030",
+      "carbon": "Kohlenstoff",
+      "neutralBy": "Neutral bis 2028"
+    },
+    "valuesSection": {
+      "title": "Unsere Grundwerte",
+      "subtitle": "Diese Werte leiten jede Entscheidung, die wir treffen, und jede Beziehung, die wir aufbauen."
+    },
+    "ctaSection": {
+      "title": "Bereit für eine Partnerschaft mit uns?",
+      "subtitle": "Schließen Sie sich Tausenden zufriedener Kunden an, die Bluenza International für ihre globalen Handelsbedürfnisse vertrauen.",
+      "getStarted": "Heute beginnen",
+      "contactTeam": "Unser Team kontaktieren"
+    }
+  },
+  "productsPage": {
+    "title": "Produkte",
+    "subtitle": "Entdecken Sie unser Premium-Sortiment an Wasserflaschen und Zubehör. Qualität, Langlebigkeit und Innovation für jeden Hydratationsbedarf.",
+    "badge": "Unsere Produkte",
+    "heroTitle": "Premium Wasserflaschen Kollektion",
+    "heroSubtitle": "Entdecken Sie unser Sortiment hochwertiger Wasserflaschen, die für jeden Lebensstil und Hydratationsbedarf entwickelt wurden.",
+    "products": {
+      "250ml": {
+        "name": "250ml Wasserflasche",
+        "description": "Perfekt für die persönliche Hydratation unterwegs. Kompaktes und leichtes Design, ideal für Kinder, Reisen und schnelle Erfrischungsbedürfnisse.",
+        "specs": {
+          "capacity": "250ml",
+          "material": "Lebensmittelechtes PET-Plastik",
+          "weight": "50g",
+          "dimensions": "15cm x 5,5cm",
+          "capType": "Schraubverschluss mit Sicherheitssiegel",
+          "features": "BPA-frei, Auslaufsicher, Ergonomisches Design",
+          "idealFor": "Kinder, Reisen, Schnelle Hydratation",
+          "warranty": "30 Tage Ersatz"
+        }
+      },
+      "500ml": {
+        "name": "500ml Wasserflasche",
+        "description": "Unsere beliebteste Größe, perfekt für den täglichen Hydratationsbedarf. Ideal für Büro, Fitnessstudio und Outdoor-Aktivitäten mit optimaler Tragbarkeit.",
+        "specs": {
+          "capacity": "500ml",
+          "material": "Lebensmittelechtes PET-Plastik",
+          "weight": "100g",
+          "dimensions": "20cm x 6,5cm",
+          "capType": "Schraubverschluss mit Sicherheitssiegel",
+          "features": "BPA-frei, Auslaufsicher, Ergonomisches Design",
+          "idealFor": "Persönlicher Gebrauch, Fitnessstudio, Reisen",
+          "warranty": "30 Tage Ersatz"
+        }
+      },
+      "1L": {
+        "name": "1L Wasserflasche",
+        "description": "Große Kapazitätsflasche für erweiterte Hydratationsbedürfnisse. Perfekt für Sport, lange Reisen und Familiengebrauch mit überlegener Haltbarkeit.",
+        "specs": {
+          "capacity": "1000ml (1L)",
+          "material": "Lebensmittelechtes PET-Plastik",
+          "weight": "150g",
+          "dimensions": "28cm x 8cm",
+          "capType": "Schraubverschluss mit Sicherheitssiegel",
+          "features": "BPA-frei, Auslaufsicher, Ergonomisches Design",
+          "idealFor": "Sport, Familiengebrauch, Lange Reisen",
+          "warranty": "30 Tage Ersatz"
+        }
+      }
+    },
+    "specLabels": {
+      "capacity": "Kapazität",
+      "material": "Material",
+      "weight": "Gewicht",
+      "dimensions": "Abmessungen",
+      "capType": "Verschlusstyp",
+      "features": "Eigenschaften",
+      "idealFor": "Ideal Für",
+      "warranty": "Garantie"
+    },
+    "buttons": {
+      "viewDetails": "Details Anzeigen",
+      "getQuote": "Angebot Erhalten",
+      "close": "Schließen"
+    },
+    "certifications": {
+      "title": "Qualitätszertifizierungen",
+      "iso": "ISO 9001:2015",
+      "haccp": "HACCP Zertifiziert",
+      "export": "Exportlizenz"
+    },
+    "cta": {
+      "title": "Benötigen Sie individuelle Flaschen oder Großbestellungen?",
+      "subtitle": "Wir bieten individuelles Branding und Großbestellungen für Unternehmen an. Kontaktieren Sie unser Team, um Ihre spezifischen Anforderungen zu besprechen.",
+      "customQuote": "Individuelles Angebot anfordern",
+      "viewCatalog": "Katalog anzeigen"
+    },
+    "modal": {
+      "specifications": "Vollständige Spezifikationen:",
+      "getQuoteNow": "Jetzt Angebot erhalten",
+      "productSpecs": "Produktspezifikationen:"
+    }
+  },
+  "contactPage": {
+    "title": "Kontaktieren Sie Uns",
+    "subtitle": "Kontaktieren Sie unser Team für Anfragen, Angebote oder Support. Wir sind hier, um Ihnen bei allen Ihren Import-Export-Bedürfnissen zu helfen.",
+    "badge": "Kontakt Aufnehmen",
+    "heroTitle": "Kontaktieren Sie Unser Expertenteam",
+    "heroSubtitle": "Bereit, Ihre globale Handelsreise zu beginnen? Unser erfahrenes Team ist hier, um personalisierte Lösungen und wettbewerbsfähige Angebote für alle Ihre Import-Export-Bedürfnisse zu bieten.",
+    "contactInfo": "Kontaktinformationen",
+    "officeHours": "Bürozeiten",
+    "getDirections": "Wegbeschreibung Erhalten",
+    "sendMessage": "Senden Sie uns eine Nachricht",
+    "formLabels": {
+      "fullName": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "company": "Firmenname",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "required": "Erforderlich",
+      "optional": "Optional"
+    },
+    "placeholders": {
+      "fullName": "Ihr vollständiger Name",
+      "email": "ihre.email@beispiel.com",
+      "phone": "Ihre Telefonnummer",
+      "company": "Ihr Firmenname",
+      "subject": "Wie können wir Ihnen helfen?",
+      "message": "Erzählen Sie uns von Ihren Anforderungen, interessanten Produkten oder Fragen, die Sie haben..."
+    },
+    "buttons": {
+      "sendMessage": "Nachricht Senden",
+      "sending": "Wird gesendet...",
+      "callNow": "Jetzt Anrufen",
+      "emailUs": "E-Mail Senden"
+    },
+    "contactDetails": {
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "address": "Adresse",
+      "workingHours": "Arbeitszeiten",
+      "workingHoursText": "Montag - Samstag: 10:00 - 18:00 Uhr",
+      "whatsapp": "WhatsApp",
+      "location": "Unser Standort"
+    },
+    "success": {
+      "title": "Nachricht Erfolgreich Gesendet!",
+      "description": "Vielen Dank, dass Sie uns kontaktiert haben. Wir melden uns innerhalb von 24 Stunden bei Ihnen."
+    },
+    "error": {
+      "title": "Nachricht Konnte Nicht Gesendet Werden",
+      "description": "Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt."
+    },
+    "quickSupport": {
+      "title": "Schneller Support",
+      "emergency": "Notfall-Support",
+      "emergencyDesc": "24/7 für dringende Bestellungen",
+      "whatsappSupport": "WhatsApp Support",
+      "whatsappDesc": "Schnelle Antworten",
+      "videoCall": "Videoanruf",
+      "videoDesc": "Meeting planen",
+      "chatNow": "Jetzt Chatten",
+      "schedule": "Planen"
+    },
+    "formDescription": "Füllen Sie das untenstehende Formular aus und unser Team wird sich innerhalb von 24 Stunden bei Ihnen melden.",
+    "selectSubject": "Wählen Sie ein Thema",
+    "subjects": {
+      "quote": "Angebot Anfordern",
+      "partnership": "Partnerschaftsanfrage",
+      "product": "Produktinformationen",
+      "logistics": "Logistik-Support",
+      "other": "Andere"
+    },
+    "officeType": "Hauptsitz",
+    "sundayClosed": "Sonntag: Geschlossen",
+    "gujaratTime": "Gujarat Standardzeit",
+    "businessInquiries": "Geschäftsanfragen willkommen",
+    "respond24h": "Wir antworten innerhalb von 24 Stunden",
+    "openAppointments": "Offen für Termine",
+    "available10to6": "Verfügbar 10:00 - 18:00 Uhr"
+  },
+  "footer": {
+    "companyDescription": "Ihr vertrauensvoller Partner für Premium-Wasserflaschelösungen. Wir liefern Qualität, Nachhaltigkeit und Innovation in jedem Produkt.",
+    "quickLinks": "Schnellzugriff",
+    "ourProducts": "Unsere Produkte",
+    "contactInfo": "Kontaktinformationen",
+    "businessHours": "Geschäftszeiten:",
+    "workingHours": "Mo - Sa: 10:00 - 18:00 Uhr",
+    "allRightsReserved": "Alle Rechte vorbehalten.",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "termsOfService": "Nutzungsbedingungen",
+    "cookiePolicy": "Cookie-Richtlinie",
+    "products": {
+      "250ml": "250ml Wasserflasche",
+      "500ml": "500ml Wasserflasche",
+      "1L": "1L Wasserflasche",
+      "custom": "Maßgeschneiderte Lösungen"
+    },
+    "quickLinksItems": {
+      "home": "Startseite",
+      "about": "Über Uns",
+      "products": "Produkte",
+      "contact": "Kontakt"
+    }
+  },
+  "quoteModal": {
+    "title": "Angebot Erhalten",
+    "for": "für",
+    "personalInfo": "Persönliche Informationen",
+    "productDetails": "Produktdetails",
+    "labels": {
+      "fullName": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "company": "Firmenname",
+      "product": "Produkt",
+      "quantity": "Menge",
+      "requirements": "Zusätzliche Anforderungen",
+      "required": "*"
+    },
+    "placeholders": {
+      "fullName": "Ihr vollständiger Name",
+      "email": "ihre.email@beispiel.com",
+      "phone": "Ihre Telefonnummer",
+      "company": "Ihr Firmenname",
+      "selectProduct": "Wählen Sie ein Produkt",
+      "quantity": "z.B. 1000 Stück",
+      "requirements": "Erzählen Sie uns von Ihren spezifischen Anforderungen, Lieferort, Zeitplan, etc."
+    },
+    "products": {
+      "250ml": "250ml Wasserflasche",
+      "500ml": "500ml Wasserflasche",
+      "1L": "1L Wasserflasche",
+      "custom": "Individuelles Produkt"
+    },
+    "buttons": {
+      "back": "Zurück",
+      "next": "Weiter",
+      "cancel": "Abbrechen",
+      "submit": "Angebotsanfrage Senden",
+      "processing": "Wird verarbeitet..."
+    },
+    "success": {
+      "title": "Angebotsanfrage Gesendet!",
+      "description": "Wir werden Sie bald mit einem detaillierten Angebot kontaktieren."
+    },
+    "error": {
+      "title": "Fehler",
+      "submitFailed": "Fehler beim Senden der Angebotsanfrage. Bitte versuchen Sie es erneut.",
+      "connectionFailed": "Verbindung fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "common": {
+    "getQuote": "Angebot erhalten",
+    "learnMore": "Mehr erfahren",
+    "contactUs": "Kontaktieren Sie uns",
+    "getQuoteNow": "Jetzt Angebot erhalten"
+  }
+}

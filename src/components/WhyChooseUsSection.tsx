@@ -1,42 +1,45 @@
 
 import { Shield, Clock, Globe, Award, Users, Truck } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 const WhyChooseUsSection = () => {
+  const { t } = useTranslation();
+  
   const strengths = [
     {
       icon: Shield,
-      title: "Quality Assurance",
-      description: "Rigorous quality control processes and international certifications ensure premium products every time.",
+      title: t('whyChoose.qualityAssurance'),
+      description: t('whyChoose.qualityDesc'),
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       icon: Clock,
-      title: "Timely Delivery",
-      description: "Efficient logistics network and reliable supply chain management for on-time deliveries worldwide.",
+      title: t('whyChoose.timelyDelivery'),
+      description: t('whyChoose.timelyDesc'),
       gradient: "from-purple-500 to-pink-500"
     },
     {
       icon: Globe,
-      title: "Global Network",
-      description: "Extensive partnerships across 50+ countries with local expertise in international markets.",
+      title: t('whyChoose.globalNetwork'),
+      description: t('whyChoose.networkDesc'),
       gradient: "from-green-500 to-teal-500"
     },
     {
       icon: Award,
-      title: "Industry Experience",
-      description: "15+ years of proven track record in agricultural commodity trading and export excellence.",
+      title: t('whyChoose.industryExperience'),
+      description: t('whyChoose.experienceDesc'),
       gradient: "from-amber-500 to-orange-500"
     },
     {
       icon: Users,
-      title: "Customer Support",
-      description: "Dedicated team of trade experts providing personalized service and comprehensive support.",
+      title: t('whyChoose.customerSupport'),
+      description: t('whyChoose.supportDesc'),
       gradient: "from-indigo-500 to-purple-500"
     },
     {
       icon: Truck,
-      title: "Logistics Excellence",
-      description: "Advanced supply chain solutions and partnerships with leading logistics providers globally.",
+      title: t('whyChoose.logisticsExcellence'),
+      description: t('whyChoose.logisticsDesc'),
       gradient: "from-rose-500 to-red-500"
     }
   ];
@@ -53,16 +56,15 @@ const WhyChooseUsSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6">
-            <span className="text-blue-600 font-medium text-sm">Why Choose Bluenza</span>
+            <span className="text-blue-600 font-medium text-sm">{t('whyChoose.badge')}</span>
           </div>
           
           <h2 className="font-poppins font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
-            Your Success is
-            <span className="text-gradient block">Our Priority</span>
+            <span className="text-gradient">{t('whyChoose.title')}</span>
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We combine industry expertise, global reach, and unwavering commitment to quality, making us the preferred partner for businesses worldwide.
+            {t('whyChoose.subtitle')}
           </p>
         </div>
         

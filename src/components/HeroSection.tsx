@@ -2,9 +2,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, TrendingUp, Users, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { t } = useTranslation();
   
   const slides = [
     {
@@ -60,16 +62,16 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Your trusted partner in global import-export operations. We specialize in premium food grains, oil seeds, and agricultural products, connecting markets worldwide with quality and reliability.
+              {t('hero.subtitle')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Get Quote Now
+                {t('common.getQuote')}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold px-8 py-3 rounded-full transition-all duration-300">
-                Learn More
+                {t('common.learnMore')}
               </Button>
             </div>
             

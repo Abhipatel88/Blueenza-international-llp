@@ -5,8 +5,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock, Send, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from 'react-i18next';
 
 const ContactSection = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -61,29 +63,29 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Phone",
+      title: t('contact.phone'),
       info: "+91 90063 90094",
       subInfo: "WhatsApp: +91 90063 90094",
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       icon: Mail,
-      title: "Email",
+      title: t('contact.email'),
       info: "bluenzainternational.llp@gmail.com",
       subInfo: "",
       gradient: "from-purple-500 to-pink-500"
     },
     {
       icon: MapPin,
-      title: "Address",
+      title: t('contact.address'),
       info: "C-3, Parishram Park, Dhuliya Chokdi",
       subInfo: "Bardoli, Surat, Gujarat-394601",
       gradient: "from-green-500 to-teal-500"
     },
     {
       icon: Clock,
-      title: "Working Hours",
-      info: "Monday - Saturday: 10:00 AM - 6:00 PM",
+      title: t('contact.workingHours'),
+      info: t('contact.workingHoursText'),
       subInfo: "",
       gradient: "from-amber-500 to-orange-500"
     }
@@ -97,16 +99,15 @@ const ContactSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6">
-            <span className="text-blue-600 font-medium text-sm">Get In Touch</span>
+            <span className="text-blue-600 font-medium text-sm">{t('contact.badge')}</span>
           </div>
           
           <h2 className="font-poppins font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
-            Let's Start Your
-            <span className="text-gradient block">Global Trade Journey</span>
+            <span className="text-gradient">{t('contact.title')}</span>
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Ready to expand your business globally? Contact our trade experts for personalized solutions and competitive quotes.
+            {t('contact.subtitle')}
           </p>
         </div>
         
@@ -114,7 +115,7 @@ const ContactSection = () => {
           {/* Contact Information */}
           <div className="animate-slide-in-left">
             <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-8">
-              Contact Information
+              {t('contact.contactInfo')}
             </h3>
             
             <div className="space-y-6 mb-8">
@@ -136,7 +137,7 @@ const ContactSection = () => {
             <div className="glass-card rounded-3xl p-6">
               <h3 className="font-poppins font-bold text-xl text-gray-900 mb-4 flex items-center">
                 <MapPin className="w-5 h-5 text-blue-600 mr-2" />
-                Find Us Here
+                {t('contact.findUs')}
               </h3>
               <div className="rounded-2xl overflow-hidden">
                 <iframe 
@@ -156,35 +157,35 @@ const ContactSection = () => {
           <div className="animate-slide-in-right">
             <div className="glass-card rounded-3xl p-8">
               <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-6">
-                Send us a Message
+                {t('contact.sendMessage')}
               </h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
+                      {t('contact.fullName')} *
                     </label>
                     <Input
                       type="text"
                       name="fullName"
                       value={formData.fullName}
                       onChange={handleInputChange}
-                      placeholder="Your full name"
+                      placeholder={t('contact.yourFullName')}
                       required
                       className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Phone Number
+                      {t('contact.phoneNumber')}
                     </label>
                     <Input
                       type="tel"
                       name="phoneNumber"
                       value={formData.phoneNumber}
                       onChange={handleInputChange}
-                      placeholder="Your phone number"
+                      placeholder={t('contact.yourPhone')}
                       className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                     />
                   </div>
@@ -192,14 +193,14 @@ const ContactSection = () => {
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
+                    {t('contact.emailAddress')} *
                   </label>
                   <Input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="your.email@example.com"
+                    placeholder={t('contact.yourEmail')}
                     required
                     className="border-gray-300 focus:border-blue-500 focus:ring-blue-500"
                   />
@@ -207,13 +208,13 @@ const ContactSection = () => {
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
+                    {t('contact.message')} *
                   </label>
                   <Textarea
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Tell us about your requirements..."
+                    placeholder={t('contact.tellRequirements')}
                     required
                     className="border-gray-300 focus:border-blue-500 focus:ring-blue-500 min-h-[120px]"
                   />
@@ -227,12 +228,12 @@ const ContactSection = () => {
                   {isSubmitting ? (
                     <>
                       <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                      Sending...
+                      {t('contact.sending')}
                     </>
                   ) : (
                     <>
                       <Send className="w-5 h-5 mr-2" />
-                      Send Message
+                      {t('contact.sendBtn')}
                     </>
                   )}
                 </Button>
