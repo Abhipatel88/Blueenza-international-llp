@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import './i18n';
+import ComingSoon from "./pages/ComingSoon";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Products from "./pages/Products";
@@ -60,20 +61,8 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
-            {/* Admin Routes */}
-            <Route path="/admin/login" element={<AdminLogin />} />
-            <Route path="/admin/dashboard" element={<AuthGuard><AdminDashboard /></AuthGuard>} />
-            <Route path="/admin/emails" element={<AuthGuard><AdminEmails /></AuthGuard>} />
-            <Route path="/admin/quotes" element={<AuthGuard><AdminQuotes /></AuthGuard>} />
-            <Route path="/admin/products" element={<AuthGuard><AdminProducts /></AuthGuard>} />
-            <Route path="/admin/profile" element={<AuthGuard><AdminProfile /></AuthGuard>} />
-            
-            {/* Public Routes - With navbar/footer */}
-            <Route path="/" element={<PublicLayout><Index /></PublicLayout>} />
-            <Route path="/about" element={<PublicLayout><About /></PublicLayout>} />
-            <Route path="/products" element={<PublicLayout><Products /></PublicLayout>} />
-            <Route path="/contact" element={<PublicLayout><Contact /></PublicLayout>} />
-            <Route path="*" element={<PublicLayout><NotFound /></PublicLayout>} />
+            {/* Coming Soon - All routes redirect here */}
+            <Route path="*" element={<ComingSoon />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
