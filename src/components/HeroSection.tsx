@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, TrendingUp, Users, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
+import { motion, AnimatePresence } from "framer-motion";
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -49,11 +50,20 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="animate-slide-in-left">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6"
+            >
               <Globe className="w-4 h-4 text-blue-600 mr-2" />
               <span className="text-blue-600 font-medium text-sm">Global Trade Excellence</span>
-            </div>
+            </motion.div>
             
             <h1 className="font-poppins font-bold text-5xl lg:text-6xl leading-tight text-gray-900 mb-6">
               <span className="text-gradient">Bluenza</span>
@@ -90,25 +100,36 @@ const HeroSection = () => {
                 <div className="text-sm text-gray-600">Global Delivery</div>
               </div>
             </div>
-          </div>
+          </motion.div>
           
           {/* Right Content - Carousel */}
-          <div className="animate-slide-in-right">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          >
             <div className="relative">
               {/* Carousel Container */}
-              <div className="glass-card rounded-3xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500 relative overflow-hidden">
+              <motion.div 
+                whileHover={{ rotate: 0, scale: 1.02 }}
+                initial={{ rotate: 3 }}
+                transition={{ duration: 0.5 }}
+                className="glass-card rounded-3xl p-8 relative overflow-hidden"
+              >
                 <div className="relative h-80 rounded-2xl overflow-hidden">
-                  {slides.map((slide, index) => (
-                    <img
-                      key={index}
-                      src={slide.image}
-                      alt={`${slide.title} - Bluenza International global trade services`}
-                      loading={index === 0 ? "eager" : "lazy"}
-                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                        index === currentSlide ? 'opacity-100' : 'opacity-0'
-                      }`}
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={currentSlide}
+                      src={slides[currentSlide].image}
+                      alt={`${slides[currentSlide].title} - Bluenza International global trade services`}
+                      loading={currentSlide === 0 ? "eager" : "lazy"}
+                      initial={{ opacity: 0, scale: 1.1 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.7 }}
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
-                  ))}
+                  </AnimatePresence>
                   
                   {/* Navigation Buttons */}
                   <button
@@ -139,20 +160,28 @@ const HeroSection = () => {
                     ))}
                   </div>
                 </div>
-              </div>
+              </motion.div>
               
               {/* Floating Cards */}
-              <div className="absolute -top-4 -right-4 glass-card rounded-2xl p-4 animate-pulse">
+              <motion.div 
+                animate={{ y: [0, -10, 0] }}
+                transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+                className="absolute -top-4 -right-4 glass-card rounded-2xl p-4"
+              >
                 <TrendingUp className="w-8 h-8 text-green-600 mb-2" />
                 <div className="text-sm font-semibold text-gray-800">Growing Markets</div>
-              </div>
+              </motion.div>
               
-              <div className="absolute -bottom-4 -left-4 glass-card rounded-2xl p-4 animate-pulse delay-500">
+              <motion.div 
+                animate={{ y: [0, 10, 0] }}
+                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: 1 }}
+                className="absolute -bottom-4 -left-4 glass-card rounded-2xl p-4"
+              >
                 <Users className="w-8 h-8 text-blue-600 mb-2" />
                 <div className="text-sm font-semibold text-gray-800">Global Network</div>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

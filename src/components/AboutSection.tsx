@@ -1,6 +1,7 @@
 
 import { CheckCircle, Award, Shield, Globe2 } from "lucide-react";
 import { useTranslation } from 'react-i18next';
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
   const { t } = useTranslation();
@@ -30,10 +31,21 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
-          <div className="animate-slide-in-left">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6"
+            >
               <span className="text-blue-600 font-medium text-sm">{t('about.badge')}</span>
-            </div>
+            </motion.div>
             
             <h2 className="font-poppins font-bold text-4xl text-gray-900 mb-6">
               <span className="text-gradient">{t('about.title')}</span>
@@ -71,12 +83,19 @@ const AboutSection = () => {
             </div>
              */}
 
-          </div>
+          </motion.div>
           
           {/* Right Content */}
-          <div className="animate-slide-in-right">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          >
             <div className="relative">
-              <img
+              <motion.img
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
                 src="/team.png"
                 alt="Bluenza International team working on global trade solutions"
                 className="w-full h-96 object-cover rounded-3xl shadow-2xl"
@@ -87,18 +106,23 @@ const AboutSection = () => {
               <div className="absolute -bottom-8 left-8 right-8">
                 <div className="grid grid-cols-3 gap-4">
                   {features.map((feature, index) => (
-                    <div
+                    <motion.div
                       key={index}
-                      className="glass-card rounded-xl p-4 text-center transform hover:scale-105 transition-all duration-300"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
+                      whileHover={{ scale: 1.05, y: -5 }}
+                      className="glass-card rounded-xl p-4 text-center"
                     >
                       <feature.icon className="w-6 h-6 text-blue-600 mx-auto mb-2" />
                       <div className="text-xs font-semibold text-gray-800">{feature.title}</div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

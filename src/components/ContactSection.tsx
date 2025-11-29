@@ -6,6 +6,7 @@ import { Phone, Mail, MapPin, Clock, Send, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from 'react-i18next';
+import { motion } from "framer-motion";
 
 const ContactSection = () => {
   const { t } = useTranslation();
@@ -97,10 +98,22 @@ const ContactSection = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6"
+          >
             <span className="text-blue-600 font-medium text-sm">{t('contact.badge')}</span>
-          </div>
+          </motion.div>
           
           <h2 className="font-poppins font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
             <span className="text-gradient">{t('contact.title')}</span>
@@ -109,11 +122,16 @@ const ContactSection = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             {t('contact.subtitle')}
           </p>
-        </div>
+        </motion.div>
         
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Information */}
-          <div className="animate-slide-in-left">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-8">
               {t('contact.contactInfo')}
             </h3>
@@ -151,7 +169,7 @@ const ContactSection = () => {
                 ></iframe>
               </div>
             </div>
-          </div>
+          </motion.div>
           
           {/* Contact Form */}
           <div className="animate-slide-in-right">

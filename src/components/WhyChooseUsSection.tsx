@@ -1,6 +1,7 @@
 
 import { Shield, Clock, Globe, Award, Users, Truck } from "lucide-react";
 import { useTranslation } from 'react-i18next';
+import { motion } from "framer-motion";
 
 const WhyChooseUsSection = () => {
   const { t } = useTranslation();
@@ -54,33 +55,65 @@ const WhyChooseUsSection = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6"
+          >
             <span className="text-blue-600 font-medium text-sm">{t('whyChoose.badge')}</span>
-          </div>
+          </motion.div>
           
-          <h2 className="font-poppins font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="font-poppins font-bold text-4xl lg:text-5xl text-gray-900 mb-6"
+          >
             <span className="text-gradient">{t('whyChoose.title')}</span>
-          </h2>
+          </motion.h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+          >
             {t('whyChoose.subtitle')}
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
         
         {/* Strengths Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {strengths.map((strength, index) => (
-            <div
+            <motion.div
               key={index}
-              className="group glass-card rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="group glass-card rounded-3xl p-8 hover:shadow-2xl transition-all duration-500"
             >
               {/* Icon */}
               <div className="relative mb-6">
-                <div className={`w-16 h-16 bg-gradient-to-r ${strength.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                <motion.div 
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ duration: 0.3 }}
+                  className={`w-16 h-16 bg-gradient-to-r ${strength.gradient} rounded-2xl flex items-center justify-center shadow-lg`}
+                >
                   <strength.icon className="w-8 h-8 text-white" />
-                </div>
+                </motion.div>
                 <div className={`absolute inset-0 w-16 h-16 bg-gradient-to-r ${strength.gradient} rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300`}></div>
               </div>
               
@@ -91,7 +124,7 @@ const WhyChooseUsSection = () => {
               <p className="text-gray-600 leading-relaxed">
                 {strength.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
         

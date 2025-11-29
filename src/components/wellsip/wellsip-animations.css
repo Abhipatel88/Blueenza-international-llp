@@ -1,0 +1,60 @@
+/* Wellsip Animations */
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logo-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes bottle-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease forwards;
+}
+
+.animate-logo-bounce {
+  animation: logo-bounce 2.4s ease-in-out infinite;
+}
+
+.animate-bottle-float {
+  animation: bottle-float 4s ease-in-out infinite;
+}
+
+.animate-bounce-slow {
+  animation: logo-bounce 2.4s ease-in-out infinite;
+}
+
+/* Scroll animations - will be triggered by Intersection Observer */
+.animate-on-scroll {
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.mineral-card {
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.review-card {
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+

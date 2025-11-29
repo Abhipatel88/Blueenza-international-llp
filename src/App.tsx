@@ -5,17 +5,23 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './i18n';
+import SVGPreloader from "./components/SVGPreloader";
 
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
+import Certificates from "./pages/Certificates";
 import NotFound from "./pages/NotFound";
+import Wellsip from "./pages/Wellsip";
+import ProductDetails from "./pages/ProductDetails";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
+import ScrollToTop from "./components/ScrollToTop";
+import SmoothScrolling from "./components/SmoothScrolling";
 import { HelmetProvider } from "react-helmet-async";
 
 // Admin imports
@@ -53,35 +59,56 @@ const PublicLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-const App = () => (
-  <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            {/* Public Routes */}
-            <Route path="/" element={<PublicLayout><Index /></PublicLayout>} />
-            <Route path="/about" element={<PublicLayout><About /></PublicLayout>} />
-            <Route path="/products" element={<PublicLayout><Products /></PublicLayout>} />
-            <Route path="/contact" element={<PublicLayout><Contact /></PublicLayout>} />
-            
-            {/* Admin Routes */}
-            <Route path="/admin/login" element={<AdminLogin />} />
-            <Route path="/admin/dashboard" element={<AuthGuard><AdminDashboard /></AuthGuard>} />
-            <Route path="/admin/emails" element={<AuthGuard><AdminEmails /></AuthGuard>} />
-            <Route path="/admin/quotes" element={<AuthGuard><AdminQuotes /></AuthGuard>} />
-            <Route path="/admin/products" element={<AuthGuard><AdminProducts /></AuthGuard>} />
-            <Route path="/admin/profile" element={<AuthGuard><AdminProfile /></AuthGuard>} />
-            
-            {/* 404 */}
-            <Route path="*" element={<PublicLayout><NotFound /></PublicLayout>} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
-  </HelmetProvider>
-);
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <SVGPreloader />;
+  }
+
+  return (
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <SmoothScrolling />
+            <ScrollToTop />
+            <Routes>
+              {/* Public Routes */}
+              <Route path="/" element={<PublicLayout><Index /></PublicLayout>} />
+              <Route path="/about" element={<PublicLayout><About /></PublicLayout>} />
+              <Route path="/products" element={<PublicLayout><Products /></PublicLayout>} />
+              <Route path="/certificates" element={<PublicLayout><Certificates /></PublicLayout>} />
+              <Route path="/contact" element={<PublicLayout><Contact /></PublicLayout>} />
+              <Route path="/wellsip" element={<Wellsip />} />
+              <Route path="/product/:productId" element={<ProductDetails />} />
+
+              {/* Admin Routes */}
+              <Route path="/admin/login" element={<AdminLogin />} />
+              <Route path="/admin/dashboard" element={<AuthGuard><AdminDashboard /></AuthGuard>} />
+              <Route path="/admin/emails" element={<AuthGuard><AdminEmails /></AuthGuard>} />
+              <Route path="/admin/quotes" element={<AuthGuard><AdminQuotes /></AuthGuard>} />
+              <Route path="/admin/products" element={<AuthGuard><AdminProducts /></AuthGuard>} />
+              <Route path="/admin/profile" element={<AuthGuard><AdminProfile /></AuthGuard>} />
+
+              {/* 404 */}
+              <Route path="*" element={<PublicLayout><NotFound /></PublicLayout>} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
+  );
+};
 
 export default App;

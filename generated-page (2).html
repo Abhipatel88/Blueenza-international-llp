@@ -1,0 +1,1261 @@
+<html lang="en"><head>
+  <title>Wellsip – Premium Alkaline Mineral Water</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-white text-zinc-900 antialiased selection:bg-pink-500/20 selection:text-zinc-900 font-sans">
+  <div class="fixed inset-0 -z-20 bg-gradient-to-b from-white via-zinc-50 to-zinc-100"></div>
+
+  <!-- Ambient glass & waves -->
+  <div class="pointer-events-none fixed inset-x-0 top-0 -z-10 h-48 bg-gradient-to-b from-pink-500/10 via-transparent to-transparent blur-3xl"></div>
+  <div class="pointer-events-none fixed inset-x-[-25%] top-32 -z-10 h-40 opacity-50">
+    <svg class="w-full h-full" viewBox="0 0 1200 200" preserveAspectRatio="none">
+      <path d="M0,80 C150,120 350,40 600,80 C850,120 1050,60 1200,100 L1200,200 L0,200 Z" fill="url(#waveGradient)" opacity="0.45">
+        <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
+            M0,80 C150,120 350,40 600,80 C850,120 1050,60 1200,100 L1200,200 L0,200 Z;
+            M0,60 C200,100 350,80 600,60 C800,40 1000,100 1200,80 L1200,200 L0,200 Z;
+            M0,90 C180,60 350,110 600,70 C820,40 980,90 1200,120 L1200,200 L0,200 Z;
+            M0,80 C150,120 350,40 600,80 C850,120 1050,60 1200,100 L1200,200 L0,200 Z
+          "></animate>
+      </path>
+      <defs>
+        <linearGradient id="waveGradient" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0%" stop-color="#ec4899"></stop>
+          <stop offset="50%" stop-color="#0f172a" stop-opacity="0.2"></stop>
+          <stop offset="100%" stop-color="#ec4899"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Page wrapper -->
+  <div class="relative flex min-h-screen flex-col">
+
+    <!-- Top contact bar -->
+    <div class="w-full border-b border-zinc-200 bg-white/80 backdrop-blur-md">
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2 text-sm text-zinc-600">
+        <div class="flex flex-wrap items-center gap-4">
+          <span class="inline-flex items-center gap-1.5">
+            <i data-lucide="phone" class="h-3.5 w-3.5 stroke-[1.5] text-pink-500"></i>
+            <span class="text-xs md:text-sm">+1 (800) 000–0000</span>
+          </span>
+          <span class="hidden items-center gap-1.5 sm:inline-flex">
+            <i data-lucide="mail" class="h-3.5 w-3.5 stroke-[1.5] text-pink-500"></i>
+            <span class="text-xs md:text-sm">care@wellsipwater.com</span>
+          </span>
+        </div>
+        <button class="group relative inline-flex items-center gap-2 rounded-full border border-pink-500/40 bg-pink-50/80 px-4 py-1.5 text-xs md:text-sm text-pink-700 transition-colors duration-300 hover:border-pink-500 hover:bg-pink-100">
+          <span>Find a Store</span>
+          <span class="flex h-5 w-5 items-center justify-center rounded-full bg-pink-500/90 text-[0.6rem] font-medium tracking-tight text-white group-hover:bg-pink-400 transition-colors duration-300">
+            Go
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main header / nav -->
+    <header id="mainHeader" class="sticky top-0 z-40 border-b border-zinc-200 bg-white/80 backdrop-blur-md transition-all duration-500">
+      <div class="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-3 md:py-4">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-2 group">
+          <div class="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-pink-500 to-zinc-700 shadow-lg shadow-pink-500/30 animate-logo-bounce">
+            <span class="text-xs font-semibold tracking-[0.18em] text-white">W</span>
+          </div>
+          <div class="flex flex-col leading-none -space-y-0.5">
+            <span class="text-base md:text-lg font-semibold tracking-[0.32em] text-zinc-900 uppercase">
+              Wellsip
+            </span>
+            <span class="text-[0.6rem] md:text-[0.65rem] font-light tracking-[0.2em] text-zinc-500 uppercase">
+              Premium Alkaline Water
+            </span>
+          </div>
+        </a>
+
+        <!-- Nav -->
+        <nav class="hidden items-center gap-6 text-xs md:flex md:text-sm">
+          <a href="#hero" class="nav-link text-zinc-600 transition-colors duration-300 hover:text-zinc-900">Home</a>
+          <a href="#story" class="nav-link text-zinc-600 transition-colors duration-300 hover:text-zinc-900">About</a>
+          <a href="#sustainability" class="nav-link text-zinc-600 transition-colors duration-300 hover:text-zinc-900">Sustainability</a>
+          <a href="#water" class="nav-link text-zinc-600 transition-colors duration-300 hover:text-zinc-900">Water</a>
+          <a href="#shop" class="nav-link text-zinc-600 transition-colors duration-300 hover:text-zinc-900">Shop</a>
+          <a href="#blog" class="nav-link text-zinc-600 transition-colors duration-300 hover:text-zinc-900">Blog</a>
+          <a href="#contact" class="nav-link text-zinc-600 transition-colors duration-300 hover:text-zinc-900">Contact</a>
+        </nav>
+
+        <!-- CTA + mobile toggle -->
+        <div class="flex items-center gap-3">
+          <a href="#shop" class="hidden md:inline-flex relative overflow-hidden rounded-full bg-gradient-to-r from-pink-500 via-pink-400 to-pink-500 px-4 py-1.5 text-xs md:text-sm font-medium tracking-tight text-white shadow-lg shadow-pink-500/40 transition-transform duration-300 hover:-translate-y-[1px] hover:shadow-pink-500/60">
+            <span class="relative z-10">Order Now</span>
+            <span class="pointer-events-none absolute inset-0 rounded-full bg-white/25 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+          </a>
+          <button id="mobileNavToggle" class="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 bg-white md:hidden">
+            <i data-lucide="menu" class="h-4 w-4 stroke-[1.5] text-zinc-900"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile nav -->
+      <div id="mobileNav" class="hidden border-t border-zinc-200 bg-white/95 backdrop-blur-md md:hidden">
+        <div class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3 text-sm">
+          <a href="#hero" class="mobile-link rounded-md px-3 py-2 text-zinc-800 hover:bg-zinc-100">Home</a>
+          <a href="#story" class="mobile-link rounded-md px-3 py-2 text-zinc-800 hover:bg-zinc-100">About</a>
+          <a href="#sustainability" class="mobile-link rounded-md px-3 py-2 text-zinc-800 hover:bg-zinc-100">Sustainability</a>
+          <a href="#water" class="mobile-link rounded-md px-3 py-2 text-zinc-800 hover:bg-zinc-100">Water</a>
+          <a href="#shop" class="mobile-link rounded-md px-3 py-2 text-zinc-800 hover:bg-zinc-100">Shop</a>
+          <a href="#blog" class="mobile-link rounded-md px-3 py-2 text-zinc-800 hover:bg-zinc-100">Blog</a>
+          <a href="#contact" class="mobile-link rounded-md px-3 py-2 text-zinc-800 hover:bg-zinc-100">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <!-- HERO -->
+      <section id="hero" class="relative overflow-hidden">
+        <div class="mx-auto flex max-w-6xl flex-col items-center gap-10 px-4 py-10 md:flex-row md:py-16 lg:py-20">
+          <!-- Text -->
+          <div class="w-full md:w-1/2">
+            <div class="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-[0.65rem] font-light tracking-tight text-zinc-700 animate-fade-in-up opacity-0 translate-y-3">
+              <span class="h-1 w-1 rounded-full bg-pink-500"></span>
+              <span>Naturally enriched · pH 8+</span>
+            </div>
+            <h1 class="mt-4 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-zinc-900 animate-fade-in-up opacity-0 translate-y-3 [animation-delay:0.06s]">
+              BORN ALKALINE –<br>
+              Premium Mineral Water
+            </h1>
+            <p class="mt-4 text-base md:text-lg font-light leading-relaxed text-zinc-600 animate-fade-in-up opacity-0 translate-y-3 [animation-delay:0.12s]">
+              Wellsip is naturally alkaline mineral water, enriched through decades of filtration in
+              mineral-rich strata, delivering a smooth, crisp sip with a stable pH of 8+.
+            </p>
+            <div class="mt-6 flex flex-wrap items-center gap-4 animate-fade-in-up opacity-0 translate-y-3 [animation-delay:0.18s]">
+              <button class="relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-pink-500 via-pink-400 to-pink-500 px-6 py-2.5 text-sm font-medium tracking-tight text-white shadow-lg shadow-pink-500/40 transition-transform duration-300 hover:-translate-y-[1px]">
+                <span class="relative z-10">Order Now</span>
+                <span class="pointer-events-none absolute inset-0 rounded-full bg-white/25 opacity-0 transition-opacity duration-500"></span>
+              </button>
+              <button class="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-light text-zinc-900 transition-colors duration-300 hover:border-pink-400 hover:bg-pink-50">
+                <span class="flex h-7 w-7 items-center justify-center rounded-full bg-pink-50 text-[0.7rem] text-pink-500">
+                  pH 8+
+                </span>
+                <span>Learn more about our source</span>
+              </button>
+            </div>
+            <div class="mt-5 flex flex-wrap items-center gap-6 text-[0.7rem] md:text-xs font-light text-zinc-500 animate-fade-in-up opacity-0 translate-y-3 [animation-delay:0.24s]">
+              <div class="flex items-center gap-2">
+                <span class="h-5 w-[1px] bg-gradient-to-b from-pink-500 via-zinc-400 to-transparent"></span>
+                <div class="flex flex-col">
+                  <span class="text-zinc-900">pH 8+ stable</span>
+                  <span>naturally alkaline, no artificial ionization</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="h-5 w-[1px] bg-gradient-to-b from-pink-500 via-zinc-400 to-transparent"></span>
+                <div class="flex flex-col">
+                  <span class="text-zinc-900">Mineral-rich</span>
+                  <span>balanced magnesium, calcium, bicarbonates</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero image / bottle -->
+          <div class="relative flex w-full items-center justify-center md:w-1/2 animate-fade-in-up opacity-0 translate-y-3 [animation-delay:0.18s]">
+            <div class="relative aspect-[3/5] w-3/4 max-w-md rounded-[1.75rem] border border-zinc-200 bg-white shadow-[0_0_60px_rgba(236,72,153,0.30)] backdrop-blur-3xl">
+              <!-- Inner glow -->
+              <div class="pointer-events-none absolute inset-2 rounded-[1.25rem] border border-zinc-100 bg-gradient-to-b from-white via-zinc-50 to-zinc-200/60"></div>
+
+              <!-- Bottle placeholder -->
+              <div class="relative z-10 flex h-full flex-col items-center justify-center">
+                <div class="relative flex h-3/4 w-2/3 items-center justify-center rounded-full bg-gradient-to-b from-zinc-100 via-white to-zinc-300 shadow-[0_40px_60px_rgba(15,23,42,0.2)] animate-bottle-float">
+                  <div class="flex h-[80%] w-[50%] items-center justify-center rounded-[1.6rem] border border-zinc-200 bg-gradient-to-b from-white via-zinc-50 to-zinc-200">
+                    <span class="text-[0.75rem] font-semibold tracking-[0.22em] text-zinc-700 uppercase text-center leading-tight">
+                      Bottle<br>Placeholder
+                    </span>
+                  </div>
+                </div>
+                <div class="mt-3 text-center text-[0.7rem] font-light text-zinc-500">
+                  Replace with Wellsip bottle render<br>
+                  (front-facing, high-resolution)
+                </div>
+              </div>
+
+              <!-- Top label -->
+              <div class="pointer-events-none absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white/90 px-2.5 py-1 text-[0.6rem] font-light tracking-tight text-zinc-700 shadow-lg">
+                <span class="h-1.5 w-1.5 rounded-full bg-pink-500"></span>
+                <span>Mineral-rich aquifer</span>
+              </div>
+
+              <!-- pH badge -->
+              <div class="pointer-events-none absolute -right-6 top-8 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-tr from-pink-500 to-white text-center text-[0.65rem] font-medium tracking-tight text-zinc-900 shadow-xl shadow-pink-500/40">
+                <span>pH<br>8+</span>
+              </div>
+
+              <!-- Gradient ring -->
+              <div class="pointer-events-none absolute -right-10 bottom-6 h-24 w-24 rounded-full border border-pink-500/40 bg-pink-200/40 blur-md"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STORY -->
+      <section id="story" class="relative border-t border-zinc-200 bg-white/70">
+        <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+          <div class="grid gap-10 md:grid-cols-[1.1fr_minmax(0,1fr)] items-center">
+            <div class="space-y-4 animate-on-scroll opacity-0 translate-y-6">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-zinc-900">
+                Naturally Alkaline Mineral Water. Origin Pure Nature.
+              </h2>
+              <p class="text-base md:text-lg font-light leading-relaxed text-zinc-600">
+                Wellsip begins its journey deep within natural mineral-rich layers of the Earth.
+                Enriched naturally over decades, our alkaline water is packed with essential minerals
+                and maintains a natural pH of 8+, offering purity, smoothness, and wellness in every sip.
+              </p>
+              <div class="flex flex-wrap items-center gap-4">
+                <button class="group inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-light text-zinc-900 transition-colors duration-300 hover:border-pink-400 hover:bg-pink-50">
+                  <span class="flex h-7 w-7 items-center justify-center rounded-full bg-pink-500/90 text-white shadow-lg shadow-pink-500/40">
+                    <i data-lucide="play" class="h-3.5 w-3.5 stroke-[1.5]"></i>
+                  </span>
+                  <span>Watch Video</span>
+                </button>
+                <span class="text-[0.75rem] font-light text-zinc-500">
+                  90-second story of our natural source and aquifer journey.
+                </span>
+              </div>
+            </div>
+            <!-- Glass card -->
+            <div class="relative rounded-2xl border border-zinc-200 bg-gradient-to-b from-white via-white to-zinc-50 p-6 shadow-[0_24px_60px_rgba(15,23,42,0.12)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6 [transition-delay:0.08s]">
+              <div class="pointer-events-none absolute inset-0 rounded-2xl border border-white/60 bg-gradient-to-tr from-white/80 via-transparent to-pink-100/60"></div>
+              <div class="relative space-y-5">
+                <div class="flex items-center justify-between gap-4">
+                  <div>
+                    <p class="text-[0.75rem] font-medium tracking-[0.22em] text-pink-500 uppercase">
+                      Wellsip Origin
+                    </p>
+                    <p class="mt-1 text-sm font-light text-zinc-600">
+                      Naturally filtered through volcanic rock and mineral-rich formations.
+                    </p>
+                  </div>
+                  <div class="flex h-10 w-10 items-center justify-center rounded-full bg-pink-50 text-[0.6rem] font-medium tracking-[0.22em] text-pink-600 uppercase">
+                    pH&nbsp;8+
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4 text-[0.8rem] font-light text-zinc-700">
+                  <div class="space-y-1">
+                    <p class="text-zinc-400">Source Depth</p>
+                    <p class="text-sm text-zinc-900">250+ m below ground</p>
+                  </div>
+                  <div class="space-y-1">
+                    <p class="text-zinc-400">Mineral Journey</p>
+                    <p class="text-sm text-zinc-900">Over decades of natural filtration</p>
+                  </div>
+                  <div class="space-y-1">
+                    <p class="text-zinc-400">Processing</p>
+                    <p class="text-sm text-zinc-900">No artificial ionization</p>
+                  </div>
+                  <div class="space-y-1">
+                    <p class="text-zinc-400">Taste Profile</p>
+                    <p class="text-sm text-zinc-900">Soft, silky, refined finish</p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between gap-4 pt-2">
+                  <div class="flex items-center gap-2 text-[0.75rem] text-zinc-500">
+                    <span class="h-1.5 w-8 rounded-full bg-gradient-to-r from-pink-500 to-zinc-300"></span>
+                    Sustainably drawn, monitored at source.
+                  </div>
+                  <button class="text-[0.75rem] font-medium text-pink-500 hover:text-pink-400 transition-colors duration-300">
+                    Source certification →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MINERAL COMPOSITION GRID -->
+      <section id="water" class="relative border-t border-zinc-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+          <div class="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div class="space-y-2">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-zinc-900">
+                Mineral Composition. Perfectly Balanced.
+              </h2>
+              <p class="text-base font-light text-zinc-600">
+                Every Wellsip batch is rigorously tested to maintain a naturally balanced mineral
+                spectrum, harmonising taste, wellness, and hydration.
+              </p>
+            </div>
+            <div class="text-[0.75rem] font-light text-zinc-500">
+              Values per litre. Naturally occurring, not artificially enhanced.
+            </div>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Card template: repeated with different content -->
+            <div class="mineral-card group rounded-2xl border border-zinc-200 bg-white p-4 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-pink-50 text-pink-500">
+                    <i data-lucide="activity" class="h-4 w-4 stroke-[1.5]"></i>
+                  </div>
+                  <p class="text-xs font-medium tracking-[0.22em] text-zinc-700 uppercase">
+                    Alkalinity
+                  </p>
+                </div>
+                <span class="text-[0.7rem] font-light text-zinc-400">pH value</span>
+              </div>
+              <div class="mt-3 flex items-baseline gap-2">
+                <span class="text-xl font-semibold tracking-tight text-zinc-900">7.8 – 8.5</span>
+                <span class="text-[0.7rem] font-light text-zinc-500">pH</span>
+              </div>
+              <p class="mt-2 text-[0.8rem] font-light text-zinc-600">
+                Naturally stable alkaline profile for a smooth, rounded taste.
+              </p>
+            </div>
+
+            <div class="mineral-card group rounded-2xl border border-zinc-200 bg-white p-4 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-pink-50 text-pink-500">
+                    <i data-lucide="sparkles" class="h-4 w-4 stroke-[1.5]"></i>
+                  </div>
+                  <p class="text-xs font-medium tracking-[0.22em] text-zinc-700 uppercase">
+                    Magnesium
+                  </p>
+                </div>
+                <span class="text-[0.7rem] font-light text-zinc-400">10–15 mg/L</span>
+              </div>
+              <div class="mt-3 flex items-baseline gap-2">
+                <span class="text-xl font-semibold tracking-tight text-zinc-900">10–15</span>
+                <span class="text-[0.7rem] font-light text-zinc-500">mg</span>
+              </div>
+              <p class="mt-2 text-[0.8rem] font-light text-zinc-600">
+                Supports muscle function and contributes to balanced electrolyte levels.
+              </p>
+            </div>
+
+            <div class="mineral-card group rounded-2xl border border-zinc-200 bg-white p-4 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-pink-50 text-pink-500">
+                    <i data-lucide="shield" class="h-4 w-4 stroke-[1.5]"></i>
+                  </div>
+                  <p class="text-xs font-medium tracking-[0.22em] text-zinc-700 uppercase">
+                    Calcium
+                  </p>
+                </div>
+                <span class="text-[0.7rem] font-light text-zinc-400">18–23 mg/L</span>
+              </div>
+              <div class="mt-3 flex items-baseline gap-2">
+                <span class="text-xl font-semibold tracking-tight text-zinc-900">18–23</span>
+                <span class="text-[0.7rem] font-light text-zinc-500">mg</span>
+              </div>
+              <p class="mt-2 text-[0.8rem] font-light text-zinc-600">
+                Essential for bone health, naturally balanced for everyday hydration.
+              </p>
+            </div>
+
+            <div class="mineral-card group rounded-2xl border border-zinc-200 bg-white p-4 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-pink-50 text-pink-500">
+                    <i data-lucide="diamond" class="h-4 w-4 stroke-[1.5]"></i>
+                  </div>
+                  <p class="text-xs font-medium tracking-[0.22em] text-zinc-700 uppercase">
+                    Silica
+                  </p>
+                </div>
+                <span class="text-[0.7rem] font-light text-zinc-400">10–14 mg/L</span>
+              </div>
+              <div class="mt-3 flex items-baseline gap-2">
+                <span class="text-xl font-semibold tracking-tight text-zinc-900">10–14</span>
+                <span class="text-[0.7rem] font-light text-zinc-500">mg</span>
+              </div>
+              <p class="mt-2 text-[0.8rem] font-light text-zinc-600">
+                Contributes to the smooth mouthfeel and clarity of Wellsip.
+              </p>
+            </div>
+
+            <div class="mineral-card group rounded-2xl border border-zinc-200 bg-white p-4 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-pink-50 text-pink-500">
+                    <i data-lucide="droplets" class="h-4 w-4 stroke-[1.5]"></i>
+                  </div>
+                  <p class="text-xs font-medium tracking-[0.22em] text-zinc-700 uppercase">
+                    Sodium
+                  </p>
+                </div>
+                <span class="text-[0.7rem] font-light text-zinc-400">40–60 mg/L</span>
+              </div>
+              <div class="mt-3 flex items-baseline gap-2">
+                <span class="text-xl font-semibold tracking-tight text-zinc-900">40–60</span>
+                <span class="text-[0.7rem] font-light text-zinc-500">mg</span>
+              </div>
+              <p class="mt-2 text-[0.8rem] font-light text-zinc-600">
+                Balanced sodium levels to support natural hydration.
+              </p>
+            </div>
+
+            <div class="mineral-card group rounded-2xl border border-zinc-200 bg-white p-4 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-pink-50 text-pink-500">
+                    <i data-lucide="ban" class="h-4 w-4 stroke-[1.5]"></i>
+                  </div>
+                  <p class="text-xs font-medium tracking-[0.22em] text-zinc-700 uppercase">
+                    Fluoride
+                  </p>
+                </div>
+                <span class="text-[0.7rem] font-light text-zinc-400">&lt; 0.2 mg/L</span>
+              </div>
+              <div class="mt-3 flex items-baseline gap-2">
+                <span class="text-xl font-semibold tracking-tight text-zinc-900">&lt; 0.2</span>
+                <span class="text-[0.7rem] font-light text-zinc-500">mg</span>
+              </div>
+              <p class="mt-2 text-[0.8rem] font-light text-zinc-600">
+                Carefully monitored to stay significantly below permissible limits.
+              </p>
+            </div>
+
+            <div class="mineral-card group rounded-2xl border border-zinc-200 bg-white p-4 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-pink-50 text-pink-500">
+                    <i data-lucide="waves" class="h-4 w-4 stroke-[1.5]"></i>
+                  </div>
+                  <p class="text-xs font-medium tracking-[0.22em] text-zinc-700 uppercase">
+                    Bicarbonates
+                  </p>
+                </div>
+                <span class="text-[0.7rem] font-light text-zinc-400">225–250 mg/L</span>
+              </div>
+              <div class="mt-3 flex items-baseline gap-2">
+                <span class="text-xl font-semibold tracking-tight text-zinc-900">225–250</span>
+                <span class="text-[0.7rem] font-light text-zinc-500">mg</span>
+              </div>
+              <p class="mt-2 text-[0.8rem] font-light text-zinc-600">
+                Key contributor to Wellsip’s alkaline profile and gentle texture.
+              </p>
+            </div>
+
+            <div class="mineral-card group rounded-2xl border border-zinc-200 bg-white p-4 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-pink-50 text-pink-500">
+                    <i data-lucide="bolt" class="h-4 w-4 stroke-[1.5]"></i>
+                  </div>
+                  <p class="text-xs font-medium tracking-[0.22em] text-zinc-700 uppercase">
+                    Potassium
+                  </p>
+                </div>
+                <span class="text-[0.7rem] font-light text-zinc-400">2–5 mg/L</span>
+              </div>
+              <div class="mt-3 flex items-baseline gap-2">
+                <span class="text-xl font-semibold tracking-tight text-zinc-900">2–5</span>
+                <span class="text-[0.7rem] font-light text-zinc-500">mg</span>
+              </div>
+              <p class="mt-2 text-[0.8rem] font-light text-zinc-600">
+                Complements the mineral balance that supports everyday performance.
+              </p>
+            </div>
+
+            <div class="mineral-card group rounded-2xl border border-zinc-200 bg-white p-4 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6 sm:col-span-2 lg:col-span-3">
+              <div class="flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-pink-50 text-pink-500">
+                    <i data-lucide="gauge" class="h-4 w-4 stroke-[1.5]"></i>
+                  </div>
+                  <p class="text-xs font-medium tracking-[0.22em] text-zinc-700 uppercase">
+                    Total Dissolved Solids
+                  </p>
+                </div>
+                <span class="text-[0.7rem] font-light text-zinc-400">200–300 mg/L</span>
+              </div>
+              <div class="mt-3 flex items-baseline gap-2">
+                <span class="text-xl font-semibold tracking-tight text-zinc-900">200–300</span>
+                <span class="text-[0.7rem] font-light text-zinc-500">TDS</span>
+              </div>
+              <p class="mt-2 text-[0.8rem] font-light text-zinc-600">
+                A premium TDS range that perfectly balances lightness with a satisfyingly rounded
+                taste. Every batch is closely monitored to maintain this profile.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section id="reviews" class="relative border-t border-zinc-200 bg-zinc-50/80">
+        <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+          <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div class="space-y-2">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-zinc-900">
+                Loved by Athletes, Chefs &amp; Everyday Purists.
+              </h2>
+              <p class="text-base font-light text-zinc-600">
+                A refined hydration experience trusted across fine dining, wellness, and sport.
+              </p>
+            </div>
+            <div class="flex items-center gap-2 text-[0.75rem] font-light text-zinc-500">
+              <i data-lucide="star" class="h-3.5 w-3.5 stroke-[1.5] text-pink-500"></i>
+              <span>4.9 average rating across verified customers</span>
+            </div>
+          </div>
+
+          <div class="relative mt-8">
+            <!-- Slider container -->
+            <div id="reviewSlider" class="overflow-hidden">
+              <div id="reviewTrack" class="flex gap-4 transition-transform duration-700">
+                <!-- 3 visible cards; we’ll loop them -->
+                <div class="review-card min-w-full sm:min-w-[calc(50%-0.5rem)] lg:min-w-[calc(33.333%-0.55rem)] rounded-2xl border border-zinc-200 bg-white p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl">
+                  <div class="flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                      <div class="h-9 w-9 rounded-full bg-gradient-to-br from-pink-400 to-zinc-300">
+                      </div>
+                      <div>
+                        <p class="text-sm font-medium text-zinc-900">Aria Mitchell</p>
+                        <p class="text-[0.7rem] font-light text-zinc-500">
+                          Endurance Athlete
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-1 text-pink-500">
+                      <i data-lucide="star" class="h-3.5 w-3.5 stroke-[1.5] fill-pink-500/70"></i>
+                      <span class="text-[0.75rem] font-medium">5.0</span>
+                    </div>
+                  </div>
+                  <p class="mt-3 text-[0.85rem] font-light leading-relaxed text-zinc-700">
+                    “The first thing I noticed was the smoothness. During long sessions, Wellsip
+                    keeps me hydrated without any heaviness. It’s become my default off-the-field
+                    water.”
+                  </p>
+                </div>
+
+                <div class="review-card min-w-full sm:min-w-[calc(50%-0.5rem)] lg:min-w-[calc(33.333%-0.55rem)] rounded-2xl border border-zinc-200 bg-white p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl">
+                  <div class="flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                      <div class="h-9 w-9 rounded-full bg-gradient-to-br from-zinc-300 to-zinc-700">
+                      </div>
+                      <div>
+                        <p class="text-sm font-medium text-zinc-900">Chef Laurent</p>
+                        <p class="text-[0.7rem] font-light text-zinc-500">
+                          Executive Chef
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-1 text-pink-500">
+                      <i data-lucide="star" class="h-3.5 w-3.5 stroke-[1.5] fill-pink-500/70"></i>
+                      <span class="text-[0.75rem] font-medium">4.9</span>
+                    </div>
+                  </div>
+                  <p class="mt-3 text-[0.85rem] font-light leading-relaxed text-zinc-700">
+                    “In the dining room, water has to complement the experience, not compete with
+                    it. Wellsip is clean, soft, and presents beautifully on the table.”
+                  </p>
+                </div>
+
+                <div class="review-card min-w-full sm:min-w-[calc(50%-0.5rem)] lg:min-w-[calc(33.333%-0.55rem)] rounded-2xl border border-zinc-200 bg-white p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl">
+                  <div class="flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                      <div class="h-9 w-9 rounded-full bg-gradient-to-br from-pink-200 to-zinc-500">
+                      </div>
+                      <div>
+                        <p class="text-sm font-medium text-zinc-900">Rhea Kapoor</p>
+                        <p class="text-[0.7rem] font-light text-zinc-500">
+                          Wellness Coach
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-1 text-pink-500">
+                      <i data-lucide="star" class="h-3.5 w-3.5 stroke-[1.5] fill-pink-500/70"></i>
+                      <span class="text-[0.75rem] font-medium">4.9</span>
+                    </div>
+                  </div>
+                  <p class="mt-3 text-[0.85rem] font-light leading-relaxed text-zinc-700">
+                    “Having a naturally alkaline option with transparent mineral information is
+                    non-negotiable for my clients. Wellsip ticks all the boxes.”
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slider dots -->
+            <div class="mt-4 flex justify-center gap-2">
+              <button class="review-dot h-1.5 w-4 rounded-full bg-pink-500/80 transition-all duration-300"></button>
+              <button class="review-dot h-1.5 w-2 rounded-full bg-zinc-300 transition-all duration-300"></button>
+              <button class="review-dot h-1.5 w-2 rounded-full bg-zinc-300 transition-all duration-300"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHOP SECTION -->
+      <section id="shop" class="relative border-t border-zinc-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+          <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div class="space-y-2">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-zinc-900">
+                Shop Wellsip Premium Alkaline Water
+              </h2>
+              <p class="text-base font-light text-zinc-600">
+                Available in 100% recyclable bottles.
+              </p>
+            </div>
+            <button class="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-light text-zinc-900 transition-colors duration-300 hover:border-pink-400 hover:bg-pink-50">
+              <i data-lucide="shopping-bag" class="h-4 w-4 stroke-[1.5] text-pink-500"></i>
+              <span>View all formats</span>
+            </button>
+          </div>
+
+          <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Product card template -->
+            <div class="group rounded-2xl border border-zinc-200 bg-white p-5 shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <p class="text-sm font-medium text-zinc-900">1L Bottle – Pack of 6</p>
+                  <p class="mt-1 text-[0.8rem] font-light text-zinc-500">
+                    Everyday premium hydration for home &amp; office.
+                  </p>
+                </div>
+                <div class="flex h-9 w-9 items-center justify-center rounded-full bg-pink-50 text-[0.7rem] font-medium text-pink-600">
+                  1L
+                </div>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-4">
+                <div class="flex h-24 flex-1 items-center justify-center rounded-xl border border-zinc-200 bg-gradient-to-b from-zinc-100 via-white to-zinc-100">
+                  <span class="text-[0.7rem] font-light text-zinc-500">
+                    Bottle image<br>placeholder
+                  </span>
+                </div>
+                <div class="flex flex-col items-end justify-between">
+                  <span class="text-base font-semibold tracking-tight text-zinc-900">
+                    $29.00
+                  </span>
+                  <button class="relative mt-2 inline-flex items-center justify-center overflow-hidden rounded-full bg-pink-500/90 px-4 py-1.5 text-[0.8rem] font-medium tracking-tight text-white shadow-md shadow-pink-500/40 transition-transform duration-300 group-hover:-translate-y-[1px]">
+                    <span class="relative z-10">Buy Now</span>
+                    <span class="pointer-events-none absolute inset-0 rounded-full bg-white/25 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="group rounded-2xl border border-zinc-200 bg-white p-5 shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <p class="text-sm font-medium text-zinc-900">750 mL Glass Bottle – Pack of 4</p>
+                  <p class="mt-1 text-[0.8rem] font-light text-zinc-500">
+                    Signature glass for dining tables and premium service.
+                  </p>
+                </div>
+                <div class="flex h-9 w-9 items-center justify-center rounded-full bg-pink-50 text-[0.7rem] font-medium text-pink-600">
+                  750
+                </div>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-4">
+                <div class="flex h-24 flex-1 items-center justify-center rounded-xl border border-zinc-200 bg-gradient-to-b from-zinc-100 via-white to-zinc-100">
+                  <span class="text-[0.7rem] font-light text-zinc-500">
+                    Bottle image<br>placeholder
+                  </span>
+                </div>
+                <div class="flex flex-col items-end justify-between">
+                  <span class="text-base font-semibold tracking-tight text-zinc-900">
+                    $34.00
+                  </span>
+                  <button class="relative mt-2 inline-flex items-center justify-center overflow-hidden rounded-full bg-pink-500/90 px-4 py-1.5 text-[0.8rem] font-medium tracking-tight text-white shadow-md shadow-pink-500/40 transition-transform duration-300 group-hover:-translate-y-[1px]">
+                    <span class="relative z-10">Buy Now</span>
+                    <span class="pointer-events-none absolute inset-0 rounded-full bg-white/25 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="group rounded-2xl border border-zinc-200 bg-white p-5 shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <p class="text-sm font-medium text-zinc-900">500 mL PET Bottle – Pack of 20</p>
+                  <p class="mt-1 text-[0.8rem] font-light text-zinc-500">
+                    On-the-go hydration with lightweight, recyclable PET.
+                  </p>
+                </div>
+                <div class="flex h-9 w-9 items-center justify-center rounded-full bg-pink-50 text-[0.7rem] font-medium text-pink-600">
+                  500
+                </div>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-4">
+                <div class="flex h-24 flex-1 items-center justify-center rounded-xl border border-zinc-200 bg-gradient-to-b from-zinc-100 via-white to-zinc-100">
+                  <span class="text-[0.7rem] font-light text-zinc-500">
+                    Bottle image<br>placeholder
+                  </span>
+                </div>
+                <div class="flex flex-col items-end justify-between">
+                  <span class="text-base font-semibold tracking-tight text-zinc-900">
+                    $39.00
+                  </span>
+                  <button class="relative mt-2 inline-flex items-center justify-center overflow-hidden rounded-full bg-pink-500/90 px-4 py-1.5 text-[0.8rem] font-medium tracking-tight text-white shadow-md shadow-pink-500/40 transition-transform duration-300 group-hover:-translate-y-[1px]">
+                    <span class="relative z-10">Buy Now</span>
+                    <span class="pointer-events-none absolute inset-0 rounded-full bg-white/25 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="group rounded-2xl border border-zinc-200 bg-white p-5 shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <p class="text-sm font-medium text-zinc-900">250 mL Glass Bottle – Pack of 6</p>
+                  <p class="mt-1 text-[0.8rem] font-light text-zinc-500">
+                    Ideal for curated tastings and premium experiences.
+                  </p>
+                </div>
+                <div class="flex h-9 w-9 items-center justify-center rounded-full bg-pink-50 text-[0.7rem] font-medium text-pink-600">
+                  250
+                </div>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-4">
+                <div class="flex h-24 flex-1 items-center justify-center rounded-xl border border-zinc-200 bg-gradient-to-b from-zinc-100 via-white to-zinc-100">
+                  <span class="text-[0.7rem] font-light text-zinc-500">
+                    Bottle image<br>placeholder
+                  </span>
+                </div>
+                <div class="flex flex-col items-end justify-between">
+                  <span class="text-base font-semibold tracking-tight text-zinc-900">
+                    $24.00
+                  </span>
+                  <button class="relative mt-2 inline-flex items-center justify-center overflow-hidden rounded-full bg-pink-500/90 px-4 py-1.5 text-[0.8rem] font-medium tracking-tight text-white shadow-md shadow-pink-500/40 transition-transform duration-300 group-hover:-translate-y-[1px]">
+                    <span class="relative z-10">Buy Now</span>
+                    <span class="pointer-events-none absolute inset-0 rounded-full bg-white/25 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="group rounded-2xl border border-zinc-200 bg-white p-5 shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <p class="text-sm font-medium text-zinc-900">200 mL PET Bottle – Pack of 20</p>
+                  <p class="mt-1 text-[0.8rem] font-light text-zinc-500">
+                    Compact format for events, hospitality &amp; travel.
+                  </p>
+                </div>
+                <div class="flex h-9 w-9 items-center justify-center rounded-full bg-pink-50 text-[0.7rem] font-medium text-pink-600">
+                  200
+                </div>
+              </div>
+              <div class="mt-4 flex items-center justify-between gap-4">
+                <div class="flex h-24 flex-1 items-center justify-center rounded-xl border border-zinc-200 bg-gradient-to-b from-zinc-100 via-white to-zinc-100">
+                  <span class="text-[0.7rem] font-light text-zinc-500">
+                    Bottle image<br>placeholder
+                  </span>
+                </div>
+                <div class="flex flex-col items-end justify-between">
+                  <span class="text-base font-semibold tracking-tight text-zinc-900">
+                    $32.00
+                  </span>
+                  <button class="relative mt-2 inline-flex items-center justify-center overflow-hidden rounded-full bg-pink-500/90 px-4 py-1.5 text-[0.8rem] font-medium tracking-tight text-white shadow-md shadow-pink-500/40 transition-transform duration-300 group-hover:-translate-y-[1px]">
+                    <span class="relative z-10">Buy Now</span>
+                    <span class="pointer-events-none absolute inset-0 rounded-full bg-white/25 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- QUALITY CONTROL -->
+      <section id="sustainability" class="relative border-t border-zinc-200 bg-zinc-50/80">
+        <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+          <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div class="space-y-2">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-zinc-900">
+                Our Quality Standards
+              </h2>
+              <p class="text-base font-light text-zinc-600">
+                Every Wellsip bottle is produced in controlled, certified facilities that adhere to
+                international benchmarks for safety and quality.
+              </p>
+            </div>
+            <div class="text-[0.75rem] font-light text-zinc-500">
+              Regular third‑party audits. Real-time batch tracking. Transparent reporting.
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-wrap items-center justify-between gap-4 animate-on-scroll opacity-0 translate-y-6">
+            <!-- Cert icons -->
+            <div class="flex flex-1 items-center justify-center gap-2 rounded-2xl border border-zinc-200 bg-white px-4 py-3 shadow-[0_14px_30px_rgba(15,23,42,0.08)] backdrop-blur-2xl">
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-pink-50 text-[0.7rem] font-semibold tracking-[0.2em] text-pink-600 uppercase">
+                ISO
+              </span>
+              <div class="flex flex-col">
+                <span class="text-xs font-medium text-zinc-900">ISO Certified</span>
+                <span class="text-[0.7rem] font-light text-zinc-500">Quality management systems</span>
+              </div>
+            </div>
+
+            <div class="flex flex-1 items-center justify-center gap-2 rounded-2xl border border-zinc-200 bg-white px-4 py-3 shadow-[0_14px_30px_rgba(15,23,42,0.08)] backdrop-blur-2xl">
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-pink-50 text-[0.7rem] font-semibold tracking-[0.2em] text-pink-600 uppercase">
+                H
+              </span>
+              <div class="flex flex-col">
+                <span class="text-xs font-medium text-zinc-900">HACCP</span>
+                <span class="text-[0.7rem] font-light text-zinc-500">Hazard analysis &amp; control</span>
+              </div>
+            </div>
+
+            <div class="flex flex-1 items-center justify-center gap-2 rounded-2xl border border-zinc-200 bg-white px-4 py-3 shadow-[0_14px_30px_rgba(15,23,42,0.08)] backdrop-blur-2xl">
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-pink-50 text-[0.7rem] font-semibold tracking-[0.2em] text-pink-600 uppercase">
+                F
+              </span>
+              <div class="flex flex-col">
+                <span class="text-xs font-medium text-zinc-900">FSSAI</span>
+                <span class="text-[0.7rem] font-light text-zinc-500">Food safety compliance</span>
+              </div>
+            </div>
+
+            <div class="flex flex-1 items-center justify-center gap-2 rounded-2xl border border-zinc-200 bg-white px-4 py-3 shadow-[0_14px_30px_rgba(15,23,42,0.08)] backdrop-blur-2xl">
+              <span class="flex h-8 w-8 items-center justify-center rounded-full bg-pink-50 text-[0.7rem] font-semibold tracking-[0.2em] text-pink-600 uppercase">
+                W
+              </span>
+              <div class="flex flex-col">
+                <span class="text-xs font-medium text-zinc-900">WHO Guidelines</span>
+                <span class="text-[0.7rem] font-light text-zinc-500">Aligned with global standards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRUSTED BY -->
+      <section id="trusted" class="relative border-t border-zinc-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+          <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div class="space-y-2">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-zinc-900">
+                Trusted By
+              </h2>
+              <p class="text-base font-light text-zinc-600">
+                From luxury hospitality to world‑class athletes, Wellsip is chosen where water
+                quality cannot be compromised.
+              </p>
+            </div>
+            <div class="text-[0.75rem] font-light text-zinc-500">
+              Hotels · Fine Dining · Training Facilities · Wellness Retreats
+            </div>
+          </div>
+
+          <div class="mt-8 grid gap-6 lg:grid-cols-[1.1fr_minmax(0,1fr)] items-start">
+            <!-- Logo grid -->
+            <div class="grid grid-cols-2 gap-4 rounded-2xl border border-zinc-200 bg-white p-5 shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <div class="flex h-16 items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50 text-xs font-medium tracking-[0.22em] text-zinc-600 uppercase">
+                LuxeStay Hotels
+              </div>
+              <div class="flex h-16 items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50 text-xs font-medium tracking-[0.22em] text-zinc-600 uppercase">
+                Elevate Fitness
+              </div>
+              <div class="flex h-16 items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50 text-xs font-medium tracking-[0.22em] text-zinc-600 uppercase">
+                Meridian Spa
+              </div>
+              <div class="flex h-16 items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50 text-xs font-medium tracking-[0.22em] text-zinc-600 uppercase">
+                Apex League
+              </div>
+            </div>
+
+            <!-- Video card -->
+            <div class="relative rounded-2xl border border-zinc-200 bg-white p-5 shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6 [transition-delay:0.08s]">
+              <div class="relative flex aspect-video items-center justify-center overflow-hidden rounded-xl border border-zinc-200 bg-gradient-to-br from-zinc-200 via-white to-zinc-100">
+                <div class="absolute inset-0 opacity-70">
+                  <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-zinc-900 via-zinc-800/80 to-transparent"></div>
+                </div>
+                <div class="relative z-10 flex flex-col items-center gap-3 text-center">
+                  <button class="group inline-flex h-12 w-12 items-center justify-center rounded-full bg-white text-pink-500 shadow-xl shadow-pink-500/40 transition-transform duration-300 hover:scale-105">
+                    <i data-lucide="play" class="h-4 w-4 stroke-[1.5]"></i>
+                  </button>
+                  <div class="space-y-1">
+                    <p class="text-sm font-medium text-white">
+                      Elite Sportsperson x Wellsip
+                    </p>
+                    <p class="text-[0.8rem] font-light text-zinc-200">
+                      Short film featuring pre‑ and post‑training rituals with Wellsip as the
+                      constant.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-3 flex items-center justify-between gap-3 text-[0.75rem]">
+                <div class="flex items-center gap-2 text-zinc-500">
+                  <i data-lucide="clock" class="h-3.5 w-3.5 stroke-[1.5]"></i>
+                  <span>2:34 min</span>
+                </div>
+                <button class="text-[0.75rem] font-medium text-pink-500 hover:text-pink-400 transition-colors duration-300">
+                  Watch the story →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOG / PLACEHOLDER -->
+      <section id="blog" class="relative border-t border-zinc-200 bg-zinc-50/80">
+        <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+          <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div class="space-y-2">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-zinc-900">
+                The Wellsip Journal
+              </h2>
+              <p class="text-base font-light text-zinc-600">
+                Perspectives on water, wellness, and the pursuit of refined living.
+              </p>
+            </div>
+            <button class="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-light text-zinc-900 transition-colors duration-300 hover:border-pink-400 hover:bg-pink-50">
+              <i data-lucide="arrow-right" class="h-4 w-4 stroke-[1.5] text-pink-500"></i>
+              <span>View all articles</span>
+            </button>
+          </div>
+
+          <div class="mt-8 grid gap-5 md:grid-cols-3">
+            <article class="rounded-2xl border border-zinc-200 bg-white p-5 shadow-[0_16px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <p class="text-[0.75rem] font-medium tracking-[0.22em] text-pink-500 uppercase">
+                Hydration
+              </p>
+              <h3 class="mt-2 text-sm font-medium text-zinc-900">
+                Why Alkaline Mineral Water Feels Different
+              </h3>
+              <p class="mt-2 text-[0.8rem] font-light text-zinc-600">
+                Explore how natural alkalinity and mineral balance influence the mouthfeel and
+                aftertaste of water.
+              </p>
+            </article>
+            <article class="rounded-2xl border border-zinc-200 bg-white p-5 shadow-[0_16px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <p class="text-[0.75rem] font-medium tracking-[0.22em] text-pink-500 uppercase">
+                Sustainability
+              </p>
+              <h3 class="mt-2 text-sm font-medium text-zinc-900">
+                Designing a Bottle That Respects the Source
+              </h3>
+              <p class="mt-2 text-[0.8rem] font-light text-zinc-600">
+                Behind the scenes of how we engineered recyclability without compromising on a
+                premium experience.
+              </p>
+            </article>
+            <article class="rounded-2xl border border-zinc-200 bg-white p-5 shadow-[0_16px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <p class="text-[0.75rem] font-medium tracking-[0.22em] text-pink-500 uppercase">
+                Rituals
+              </p>
+              <h3 class="mt-2 text-sm font-medium text-zinc-900">
+                Curating a Daily Hydration Ritual with Intention
+              </h3>
+              <p class="mt-2 text-[0.8rem] font-light text-zinc-600">
+                Small, conscious choices around water that reframe your relationship with
+                hydration.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT / FOOTER PREVIEW -->
+      <section id="contact" class="relative border-t border-zinc-200 bg-white">
+        <div class="mx-auto max-w-6xl px-4 py-12 md:py-16">
+          <div class="grid gap-10 md:grid-cols-[1.1fr_minmax(0,1fr)] items-start">
+            <div class="space-y-3">
+              <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-zinc-900">
+                Connect with Wellsip
+              </h2>
+              <p class="text-base font-light text-zinc-600">
+                For retail, HoReCa, or athlete partnerships, share a few details and our team will
+                reach out.
+              </p>
+              <div class="mt-4 grid gap-3 text-[0.8rem] font-light text-zinc-600 sm:grid-cols-2">
+                <div>
+                  <p class="text-zinc-400">Phone</p>
+                  <p class="text-sm text-zinc-900 mt-1">+1 (800) 000–0000</p>
+                </div>
+                <div>
+                  <p class="text-zinc-400">Email</p>
+                  <p class="text-sm text-zinc-900 mt-1">partnerships@wellsipwater.com</p>
+                </div>
+                <div class="sm:col-span-2">
+                  <p class="text-zinc-400">Office</p>
+                  <p class="text-sm text-zinc-900 mt-1">
+                    Wellsip Beverages, 1200 Crystal Spring Way, Suite 18, CA 94100
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Simple contact form mock -->
+            <form class="rounded-2xl border border-zinc-200 bg-white p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+              <div class="grid gap-3 text-[0.8rem]">
+                <div>
+                  <label class="block text-[0.75rem] font-light text-zinc-700">
+                    Name
+                  </label>
+                  <input class="mt-1 w-full rounded-lg border border-zinc-200 bg-white px-3 py-2 text-xs text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-pink-500/70 focus:bg-white" placeholder="Your full name">
+                </div>
+                <div>
+                  <label class="block text-[0.75rem] font-light text-zinc-700">
+                    Email
+                  </label>
+                  <input class="mt-1 w-full rounded-lg border border-zinc-200 bg-white px-3 py-2 text-xs text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-pink-500/70 focus:bg-white" placeholder="you@example.com">
+                </div>
+                <div>
+                  <label class="block text-[0.75rem] font-light text-zinc-700">
+                    Message
+                  </label>
+                  <textarea rows="3" class="mt-1 w-full rounded-lg border border-zinc-200 bg-white px-3 py-2 text-xs text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-pink-500/70 focus:bg-white" placeholder="Tell us a bit about your requirements"></textarea>
+                </div>
+                <button type="button" class="group relative mt-1 inline-flex items-center justify-center overflow-hidden rounded-full bg-pink-500/90 px-5 py-2 text-xs font-medium tracking-tight text-white shadow-md shadow-pink-500/40 transition-transform duration-300 hover:-translate-y-[1px]">
+                  <span class="relative z-10">Submit</span>
+                  <span class="pointer-events-none absolute inset-0 rounded-full bg-white/25 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+                </button>
+              </div>
+              <p class="mt-3 text-[0.7rem] font-light text-zinc-500">
+                This form is for demonstration. Connect this to your preferred CRM or email handler.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-200 bg-white/90 backdrop-blur-xl">
+      <div class="mx-auto max-w-6xl px-4 py-8 md:py-10">
+        <div class="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+          <!-- Brand -->
+          <div class="space-y-3 max-w-sm">
+            <div class="flex items-center gap-2">
+              <div class="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-pink-500 to-zinc-700 shadow-lg shadow-pink-500/30">
+                <span class="text-xs font-semibold tracking-[0.18em] text-white">W</span>
+              </div>
+              <div class="flex flex-col leading-none -space-y-0.5">
+                <span class="text-base font-semibold tracking-[0.32em] text-zinc-900 uppercase">
+                  Wellsip
+                </span>
+                <span class="text-[0.6rem] font-light tracking-[0.2em] text-zinc-500 uppercase">
+                  Premium Alkaline Water
+                </span>
+              </div>
+            </div>
+            <p class="text-[0.75rem] font-light text-zinc-500">
+              Naturally alkaline mineral water, crafted for those who notice the details — from
+              source to sip.
+            </p>
+            <div class="flex items-center gap-3 text-[0.75rem] text-zinc-500">
+              <span class="inline-flex items-center gap-1.5">
+                <i data-lucide="droplet" class="h-3.5 w-3.5 stroke-[1.5] text-pink-500"></i>
+                <span>pH 8+ stable</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5">
+                <i data-lucide="leaf" class="h-3.5 w-3.5 stroke-[1.5] text-pink-500"></i>
+                <span>100% recyclable bottles</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Footer nav columns -->
+          <div class="grid gap-8 text-[0.8rem] md:grid-cols-3 md:text-[0.75rem]">
+            <div>
+              <p class="text-[0.75rem] font-medium tracking-[0.22em] text-zinc-500 uppercase">
+                Explore
+              </p>
+              <div class="mt-3 space-y-2 text-zinc-600">
+                <a href="#hero" class="block hover:text-zinc-900 transition-colors duration-200">Home</a>
+                <a href="#story" class="block hover:text-zinc-900 transition-colors duration-200">Our Story</a>
+                <a href="#water" class="block hover:text-zinc-900 transition-colors duration-200">Water &amp; Minerals</a>
+                <a href="#shop" class="block hover:text-zinc-900 transition-colors duration-200">Shop</a>
+              </div>
+            </div>
+            <div>
+              <p class="text-[0.75rem] font-medium tracking-[0.22em] text-zinc-500 uppercase">
+                Community
+              </p>
+              <div class="mt-3 space-y-2 text-zinc-600">
+                <a href="#reviews" class="block hover:text-zinc-900 transition-colors duration-200">
+                  Reviews
+                </a>
+                <a href="#trusted" class="block hover:text-zinc-900 transition-colors duration-200">
+                  Partners
+                </a>
+                <a href="#blog" class="block hover:text-zinc-900 transition-colors duration-200">
+                  Journal
+                </a>
+              </div>
+            </div>
+            <div>
+              <p class="text-[0.75rem] font-medium tracking-[0.22em] text-zinc-500 uppercase">
+                Connect
+              </p>
+              <div class="mt-3 space-y-2 text-zinc-600">
+                <a href="#contact" class="block hover:text-zinc-900 transition-colors duration-200">
+                  Contact
+                </a>
+                <div class="flex gap-2 pt-1">
+                  <button class="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-200 bg-white hover:border-pink-400 hover:bg-pink-50 transition-colors duration-200" aria-label="Instagram">
+                    <i data-lucide="instagram" class="h-3.5 w-3.5 stroke-[1.5]"></i>
+                  </button>
+                  <button class="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-200 bg-white hover:border-pink-400 hover:bg-pink-50 transition-colors duration-200" aria-label="Twitter">
+                    <i data-lucide="twitter" class="h-3.5 w-3.5 stroke-[1.5]"></i>
+                  </button>
+                  <button class="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-200 bg-white hover:border-pink-400 hover:bg-pink-50 transition-colors duration-200" aria-label="LinkedIn">
+                    <i data-lucide="linkedin" class="h-3.5 w-3.5 stroke-[1.5]"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 border-t border-zinc-200 pt-4 text-[0.7rem] text-zinc-500 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+          <p>© <span id="yearSpan"></span> Wellsip Beverages. All rights reserved.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#" class="hover:text-zinc-700 transition-colors duration-200">Privacy Policy</a>
+            <a href="#" class="hover:text-zinc-700 transition-colors duration-200">Terms</a>
+            <a href="#" class="hover:text-zinc-700 transition-colors duration-200">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Inject Lucide icons
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    });
+
+    // Mobile nav toggle
+    const mobileToggle = document.getElementById('mobileNavToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    if (mobileToggle && mobileNav) {
+      mobileToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('hidden');
+        const icon = mobileToggle.querySelector('i[data-lucide]');
+        if (icon) {
+          icon.setAttribute('data-lucide',
+            mobileNav.classList.contains('hidden') ? 'menu' : 'x'
+          );
+          if (window.lucide) {
+            window.lucide.createIcons();
+          }
+        }
+      });
+
+      // Close when clicking a link
+      document.querySelectorAll('#mobileNav .mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.add('hidden');
+          const icon = mobileToggle.querySelector('i[data-lucide]');
+          if (icon) {
+            icon.setAttribute('data-lucide', 'menu');
+            if (window.lucide) window.lucide.createIcons();
+          }
+        });
+      });
+    }
+
+    // Header subtle change on scroll
+    const header = document.getElementById('mainHeader');
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      if (!header) return;
+      if (currentY > 32) {
+        header.classList.add('backdrop-blur-xl');
+        header.classList.add('shadow-[0_1px_8px_rgba(15,23,42,0.06)]');
+      } else {
+        header.classList.remove('backdrop-blur-xl');
+        header.classList.remove('shadow-[0_1px_8px_rgba(15,23,42,0.06)]');
+      }
+    };
+    window.addEventListener('scroll', onScroll);
+
+    // IntersectionObserver for scroll animations
+    const animatedEls = document.querySelectorAll('.animate-on-scroll, .mineral-card, .review-card, .group.animate-on-scroll');
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0', 'translate-y-6');
+            entry.target.classList.add('opacity-100', 'translate-y-0', 'transition', 'duration-700');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    animatedEls.forEach(el => observer.observe(el));
+
+    // Simple reviews slider
+    const reviewTrack = document.getElementById('reviewTrack');
+    const reviewDots = document.querySelectorAll('.review-dot');
+    let currentSlide = 0;
+
+    const updateReviewSlider = index => {
+      if (!reviewTrack) return;
+      const slides = reviewTrack.children.length;
+      currentSlide = (index + slides) % slides;
+
+      const trackWidth = reviewTrack.scrollWidth;
+      const slideWidth = trackWidth / slides;
+      reviewTrack.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+
+      reviewDots.forEach((dot, i) => {
+        if (i === currentSlide) {
+          dot.classList.remove('w-2', 'bg-zinc-300');
+          dot.classList.add('w-4', 'bg-pink-500/80');
+        } else {
+          dot.classList.remove('w-4', 'bg-pink-500/80');
+          dot.classList.add('w-2', 'bg-zinc-300');
+        }
+      });
+    };
+
+    reviewDots.forEach((dot, i) => {
+      dot.addEventListener('click', () => updateReviewSlider(i));
+    });
+
+    if (reviewTrack) {
+      setInterval(() => updateReviewSlider(currentSlide + 1), 7000);
+    }
+
+    // Dynamic year in footer
+    const yearSpan = document.getElementById('yearSpan');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  </script>
+
+  <!-- Keyframes -->
+  <style>
+    @keyframes fade-in-up {
+      0% { opacity: 0; transform: translateY(12px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes logo-bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-2px); }
+    }
+    @keyframes bottle-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .animate-fade-in-up {
+      animation: fade-in-up 0.8s ease forwards;
+    }
+    .animate-logo-bounce {
+      animation: logo-bounce 2.4s ease-in-out infinite;
+    }
+    .animate-bottle-float {
+      animation: bottle-float 4s ease-in-out infinite;
+    }
+  </style>
+
+</body></html>
