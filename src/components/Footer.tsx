@@ -22,8 +22,8 @@ const Footer = () => {
 
   const contactInfo = [
     { icon: Phone, text: "+91 90063 90094" },
-    { icon: Mail, text: "bluenzainternational.llp@gmail.com" },
-    { icon: MapPin, text: "C-3, Parishram Park, Dhuliya Chokdi, Bardoli, Surat, Gujarat-394601" }
+    { icon: Mail, text: "Uday.dabhi@bluenzainternationalllp.com" },
+    { icon: MapPin, text: "C-3, First Floor, Parishram Park, Dhuliya Chokdi, Bardoli-394601" }
   ];
 
   const socialLinks = [

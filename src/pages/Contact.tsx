@@ -75,7 +75,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: t('contactPage.contactDetails.email'),
-      info: "bluenzainternational.llp@gmail.com",
+      info: "Uday.dabhi@bluenzainternationalllp.com",
       subInfo: t('contactPage.businessInquiries'),
       description: t('contactPage.respond24h'),
       gradient: "from-purple-500 to-pink-500"
@@ -151,7 +151,7 @@ const Contact = () => {
               "postalCode": "394601"
             },
             "telephone": "+91 90063 90094",
-            "email": "bluenzainternational.llp@gmail.com",
+            "email": "Uday.dabhi@bluenzainternationalllp.com",
             "openingHours": [
               "Mo-Sa 10:00-18:00"
             ],

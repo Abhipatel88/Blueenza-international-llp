@@ -9,14 +9,14 @@ const WellsipHero: React.FC = () => {
         <div className="w-full md:w-1/2">
           <div className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-[0.65rem] font-light tracking-tight text-zinc-700 animate-fade-in-up opacity-0 translate-y-3">
             <span className="h-1 w-1 rounded-full bg-pink-500"></span>
-            <span>Naturally enriched · pH 8+</span>
+            <span>Enriched · pH 8+</span>
           </div>
           <h1 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-zinc-900 animate-fade-in-up opacity-0 translate-y-3 [animation-delay:0.06s]">
             BORN ALKALINE –<br />
             Premium Mineral Water
           </h1>
           <p className="mt-4 text-base md:text-lg font-light leading-relaxed text-zinc-600 animate-fade-in-up opacity-0 translate-y-3 [animation-delay:0.12s]">
-            Wellsip is naturally alkaline mineral water, enriched through decades of filtration in
+            Wellsip is alkaline mineral water, enriched through decades of filtration in
             mineral-rich strata, delivering a smooth, crisp sip with a stable pH of 8+.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4 animate-fade-in-up opacity-0 translate-y-3 [animation-delay:0.18s]">
@@ -35,7 +35,7 @@ const WellsipHero: React.FC = () => {
               <span className="h-5 w-[1px] bg-gradient-to-b from-pink-500 via-zinc-400 to-transparent"></span>
               <div className="flex flex-col">
                 <span className="text-zinc-900">pH 8+ stable</span>
-                <span>naturally alkaline, no artificial ionization</span>
+                <span>alkaline, no artificial ionization</span>
               </div>
             </div>
             <div className="flex items-center gap-2">

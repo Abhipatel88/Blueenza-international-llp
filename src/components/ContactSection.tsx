@@ -72,7 +72,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: t('contact.email'),
-      info: "bluenzainternational.llp@gmail.com",
+      info: "Uday.dabhi@bluenzainternationalllp.com",
       subInfo: "",
       gradient: "from-purple-500 to-pink-500"
     },

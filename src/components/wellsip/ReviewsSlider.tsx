@@ -13,22 +13,40 @@ const ReviewsSlider: React.FC = () => {
 
   const reviews: Review[] = [
     {
-      name: 'Sophia Martinez',
-      role: 'Wellness Coach',
+      name: 'Priya Sharma',
+      role: 'Fitness Trainer',
       rating: 5,
-      text: 'Wellsip has become a staple in my daily routine. The natural alkalinity and smooth taste make it my go-to choice for staying hydrated throughout the day.',
+      text: 'Wellsip has transformed my hydration routine. The alkaline water helps me stay energized during my training sessions and my clients love it too. The taste is so pure and refreshing.',
     },
     {
-      name: 'James Chen',
-      role: 'Professional Athlete',
+      name: 'Rajesh Kumar',
+      role: 'Cricket Coach',
       rating: 5,
-      text: "As an athlete, hydration is crucial. Wellsip's mineral-rich composition helps me recover faster and perform at my best. The pH balance is perfect.",
+      text: 'As a sports coach, I understand the importance of proper hydration. Wellsip\'s mineral-rich composition helps our players recover faster and maintain peak performance throughout the match.',
     },
     {
-      name: 'Emily Thompson',
+      name: 'Anita Patel',
       role: 'Yoga Instructor',
       rating: 5,
-      text: "I love the purity and taste of Wellsip. It is not just water, it is a wellness experience. The natural minerals make a noticeable difference in how I feel.",
+      text: 'I\'ve been drinking Wellsip for 6 months now and the difference is remarkable. My digestion has improved and I feel more balanced. It\'s become an essential part of my wellness routine.',
+    },
+    {
+      name: 'Dr. Vikram Singh',
+      role: 'Nutritionist',
+      rating: 5,
+      text: 'I recommend Wellsip to my clients who need better hydration. The natural pH balance and mineral content make it superior to regular water. My patients report improved energy levels.',
+    },
+    {
+      name: 'Meera Joshi',
+      role: 'Working Professional',
+      rating: 5,
+      text: 'Working long hours in IT, staying hydrated is crucial. Wellsip keeps me refreshed throughout the day. The alkaline properties help reduce acidity from stress and irregular eating.',
+    },
+    {
+      name: 'Arjun Reddy',
+      role: 'Marathon Runner',
+      rating: 5,
+      text: 'Training for marathons requires optimal hydration. Wellsip\'s mineral composition helps prevent cramps and aids in faster recovery. It\'s my go-to water for all training sessions.',
     },
   ];
 
@@ -57,7 +75,7 @@ const ReviewsSlider: React.FC = () => {
                 <Star key={i} className="h-3.5 w-3.5 fill-pink-500 stroke-pink-500" />
               ))}
             </div>
-            <span>4.9 / 5 from 1,200+ reviews</span>
+            <span>4.8 / 5 from 2,500+ reviews</span>
           </div>
         </div>
 

@@ -68,7 +68,7 @@ const Navbar = () => {
               className="w-12 h-12 object-contain"
               loading="eager"
             />
-            <span className="font-poppins font-bold text-xl text-[#073980]">
+            <span className={`font-poppins font-bold text-xl transition-colors duration-300 ${isScrolled ? "text-gray-900" : "text-white"}`}>
               Bluenza International LLP
             </span>
             </Link>
@@ -88,8 +88,8 @@ const Navbar = () => {
                   to={item.path}
                   className={`font-medium transition-colors duration-200 ${
                     location.pathname === item.path
-                      ? "text-blue-600"
-                      : "text-gray-700 hover:text-blue-600"
+                      ? (isScrolled ? "text-blue-600" : "text-blue-400")
+                      : (isScrolled ? "text-gray-700 hover:text-blue-600" : "text-white hover:text-blue-300")
                   }`}
                 >
                   {item.name}
@@ -107,8 +107,8 @@ const Navbar = () => {
                 onClick={() => setShowProductsDropdown(!showProductsDropdown)}
                 className={`font-medium transition-colors duration-200 flex items-center ${
                   location.pathname === "/products" || location.pathname === "/wellsip"
-                    ? "text-blue-600"
-                    : "text-gray-700 hover:text-blue-600"
+                    ? (isScrolled ? "text-blue-600" : "text-blue-400")
+                    : (isScrolled ? "text-gray-700 hover:text-blue-600" : "text-white hover:text-blue-300")
                 }`}
               >
                 {t('nav.products')}
@@ -131,7 +131,7 @@ const Navbar = () => {
                     onClick={() => setShowProductsDropdown(false)}
                     className="block px-6 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 hover:text-blue-600 transition-all duration-200 font-medium"
                   >
-                    Wellsip Products
+                    Wellsip
                   </Link>
                   </motion.div>
                 )}
@@ -163,9 +163,9 @@ const Navbar = () => {
               className="p-2 rounded-lg glass"
             >
               {isOpen ? (
-                <X className="h-6 w-6 text-gray-800" />
+                <X className={`h-6 w-6 ${isScrolled ? "text-gray-800" : "text-white"}`} />
               ) : (
-                <Menu className="h-6 w-6 text-gray-800" />
+                <Menu className={`h-6 w-6 ${isScrolled ? "text-gray-800" : "text-white"}`} />
               )}
             </button>
           </div>
@@ -207,7 +207,7 @@ const Navbar = () => {
                     : "text-gray-700 hover:text-blue-600"
                 }`}
               >
-                Wellsip Products
+                Wellsip 
               </Link>
               <div className="mb-4">
                 <LanguageSwitcher />

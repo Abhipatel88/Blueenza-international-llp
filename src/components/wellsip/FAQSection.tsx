@@ -12,7 +12,7 @@ const FAQSection: React.FC = () => {
   const faqColumn1: FAQItem[] = [
     {
       question: 'Is Wellsip artificially ionized to increase its pH?',
-      answer: 'No. Wellsip is naturally alkaline. Its pH of 8+ comes from the minerals and bicarbonates picked up as water travels through deep geological formations. We do not use electrolysis or post-filtration additives to alter pH.',
+      answer: 'No. Wellsip is alkaline. Its pH of 8+ comes from the minerals and bicarbonates picked up as water travels through deep geological formations. We do not use electrolysis or post-filtration additives to alter pH.',
     },
     {
       question: 'Can I drink Wellsip every day?',

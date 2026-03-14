@@ -23,7 +23,7 @@ const SustainabilitySection: React.FC = () => {
             </div>
             <h3 className="mt-4 text-sm font-medium text-zinc-900">100% Recyclable Bottles</h3>
             <p className="mt-2 text-[0.8rem] font-light leading-relaxed text-zinc-600">
-              Our bottles are made from 100% recyclable PET plastic, designed for a circular economy.
+              Our bottles are Made from Virgin PET – Fully Recyclable Packaging , designed for a circular economy.
               We encourage recycling and use recycled materials wherever possible.
             </p>
           </div>
@@ -34,8 +34,7 @@ const SustainabilitySection: React.FC = () => {
             </div>
             <h3 className="mt-4 text-sm font-medium text-zinc-900">Responsible Sourcing</h3>
             <p className="mt-2 text-[0.8rem] font-light leading-relaxed text-zinc-600">
-              We monitor our aquifer levels continuously to ensure sustainable extraction rates that
-              protect the natural ecosystem for future generations.
+             We responsibly source our water from carefully monitored underground reserves, ensuring sustainability while maintaining the highest standards of purity and safety.
             </p>
           </div>
 

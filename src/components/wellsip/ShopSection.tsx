@@ -4,40 +4,28 @@ import ProductCard from './ProductCard';
 const ShopSection: React.FC = () => {
   const products = [
     {
-      id: 'single-bottle',
-      title: 'Single Bottle',
-      subtitle: 'Wellsip 500ml',
-      price: '$2.99',
+      id: '1ltr-15pack',
+      title: '15-Pack',
+      subtitle: 'Wellsip 1 Ltr',
+      price: '₹600',
     },
     {
-      id: '6-pack',
-      title: '6-Pack',
-      subtitle: 'Wellsip 500ml',
-      price: '$15.99',
-      originalPrice: '$17.94',
-      badge: 'Save 11%',
+      id: '750ml-15pack',
+      title: '15-Pack',
+      subtitle: 'Wellsip 750ml',
+      price: '₹600',
     },
     {
-      id: '12-pack',
-      title: '12-Pack',
-      subtitle: 'Wellsip 500ml',
-      price: '$29.99',
-      originalPrice: '$35.88',
-      badge: 'Save 16%',
-    },
-    {
-      id: '24-pack',
+      id: '500ml-24pack',
       title: '24-Pack',
       subtitle: 'Wellsip 500ml',
-      price: '$54.99',
-      originalPrice: '$71.76',
-      badge: 'Best Value',
+      price: '₹480',
     },
     {
-      id: 'premium-glass',
-      title: 'Premium Glass Bottle',
-      subtitle: 'Wellsip 750ml',
-      price: '$4.99',
+      id: '200ml-35pack',
+      title: '35-Pack',
+      subtitle: 'Wellsip 200ml',
+      price: '₹350',
     },
   ];
 
@@ -50,7 +38,7 @@ const ShopSection: React.FC = () => {
               Shop Wellsip
             </h2>
             <p className="text-base font-light text-zinc-600">
-              Choose the perfect pack for your hydration needs. Free shipping on orders over $50.
+              Choose the perfect pack for your hydration needs. Free shipping on orders over ₹500.
             </p>
           </div>
           <button className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-light text-zinc-900 transition-colors duration-300 hover:border-pink-400 hover:bg-pink-50">
@@ -59,7 +47,7 @@ const ShopSection: React.FC = () => {
           </button>
         </div>
 
-        <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {products.map((product, index) => (
             <ProductCard
               key={index}
@@ -67,14 +55,12 @@ const ShopSection: React.FC = () => {
               title={product.title}
               subtitle={product.subtitle}
               price={product.price}
-              originalPrice={product.originalPrice}
-              badge={product.badge}
               delay={`${index * 0.05}s`}
             />
           ))}
         </div>
 
-        <div className="mt-8 rounded-2xl border border-zinc-200 bg-gradient-to-b from-white via-white to-zinc-50 p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
+        {/* <div className="mt-8 rounded-2xl border border-zinc-200 bg-gradient-to-b from-white via-white to-zinc-50 p-6 shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div className="space-y-1">
               <p className="text-sm font-medium text-zinc-900">
@@ -89,7 +75,7 @@ const ShopSection: React.FC = () => {
               <span>→</span>
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -35,16 +35,16 @@ const ContactSection: React.FC = () => {
             <div className="mt-4 grid gap-3 text-[0.8rem] font-light text-zinc-600 sm:grid-cols-2">
               <div>
                 <p className="text-zinc-400">Phone</p>
-                <p className="text-sm text-zinc-900 mt-1">+1 (800) 000–0000</p>
+                <p className="text-sm text-zinc-900 mt-1">+91 90063 90094</p>
               </div>
               <div>
                 <p className="text-zinc-400">Email</p>
-                <p className="text-sm text-zinc-900 mt-1">partnerships@wellsipwater.com</p>
+                <p className="text-sm text-zinc-900 mt-1">Uday.dabhi@bluenzainternationalllp.com</p>
               </div>
               <div className="sm:col-span-2">
                 <p className="text-zinc-400">Office</p>
                 <p className="text-sm text-zinc-900 mt-1">
-                  Wellsip Beverages, 1200 Crystal Spring Way, Suite 18, CA 94100
+                  C-3, First Floor, Parishram Park, Dhuliya Chokdi, Bardoli-394601
                 </p>
               </div>
             </div>

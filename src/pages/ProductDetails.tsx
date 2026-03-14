@@ -8,11 +8,30 @@ const ProductDetails: React.FC = () => {
   const { productId } = useParams();
 
   const products = [
-    { id: 'single-bottle', title: 'Single Bottle', subtitle: 'Wellsip 500ml', price: '$2.99' },
-    { id: '6-pack', title: '6-Pack', subtitle: 'Wellsip 500ml', price: '$15.99', originalPrice: '$17.94' },
-    { id: '12-pack', title: '12-Pack', subtitle: 'Wellsip 500ml', price: '$29.99', originalPrice: '$35.88' },
-    { id: '24-pack', title: '24-Pack', subtitle: 'Wellsip 500ml', price: '$54.99', originalPrice: '$71.76' },
-    { id: 'premium-glass', title: 'Premium Glass Bottle', subtitle: 'Wellsip 750ml', price: '$4.99' },
+    {
+      id: '1ltr-15pack',
+      title: '15-Pack',
+      subtitle: 'Wellsip 1 Ltr',
+      price: '₹600',
+    },
+    {
+      id: '750ml-15pack',
+      title: '15-Pack',
+      subtitle: 'Wellsip 750ml',
+      price: '₹600',
+    },
+    {
+      id: '500ml-24pack',
+      title: '24-Pack',
+      subtitle: 'Wellsip 500ml',
+      price: '₹480',
+    },
+    {
+      id: '200ml-35pack',
+      title: '35-Pack',
+      subtitle: 'Wellsip 200ml',
+      price: '₹350',
+    },
   ];
 
   const relatedProducts = products.filter(p => p.id !== productId).slice(0, 3);
@@ -64,9 +83,6 @@ const ProductDetails: React.FC = () => {
                 </h1>
                 <div className="flex items-baseline gap-3 mb-6">
                   <span className="text-3xl font-bold text-zinc-900">{currentProduct.price}</span>
-                  {currentProduct.originalPrice && (
-                    <span className="text-xl text-zinc-400 line-through">{currentProduct.originalPrice}</span>
-                  )}
                 </div>
               </div>
 
@@ -80,23 +96,23 @@ const ProductDetails: React.FC = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-pink-600 mt-1">•</span>
-                    <span className="text-zinc-700">Origin Aravalli Hills. Enriched with naturally-occurring calcium, magnesium and essential electrolytes.</span>
+                    <span className="text-zinc-700">Pack of 15 PET bottles.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-pink-600 mt-1">•</span>
-                    <span className="text-zinc-700">Pair it with a meal, use it as a mixer or enjoy chilled as is.</span>
+                    <span className="text-zinc-700">Origin Aravalli Hills. Enriched with calcium, magnesium and essential electrolytes.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-pink-600 mt-1">•</span>
-                    <span className="text-zinc-700">Case of 8 glass bottles.</span>
+                    <span className="text-zinc-700">Best before 12 months from date of manufacturing.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-pink-600 mt-1">•</span>
-                    <span className="text-zinc-700"><strong>Ingredients:</strong> Aava Natural Mineral Water, Carbon Dioxide.</span>
+                    <span className="text-zinc-700">The bottle is fully recyclable, supporting a more sustainable and eco-friendly environment.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-pink-600 mt-1">•</span>
-                    <span className="text-zinc-700">Packaging inspired by the biodiversity in our Aava Ecosystem.</span>
+                    <span className="text-zinc-700">Available sizes - 200ml, 500ml, 750ml, 1000ml.</span>
                   </li>
                 </ul>
               </div>
@@ -154,7 +170,7 @@ const ProductDetails: React.FC = () => {
           <p className="text-sm text-zinc-600 text-center mt-8 max-w-4xl mx-auto leading-relaxed">
             Publicly available scientific research and trusted clinical studies have examined how regular mineral intake
             supports functions like immunity, heart performance, longevity, and general wellbeing. These findings highlight
-            the natural health advantages of consuming mineral-rich water every day.
+            the health advantages of consuming mineral-rich water every day.
           </p>
         </section>
 
@@ -230,9 +246,6 @@ const ProductDetails: React.FC = () => {
                 <h3 className="text-lg font-semibold text-zinc-900 mb-2">{product.title}</h3>
                 <div className="flex items-baseline gap-2">
                   <span className="text-xl font-bold text-zinc-900">{product.price}</span>
-                  {product.originalPrice && (
-                    <span className="text-sm text-zinc-400 line-through">{product.originalPrice}</span>
-                  )}
                 </div>
               </Link>
             ))}

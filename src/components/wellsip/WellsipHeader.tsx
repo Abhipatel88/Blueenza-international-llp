@@ -59,11 +59,11 @@ const WellsipHeader: React.FC = () => {
           <div className="flex flex-wrap items-center gap-4">
             <span className="inline-flex items-center gap-1.5">
               <Phone className="h-3.5 w-3.5 stroke-[1.5] text-pink-500" />
-              <span className="text-xs md:text-sm">+1 (800) 000–0000</span>
+              <span className="text-xs md:text-sm">+91 90063 90094</span>
             </span>
             <span className="hidden items-center gap-1.5 sm:inline-flex">
               <Mail className="h-3.5 w-3.5 stroke-[1.5] text-pink-500" />
-              <span className="text-xs md:text-sm">care@wellsipwater.com</span>
+              <span className="text-xs md:text-sm">Uday.dabhi@bluenzainternationalllp.com</span>
             </span>
           </div>
           <button className="group relative inline-flex items-center gap-2 rounded-full border border-pink-500/40 bg-pink-50/80 px-4 py-1.5 text-xs md:text-sm text-pink-700 transition-colors duration-300 hover:border-pink-500 hover:bg-pink-100">

@@ -1,56 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 import MineralCard from './MineralCard';
 
 const MineralComposition: React.FC = () => {
+  const [openMineralIndex, setOpenMineralIndex] = useState<number | null>(null);
+
+  const toggleMineral = (index: number) => {
+    setOpenMineralIndex(openMineralIndex === index ? null : index);
+  };
+
   const minerals = [
     {
       symbol: 'Ca²⁺',
       name: 'Calcium',
-      value: '40',
+      value: '21',
       description: 'Supports bone health, muscle function, and nerve transmission.',
     },
     {
       symbol: 'Mg²⁺',
       name: 'Magnesium',
-      value: '25',
+      value: '11',
       description: 'Aids in energy production, muscle relaxation, and cardiovascular health.',
     },
     {
       symbol: 'HCO₃⁻',
       name: 'Bicarbonates',
-      value: '180',
+      value: '200',
       description: 'Helps maintain pH balance and supports digestive wellness.',
-    },
-    {
-      symbol: 'K⁺',
-      name: 'Potassium',
-      value: '2',
-      description: 'Essential for fluid balance, nerve signals, and muscle contractions.',
-    },
-    {
-      symbol: 'Na⁺',
-      name: 'Sodium',
-      value: '8',
-      description: 'Regulates fluid balance and supports nerve and muscle function.',
     },
     {
       symbol: 'SiO₂',
       name: 'Silica',
-      value: '15',
-      description: 'Contributes to connective tissue health and skin elasticity.',
-    },
-    {
-      symbol: 'SO₄²⁻',
-      name: 'Sulfates',
       value: '12',
-      description: 'Supports detoxification processes and digestive health.',
-    },
-    {
-      symbol: 'Cl⁻',
-      name: 'Chlorides',
-      value: '6',
-      description: 'Helps maintain proper fluid balance and digestive acid production.',
-    },
+      description: 'Contributes to connective tissue health and skin elasticity.',
+    }
   ];
 
   return (
@@ -62,15 +45,16 @@ const MineralComposition: React.FC = () => {
               Mineral Composition
             </h2>
             <p className="text-base font-light text-zinc-600">
-              Naturally enriched with essential minerals for optimal hydration and wellness.
+              Enriched with essential minerals for optimal hydration and wellness.
             </p>
           </div>
           <div className="text-[0.75rem] font-light text-zinc-500">
-            Values in mg/L · Naturally occurring
+            Values in mg/L · Occurring
           </div>
         </div>
 
-        <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        {/* Desktop Grid View */}
+        <div className="hidden md:grid mt-8 gap-5 md:grid-cols-2 lg:grid-cols-4">
           {minerals.map((mineral, index) => (
             <MineralCard
               key={mineral.symbol}
@@ -83,11 +67,54 @@ const MineralComposition: React.FC = () => {
           ))}
         </div>
 
+        {/* Mobile Accordion View */}
+        <div className="md:hidden mt-8 space-y-3">
+          {minerals.map((mineral, index) => (
+            <div
+              key={mineral.symbol}
+              className="rounded-2xl border border-zinc-200 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6"
+              style={{ transitionDelay: `${index * 0.05}s` }}
+            >
+              <button
+                onClick={() => toggleMineral(index)}
+                className="w-full flex items-center justify-between p-4 text-left"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-pink-50 text-[0.7rem] font-semibold text-pink-600">
+                    {mineral.value}
+                  </div>
+                  <div>
+                    <span className="text-[0.75rem] font-medium tracking-[0.22em] text-pink-500 uppercase">
+                      {mineral.symbol}
+                    </span>
+                    <div className="text-sm font-medium text-zinc-900">{mineral.name}</div>
+                  </div>
+                </div>
+                <ChevronDown 
+                  className={`h-5 w-5 text-zinc-400 transition-transform duration-200 ${
+                    openMineralIndex === index ? 'rotate-180' : ''
+                  }`} 
+                />
+              </button>
+              
+              {openMineralIndex === index && (
+                <div className="px-4 pb-4 pt-0">
+                  <div className="border-t border-zinc-100 pt-3">
+                    <p className="text-[0.8rem] font-light leading-relaxed text-zinc-600">
+                      {mineral.description}
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
         <div className="mt-8 rounded-2xl border border-zinc-200 bg-white p-5 shadow-[0_20px_50px_rgba(15,23,42,0.08)] backdrop-blur-2xl animate-on-scroll opacity-0 translate-y-6">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div className="space-y-1">
               <p className="text-sm font-medium text-zinc-900">
-                Total Dissolved Solids (TDS): ~290 mg/L
+                Total Dissolved Solids (TDS): ~280-350  mg/L
               </p>
               <p className="text-[0.8rem] font-light text-zinc-600">
                 Optimal mineral content for a balanced, smooth taste and superior hydration.

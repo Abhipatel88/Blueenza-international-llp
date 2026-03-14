@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Award, Download, Eye, Calendar, CheckCircle, FileText, X } from 'lucide-react';
+import { Award, Eye, Calendar, CheckCircle, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
@@ -62,20 +62,16 @@ const Certificates = () => {
   ];
 
   const handleViewPdf = (pdfPath: string) => {
-    setSelectedPdf(pdfPath);
+    // For mobile devices, open in new tab instead of modal
+    if (window.innerWidth < 768) {
+      window.open(pdfPath, '_blank');
+    } else {
+      setSelectedPdf(pdfPath);
+    }
   };
 
   const handleOpenInNewTab = (pdfPath: string) => {
     window.open(pdfPath, '_blank');
-  };
-
-  const handleDownloadPdf = (pdfPath: string, title: string) => {
-    const link = document.createElement('a');
-    link.href = pdfPath;
-    link.download = `${title}.pdf`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   return (
@@ -143,18 +139,13 @@ const Certificates = () => {
                     <Button 
                       size="sm" 
                       className="bg-white/20 backdrop-blur-sm text-white border-white/30 hover:bg-white/30"
-                      onClick={() => handleViewPdf(certificate.pdfPath)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleViewPdf(certificate.pdfPath);
+                      }}
                     >
                       <Eye className="w-4 h-4 mr-2" />
                       Preview
-                    </Button>
-                    <Button 
-                      size="sm" 
-                      className="bg-white/20 backdrop-blur-sm text-white border-white/30 hover:bg-white/30"
-                      onClick={() => handleDownloadPdf(certificate.pdfPath, certificate.title)}
-                    >
-                      <Download className="w-4 h-4 mr-2" />
-                      Download
                     </Button>
                   </div>
                 </div>
@@ -194,14 +185,8 @@ const Certificates = () => {
                       onClick={() => handleViewPdf(certificate.pdfPath)}
                     >
                       <Eye className="w-4 h-4 mr-2" />
-                      Preview
-                    </Button>
-                    <Button 
-                      size="sm" 
-                      className="bg-blue-600 hover:bg-blue-700 text-white"
-                      onClick={() => handleDownloadPdf(certificate.pdfPath, certificate.title)}
-                    >
-                      <Download className="w-4 h-4" />
+                      <span className="hidden sm:inline">Preview</span>
+                      <span className="sm:hidden">View Certificate</span>
                     </Button>
                   </div>
                 </div>
@@ -287,7 +272,7 @@ const Certificates = () => {
             {/* Modal Footer */}
             <div className="p-4 border-t border-slate-200 flex justify-between items-center">
               <p className="text-sm text-slate-600">
-                Having trouble viewing? Try opening in a new tab or downloading the PDF.
+                Having trouble viewing? Try opening in a new tab.
               </p>
               <div className="flex gap-3">
                 <Button
@@ -296,18 +281,6 @@ const Certificates = () => {
                   className="border-slate-200 text-slate-600 hover:bg-slate-50"
                 >
                   Close
-                </Button>
-                <Button
-                  onClick={() => {
-                    const certificate = certificates.find(cert => cert.pdfPath === selectedPdf);
-                    if (certificate) {
-                      handleDownloadPdf(selectedPdf, certificate.title);
-                    }
-                  }}
-                  className="bg-blue-600 hover:bg-blue-700 text-white"
-                >
-                  <Download className="w-4 h-4 mr-2" />
-                  Download PDF
                 </Button>
               </div>
             </div>

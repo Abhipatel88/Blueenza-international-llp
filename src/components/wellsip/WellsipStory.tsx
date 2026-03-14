@@ -16,12 +16,12 @@ const WellsipStory: React.FC = () => {
 
             </p>
             <div className="flex flex-wrap items-center gap-4">
-              <button className="group inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-light text-zinc-900 transition-colors duration-300 hover:border-pink-400 hover:bg-pink-50">
+              {/* <button className="group inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-light text-zinc-900 transition-colors duration-300 hover:border-pink-400 hover:bg-pink-50">
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-pink-500/90 text-white shadow-lg shadow-pink-500/40">
                   <Play className="h-3.5 w-3.5 stroke-[1.5]" />
                 </span>
                 <span>Watch Video</span>
-              </button>
+              </button> */}
               <span className="text-[0.75rem] font-light text-zinc-500">
                 90-second story of our natural source and aquifer journey.
               </span>
@@ -55,9 +55,9 @@ const WellsipStory: React.FC = () => {
                   <span className="h-1.5 w-8 rounded-full bg-gradient-to-r from-pink-500 to-zinc-300"></span>
                   Premium alkaline water for daily wellness.
                 </div>
-                <button className="text-[0.75rem] font-medium text-pink-500 hover:text-pink-400 transition-colors duration-300">
+                {/* <button className="text-[0.75rem] font-medium text-pink-500 hover:text-pink-400 transition-colors duration-300">
                   Learn more →
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
