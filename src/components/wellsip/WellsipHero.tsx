@@ -12,7 +12,7 @@ const WellsipHero: React.FC = () => {
             <span>Enriched · pH 8+</span>
           </div>
           <h1 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-zinc-900 animate-fade-in-up opacity-0 translate-y-3 [animation-delay:0.06s]">
-            BORN ALKALINE –<br />
+            ALKALINE –<br />
             Premium Mineral Water
           </h1>
           <p className="mt-4 text-base md:text-lg font-light leading-relaxed text-zinc-600 animate-fade-in-up opacity-0 translate-y-3 [animation-delay:0.12s]">

@@ -35,7 +35,7 @@ const FAQSection: React.FC = () => {
     },
     {
       question: 'How is Wellsip different from RO or distilled water?',
-      answer: 'Reverse-osmosis and distilled water are typically stripped of most minerals and can taste flat. Wellsip retains a naturally balanced mineral profile and mild alkalinity, which many people experience as a smoother, more satisfying sip.',
+      answer: 'Reverse-osmosis and distilled water are typically stripped of most minerals and can taste flat. Wellsip retains a balanced mineral profile and mild alkalinity, which many people experience as a smoother, more satisfying sip.',
     },
   ];
 

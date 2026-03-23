@@ -3,7 +3,11 @@ import { Button } from '@/components/ui/button';
 import { Globe, ChevronDown } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 
-const LanguageSwitcher = () => {
+interface LanguageSwitcherProps {
+  isHomePage?: boolean;
+}
+
+const LanguageSwitcher = ({ isHomePage = false }: LanguageSwitcherProps) => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -39,7 +43,11 @@ const LanguageSwitcher = () => {
         variant="ghost"
         size="sm"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+        className={`flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+          isHomePage 
+            ? "text-white bg-white/20 hover:bg-white/30" 
+            : "text-gray-700 bg-blue-600 hover:bg-blue-700 text-white"
+        }`}
       >
         <Globe className="w-4 h-4" />
         <span>{currentLanguage.nativeName}</span>

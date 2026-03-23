@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, X, CheckCircle, User, Phone, Mail, Building, Package, Hash, FileText } from "lucide-react";
+import { X, User, Phone, Mail, Building, Package, Hash, FileText, Loader2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from 'react-i18next';
@@ -12,6 +12,8 @@ interface QuoteModalProps {
 
 const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps) => {
   const { t } = useTranslation();
+  const { toast } = useToast();
+  
   const [quoteForm, setQuoteForm] = useState({
     fullName: "",
     email: "",
@@ -23,10 +25,6 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [currentStep, setCurrentStep] = useState(1);
-  const totalSteps = 2;
-
-  const { toast } = useToast();
 
   // Handle body scroll when modal is open
   useEffect(() => {
@@ -38,18 +36,6 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
     };
   }, [isOpen]);
 
-  const nextStep = () => {
-    if (currentStep < totalSteps) {
-      setCurrentStep(currentStep + 1);
-    }
-  };
-
-  const prevStep = () => {
-    if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);
-    }
-  };
-  
   const handleClose = () => {
     document.body.style.overflow = 'auto';
     onClose();
@@ -94,255 +80,197 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-60 z-[9999] overflow-y-auto min-h-[100vh]" onClick={handleClose}>
-      <div className="flex items-center justify-center min-h-screen p-4">
-        <div 
-          className="bg-white rounded-3xl max-w-2xl w-full shadow-2xl transform transition-all duration-300 ease-in-out" 
-          onClick={(e) => e.stopPropagation()}
-        >
-        <div>
-          {/* Modal Header with gradient background */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 rounded-t-3xl">
-            <div className="flex justify-between items-center">
-              <div>
-                <h2 className="font-poppins font-bold text-3xl text-white">
-                  {t('quoteModal.title')}
-                </h2>
-                {prefilledProduct && (
-                  <p className="text-blue-100 font-medium mt-1">
-                    {t('quoteModal.for')} {prefilledProduct}
-                  </p>
-                )}
-              </div>
-              <button 
-                onClick={handleClose}
-                className="p-2 hover:bg-white/20 rounded-full transition-colors"
-              >
-                <X className="w-6 h-6 text-white" />
-              </button>
-            </div>
-            
-            {/* Progress indicator */}
-            <div className="mt-6 flex items-center">
-              <div className="w-full bg-white/30 rounded-full h-2">
-                <div 
-                  className="bg-white h-2 rounded-full transition-all duration-300 ease-in-out" 
-                  style={{ width: `${(currentStep / totalSteps) * 100}%` }}
-                ></div>
-              </div>
-              <span className="text-white text-sm ml-3">{currentStep}/{totalSteps}</span>
-            </div>
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] overflow-y-auto flex items-center justify-center p-4 sm:p-6" onClick={handleClose}>
+      <div 
+        className="bg-white rounded-xl shadow-xl max-w-2xl w-full transform transition-all" 
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Simple Header */}
+        <div className="flex justify-between items-center px-6 py-4 border-b border-gray-100">
+          <div>
+            <h2 className="font-semibold text-xl text-gray-900">
+              {t('quoteModal.title')}
+            </h2>
+            {prefilledProduct && (
+              <p className="text-sm text-gray-500 mt-1">
+                {t('quoteModal.for')} <span className="font-medium text-gray-900">{prefilledProduct}</span>
+              </p>
+            )}
           </div>
-          
-          <div className="p-6">
+          <button 
+            onClick={handleClose}
+            className="p-2 hover:bg-gray-100 rounded-md transition-colors text-gray-500 hover:text-gray-700"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+        
+        {/* Form Body */}
+        <div className="p-6 max-h-[calc(100vh-10rem)] overflow-y-auto">
+          <form id="quote-form" onSubmit={handleSubmit} className="space-y-5">
+            
+            {/* 2-Column Grid for Inputs */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              
+              {/* Full Name */}
+              <div className="space-y-1.5">
+                <label className="text-sm font-medium text-gray-700 flex items-center gap-1">
+                  {t('quoteModal.labels.fullName')} <span className="text-red-500">*</span>
+                </label>
+                <div className="relative">
+                  <User className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
+                  <input
+                    type="text"
+                    required
+                    value={quoteForm.fullName}
+                    onChange={(e) => setQuoteForm(prev => ({ ...prev, fullName: e.target.value }))}
+                    placeholder={t('quoteModal.placeholders.fullName')}
+                    className="w-full pl-9 pr-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow"
+                  />
+                </div>
+              </div>
 
-          {/* Quote Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {currentStep === 1 && (
-              <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-gray-800">{t('quoteModal.personalInfo')}</h3>
-                
+              {/* Email */}
+              <div className="space-y-1.5">
+                <label className="text-sm font-medium text-gray-700 flex items-center gap-1">
+                  {t('quoteModal.labels.email')} <span className="text-red-500">*</span>
+                </label>
                 <div className="relative">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('quoteModal.labels.fullName')} {t('quoteModal.labels.required')}
-                  </label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <User className="h-5 w-5 text-gray-400" />
-                    </div>
-                    <input
-                      type="text"
-                      value={quoteForm.fullName}
-                      onChange={(e) => setQuoteForm(prev => ({ ...prev, fullName: e.target.value }))}
-                      placeholder={t('quoteModal.placeholders.fullName')}
-                      required
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
-                    />
-                  </div>
-                </div>
-                
-                <div className="relative">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('quoteModal.labels.email')} {t('quoteModal.labels.required')}
-                  </label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Mail className="h-5 w-5 text-gray-400" />
-                    </div>
-                    <input
-                      type="email"
-                      value={quoteForm.email}
-                      onChange={(e) => setQuoteForm(prev => ({ ...prev, email: e.target.value }))}
-                      placeholder={t('quoteModal.placeholders.email')}
-                      required
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
-                    />
-                  </div>
-                </div>
-                
-                <div className="relative">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('quoteModal.labels.phone')} {t('quoteModal.labels.required')}
-                  </label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Phone className="h-5 w-5 text-gray-400" />
-                    </div>
-                    <input
-                      type="tel"
-                      value={quoteForm.phoneNumber}
-                      onChange={(e) => setQuoteForm(prev => ({ ...prev, phoneNumber: e.target.value }))}
-                      placeholder={t('quoteModal.placeholders.phone')}
-                      required
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
-                    />
-                  </div>
-                </div>
-                
-                <div className="relative">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('quoteModal.labels.company')}
-                  </label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Building className="h-5 w-5 text-gray-400" />
-                    </div>
-                    <input
-                      type="text"
-                      value={quoteForm.companyName}
-                      onChange={(e) => setQuoteForm(prev => ({ ...prev, companyName: e.target.value }))}
-                      placeholder={t('quoteModal.placeholders.company')}
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
-                    />
-                  </div>
+                  <Mail className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
+                  <input
+                    type="email"
+                    required
+                    value={quoteForm.email}
+                    onChange={(e) => setQuoteForm(prev => ({ ...prev, email: e.target.value }))}
+                    placeholder={t('quoteModal.placeholders.email')}
+                    className="w-full pl-9 pr-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow"
+                  />
                 </div>
               </div>
-            )}
-            
-            {currentStep === 2 && (
-              <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-gray-800">{t('quoteModal.productDetails')}</h3>
-                
+
+              {/* Phone */}
+              <div className="space-y-1.5">
+                <label className="text-sm font-medium text-gray-700 flex items-center gap-1">
+                  {t('quoteModal.labels.phone')} <span className="text-red-500">*</span>
+                </label>
                 <div className="relative">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('quoteModal.labels.product')} {t('quoteModal.labels.required')}
-                  </label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Package className="h-5 w-5 text-gray-400" />
-                    </div>
-                    <select
-                      value={quoteForm.product}
-                      onChange={(e) => setQuoteForm(prev => ({ ...prev, product: e.target.value }))}
-                      required
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors appearance-none"
-                    >
-                      <option value="">{t('quoteModal.placeholders.selectProduct')}</option>
-                      <option value="250ml Water Bottle">{t('quoteModal.products.250ml')}</option>
-                      <option value="500ml Water Bottle">{t('quoteModal.products.500ml')}</option>
-                      <option value="1L Water Bottle">{t('quoteModal.products.1L')}</option>
-                      <option value="Custom Product">{t('quoteModal.products.custom')}</option>
-                    </select>
-                  </div>
-                </div>
-                
-                <div className="relative">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('quoteModal.labels.quantity')} {t('quoteModal.labels.required')}
-                  </label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Hash className="h-5 w-5 text-gray-400" />
-                    </div>
-                    <input
-                      type="text"
-                      value={quoteForm.quantity}
-                      onChange={(e) => setQuoteForm(prev => ({ ...prev, quantity: e.target.value }))}
-                      placeholder={t('quoteModal.placeholders.quantity')}
-                      required
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors"
-                    />
-                  </div>
-                </div>
-                
-                <div className="relative">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {t('quoteModal.labels.requirements')}
-                  </label>
-                  <div className="relative">
-                    <div className="absolute top-3 left-3 flex items-start pointer-events-none">
-                      <FileText className="h-5 w-5 text-gray-400" />
-                    </div>
-                    <textarea
-                      value={quoteForm.additionalRequirements}
-                      onChange={(e) => setQuoteForm(prev => ({ ...prev, additionalRequirements: e.target.value }))}
-                      placeholder={t('quoteModal.placeholders.requirements')}
-                      rows={4}
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors resize-none"
-                    />
-                  </div>
+                  <Phone className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
+                  <input
+                    type="tel"
+                    required
+                    value={quoteForm.phoneNumber}
+                    onChange={(e) => setQuoteForm(prev => ({ ...prev, phoneNumber: e.target.value }))}
+                    placeholder={t('quoteModal.placeholders.phone')}
+                    className="w-full pl-9 pr-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow"
+                  />
                 </div>
               </div>
-            )}
-            
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-gray-200 mt-6">
-              {currentStep > 1 && (
-                <button
-                  type="button"
-                  onClick={prevStep}
-                  className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold px-6 py-3 rounded-full transition-all duration-300 flex-1 flex items-center justify-center"
-                >
-                  {t('quoteModal.buttons.back')}
-                </button>
-              )}
-              
-              {currentStep < totalSteps ? (
-                <button
-                  type="button"
-                  onClick={nextStep}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg flex-1 flex items-center justify-center"
-                >
-                  {t('quoteModal.buttons.next')}
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </button>
-              ) : (
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg flex-1 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      {t('quoteModal.buttons.processing')}
-                    </>
-                  ) : (
-                    <>
-                      {t('quoteModal.buttons.submit')}
-                      <CheckCircle className="ml-2 w-4 h-4" />
-                    </>
-                  )}
-                </button>
-              )}
-              
-              {currentStep === 1 && (
-                <button
-                  type="button"
-                  onClick={handleClose}
-                  className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold px-6 py-3 rounded-full transition-all duration-300 flex-1"
-                >
-                  {t('quoteModal.buttons.cancel')}
-                </button>
-              )}
+
+              {/* Company */}
+              <div className="space-y-1.5">
+                <label className="text-sm font-medium text-gray-700">
+                  {t('quoteModal.labels.company')}
+                </label>
+                <div className="relative">
+                  <Building className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
+                  <input
+                    type="text"
+                    value={quoteForm.companyName}
+                    onChange={(e) => setQuoteForm(prev => ({ ...prev, companyName: e.target.value }))}
+                    placeholder={t('quoteModal.placeholders.company')}
+                    className="w-full pl-9 pr-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow"
+                  />
+                </div>
+              </div>
+
+              {/* Product */}
+              <div className="space-y-1.5">
+                <label className="text-sm font-medium text-gray-700 flex items-center gap-1">
+                  {t('quoteModal.labels.product')} <span className="text-red-500">*</span>
+                </label>
+                <div className="relative">
+                  <Package className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
+                  <select
+                    required
+                    value={quoteForm.product}
+                    onChange={(e) => setQuoteForm(prev => ({ ...prev, product: e.target.value }))}
+                    className="w-full pl-9 pr-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow appearance-none bg-white"
+                  >
+                    <option value="">{t('quoteModal.placeholders.selectProduct')}</option>
+                    <option value="250ml Water Bottle">{t('quoteModal.products.250ml')}</option>
+                    <option value="500ml Water Bottle">{t('quoteModal.products.500ml')}</option>
+                    <option value="1L Water Bottle">{t('quoteModal.products.1L')}</option>
+                    <option value="Custom Product">{t('quoteModal.products.custom')}</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Quantity */}
+              <div className="space-y-1.5">
+                <label className="text-sm font-medium text-gray-700 flex items-center gap-1">
+                  {t('quoteModal.labels.quantity')} <span className="text-red-500">*</span>
+                </label>
+                <div className="relative">
+                  <Hash className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
+                  <input
+                    type="text"
+                    required
+                    value={quoteForm.quantity}
+                    onChange={(e) => setQuoteForm(prev => ({ ...prev, quantity: e.target.value }))}
+                    placeholder={t('quoteModal.placeholders.quantity')}
+                    className="w-full pl-9 pr-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Additional Requirements (Full Width) */}
+            <div className="space-y-1.5">
+              <label className="text-sm font-medium text-gray-700">
+                {t('quoteModal.labels.requirements')}
+              </label>
+              <div className="relative">
+                <FileText className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                <textarea
+                  value={quoteForm.additionalRequirements}
+                  onChange={(e) => setQuoteForm(prev => ({ ...prev, additionalRequirements: e.target.value }))}
+                  placeholder={t('quoteModal.placeholders.requirements')}
+                  rows={3}
+                  className="w-full pl-9 pr-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-shadow resize-none"
+                />
+              </div>
             </div>
           </form>
-          </div>
         </div>
+
+        {/* Footer actions */}
+        <div className="px-6 py-4 border-t border-gray-100 bg-gray-50 rounded-b-xl flex justify-end gap-3">
+          <Button 
+            type="button" 
+            variant="outline" 
+            onClick={handleClose}
+            disabled={isSubmitting}
+          >
+            {t('quoteModal.buttons.cancel', 'Cancel')}
+          </Button>
+          <Button 
+            form="quote-form"
+            type="submit" 
+            disabled={isSubmitting}
+            className="bg-blue-600 hover:bg-blue-700 text-white min-w-[120px]"
+          >
+            {isSubmitting ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                {t('quoteModal.buttons.processing', 'Sending...')}
+              </>
+            ) : (
+              t('quoteModal.buttons.submit', 'Request Quote')
+            )}
+          </Button>
+        </div>
+        
       </div>
-    </div>
     </div>
   );
 };

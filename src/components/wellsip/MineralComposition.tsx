@@ -80,8 +80,11 @@ const MineralComposition: React.FC = () => {
                 className="w-full flex items-center justify-between p-4 text-left"
               >
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-pink-50 text-[0.7rem] font-semibold text-pink-600">
-                    {mineral.value}
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-pink-50 text-pink-600 font-bold">
+                    <div className="text-center">
+                      <div className="text-xs leading-none">{mineral.value}</div>
+                      <div className="text-[0.6rem] mt-0.5">mg/l</div>
+                    </div>
                   </div>
                   <div>
                     <span className="text-[0.75rem] font-medium tracking-[0.22em] text-pink-500 uppercase">

@@ -14,7 +14,7 @@ const WellsipFooter: React.FC = () => {
              <img src="/wellsip-logo.png" className='h-20' alt="" />
             </div>
             <p className="text-[0.75rem] font-light text-zinc-500">
-              Naturally alkaline mineral water, crafted for those who notice the details — from
+              alkaline mineral water, crafted for those who notice the details — from
               source to sip.
             </p>
             <div className="flex items-center gap-3 text-[0.75rem] text-zinc-500">

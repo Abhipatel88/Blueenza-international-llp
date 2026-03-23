@@ -22,8 +22,11 @@ const MineralCard: React.FC<MineralCardProps> = ({ symbol, name, value, descript
           </span>
           <span className="mt-1 text-sm font-medium text-zinc-900">{name}</span>
         </div>
-        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-pink-50 text-[0.7rem] font-semibold text-pink-600">
-          {value}
+        <div className="flex h-20 w-20 items-center justify-center rounded-full bg-pink-50 text-pink-600 font-bold">
+          <div className="text-center">
+            <div className="text-base leading-none">{value}</div>
+            <div className="text-sm mt-1">mg/l</div>
+          </div>
         </div>
       </div>
       <p className="relative mt-3 text-[0.8rem] font-light leading-relaxed text-zinc-600">

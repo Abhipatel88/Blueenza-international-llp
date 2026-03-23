@@ -14,10 +14,7 @@ const Footer = () => {
   ];
 
   const products = [
-    { name: t('footer.products.250ml'), path: "/products" },
-    { name: t('footer.products.500ml'), path: "/products" },
-    { name: t('footer.products.1L'), path: "/products" },
-    { name: t('footer.products.custom'), path: "/products" }
+    { name: "Wellship", path: "/products" }
   ];
 
   const contactInfo = [
@@ -51,7 +48,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              {t('footer.companyDescription')}
+              Complete import export service provider
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (

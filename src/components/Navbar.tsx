@@ -50,7 +50,9 @@ const Navbar = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "glass border-b border-white/20 shadow-lg"
+          ? location.pathname === "/" 
+            ? "bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-lg"
+            : "bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -68,7 +70,11 @@ const Navbar = () => {
               className="w-12 h-12 object-contain"
               loading="eager"
             />
-            <span className={`font-poppins font-bold text-xl transition-colors duration-300 ${isScrolled ? "text-gray-900" : "text-white"}`}>
+            <span className={`font-poppins font-bold text-xl transition-colors duration-300 ${
+              location.pathname === "/" 
+                ? isScrolled ? "text-gray-900" : "text-white"
+                : "text-gray-900"
+            }`}>
               Bluenza International LLP
             </span>
             </Link>
@@ -88,8 +94,8 @@ const Navbar = () => {
                   to={item.path}
                   className={`font-medium transition-colors duration-200 ${
                     location.pathname === item.path
-                      ? (isScrolled ? "text-blue-600" : "text-blue-400")
-                      : (isScrolled ? "text-gray-700 hover:text-blue-600" : "text-white hover:text-blue-300")
+                      ? (location.pathname === "/" ? (isScrolled ? "text-blue-600" : "text-blue-400") : "text-blue-600")
+                      : (location.pathname === "/" ? (isScrolled ? "text-gray-700 hover:text-blue-600" : "text-white hover:text-blue-300") : "text-gray-700 hover:text-blue-600")
                   }`}
                 >
                   {item.name}
@@ -107,8 +113,8 @@ const Navbar = () => {
                 onClick={() => setShowProductsDropdown(!showProductsDropdown)}
                 className={`font-medium transition-colors duration-200 flex items-center ${
                   location.pathname === "/products" || location.pathname === "/wellsip"
-                    ? (isScrolled ? "text-blue-600" : "text-blue-400")
-                    : (isScrolled ? "text-gray-700 hover:text-blue-600" : "text-white hover:text-blue-300")
+                    ? (location.pathname === "/" ? (isScrolled ? "text-blue-600" : "text-blue-400") : "text-blue-600")
+                    : (location.pathname === "/" ? (isScrolled ? "text-gray-700 hover:text-blue-600" : "text-white hover:text-blue-300") : "text-gray-700 hover:text-blue-600")
                 }`}
               >
                 {t('nav.products')}
@@ -137,7 +143,7 @@ const Navbar = () => {
                 )}
               </AnimatePresence>
             </div>
-            <LanguageSwitcher />
+            <LanguageSwitcher isHomePage={location.pathname === "/"} />
             <Button 
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
               onClick={() => setShowQuoteModal(true)}
@@ -163,9 +169,9 @@ const Navbar = () => {
               className="p-2 rounded-lg glass"
             >
               {isOpen ? (
-                <X className={`h-6 w-6 ${isScrolled ? "text-gray-800" : "text-white"}`} />
+                <X className={`h-6 w-6 ${location.pathname === "/" ? (isScrolled ? "text-gray-800" : "text-white") : "text-gray-800"}`} />
               ) : (
-                <Menu className={`h-6 w-6 ${isScrolled ? "text-gray-800" : "text-white"}`} />
+                <Menu className={`h-6 w-6 ${location.pathname === "/" ? (isScrolled ? "text-gray-800" : "text-white") : "text-gray-800"}`} />
               )}
             </button>
           </div>
@@ -210,7 +216,7 @@ const Navbar = () => {
                 Wellsip 
               </Link>
               <div className="mb-4">
-                <LanguageSwitcher />
+                <LanguageSwitcher isHomePage={location.pathname === "/"} />
               </div>
               <Button 
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-2 rounded-full"
