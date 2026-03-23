@@ -239,50 +239,34 @@ const Certificates = () => {
             {/* Modal Header */}
             <div className="flex items-center justify-between p-4 border-b border-slate-200">
               <h3 className="font-poppins font-bold text-lg text-slate-900">Certificate Preview</h3>
-              <div className="flex items-center gap-3">
-                <Button
-                  size="sm"
-                  variant="outline"
-                  onClick={() => handleOpenInNewTab(selectedPdf)}
-                  className="border-blue-200 text-blue-600 hover:bg-blue-50"
-                >
-                  <Eye className="w-4 h-4 mr-2" />
-                  Open in New Tab
-                </Button>
-                <Button
-                  size="sm"
-                  variant="ghost"
-                  onClick={() => setSelectedPdf(null)}
-                  className="text-slate-500 hover:text-slate-700 hover:bg-slate-100"
-                >
-                  <X className="w-5 h-5" />
-                </Button>
-              </div>
+              <Button
+                size="sm"
+                variant="ghost"
+                onClick={() => setSelectedPdf(null)}
+                className="text-slate-500 hover:text-slate-700 hover:bg-slate-100"
+              >
+                <X className="w-5 h-5" />
+              </Button>
             </div>
             
             {/* PDF Viewer */}
             <div className="flex-1 p-4">
               <iframe
-                src={selectedPdf}
+                src={`${selectedPdf}#toolbar=0`}
                 className="w-full h-full rounded-xl border border-slate-200"
                 title="Certificate Preview"
               />
             </div>
             
             {/* Modal Footer */}
-            <div className="p-4 border-t border-slate-200 flex justify-between items-center">
-              <p className="text-sm text-slate-600">
-                Having trouble viewing? Try opening in a new tab.
-              </p>
-              <div className="flex gap-3">
-                <Button
-                  variant="outline"
-                  onClick={() => setSelectedPdf(null)}
-                  className="border-slate-200 text-slate-600 hover:bg-slate-50"
-                >
-                  Close
-                </Button>
-              </div>
+            <div className="p-4 border-t border-slate-200 flex justify-end">
+              <Button
+                variant="outline"
+                onClick={() => setSelectedPdf(null)}
+                className="border-slate-200 text-slate-600 hover:bg-slate-50"
+              >
+                Close
+              </Button>
             </div>
           </div>
         </div>

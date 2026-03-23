@@ -3,6 +3,7 @@ import { X, User, Phone, Mail, Building, Package, Hash, FileText, Loader2 } from
 import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from 'react-i18next';
+import { createPortal } from "react-dom";
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -79,7 +80,7 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
 
   if (!isOpen) return null;
 
-  return (
+  return createPortal(
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9999] overflow-y-auto flex items-center justify-center p-4 sm:p-6" onClick={handleClose}>
       <div 
         className="bg-white rounded-xl shadow-xl max-w-2xl w-full transform transition-all" 
@@ -271,8 +272,9 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = "" }: QuoteModalProps)
         </div>
         
       </div>
-    </div>
-  );
+    </div>,
+document.body
+);
 };
 
 export default QuoteModal;
