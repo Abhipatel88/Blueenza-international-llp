@@ -14,7 +14,7 @@ const Footer = () => {
   ];
 
   const products = [
-    { name: "Wellship", path: "/products" }
+    { name: "Wellsip", path: "/wellsip" }
   ];
 
   const contactInfo = [
@@ -44,7 +44,7 @@ const Footer = () => {
                 loading="lazy"
               />
               <span className="font-poppins font-bold text-xl">
-                Bluenza International
+                Bluenza International LLP
               </span>
             </div>
             <p className="text-gray-300 leading-relaxed">

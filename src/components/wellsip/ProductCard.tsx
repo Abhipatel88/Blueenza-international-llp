@@ -23,6 +23,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   const navigate = useNavigate();
 
+  const getBottleImage = (subtitle: string) => {
+    if (subtitle.includes('200ml')) return '/200ml.png';
+    if (subtitle.includes('500ml')) return '/500ml.jpg';
+    return '/bottol-hero.png'; // default for other sizes
+  };
+
   const handleViewDetails = () => {
     if (productId) {
       navigate(`/product/${productId}`);
@@ -44,7 +50,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
       {/* Product image placeholder */}
       <div className="relative mb-4 flex aspect-[4/5] items-center justify-center overflow-hidden rounded-xl border border-zinc-200 bg-gradient-to-b from-zinc-50 via-white to-zinc-100">
         <div className="flex h-3/4 w-1/2 items-center justify-center rounded-[1.2rem] border border-zinc-200 bg-gradient-to-b from-white via-zinc-50 to-zinc-200">
-          <img src="/bottol-hero.png" className='h-full object-cover w-full' alt="" />
+          <img src={getBottleImage(subtitle)} className='h-full object-cover w-full' alt="" />
         </div>
       </div>
 

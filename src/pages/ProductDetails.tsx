@@ -10,29 +10,42 @@ const ProductDetails: React.FC = () => {
   const products = [
     {
       id: '1ltr-15pack',
-      title: '15-Pack',
+      title: '15-Bottels',
       subtitle: 'Wellsip 1 Ltr',
       price: '₹600',
     },
     {
       id: '750ml-15pack',
-      title: '15-Pack',
+      title: '15-Bottels',
       subtitle: 'Wellsip 750ml',
       price: '₹600',
     },
     {
       id: '500ml-24pack',
-      title: '24-Pack',
+      title: '24-Bottels',
       subtitle: 'Wellsip 500ml',
       price: '₹480',
     },
     {
       id: '200ml-35pack',
-      title: '35-Pack',
+      title: '35-Bottels',
       subtitle: 'Wellsip 200ml',
       price: '₹350',
     },
   ];
+
+  const getBottleImage = (subtitle: string) => {
+    if (subtitle.includes('200ml')) return '/200ml.png';
+    if (subtitle.includes('500ml')) return '/500ml.jpg';
+    return '/bottol-hero.png'; // default for other sizes
+  };
+
+  const getPackSize = (productId: string) => {
+    if (productId.includes('15pack')) return '15';
+    if (productId.includes('24pack')) return '24';
+    if (productId.includes('35pack')) return '35';
+    return '15'; // default
+  };
 
   const relatedProducts = products.filter(p => p.id !== productId).slice(0, 3);
   const currentProduct = products.find(p => p.id === productId) || products[0];
@@ -66,7 +79,7 @@ const ProductDetails: React.FC = () => {
             {/* Product Image */}
             <div className="flex items-center justify-center bg-gradient-to-b from-zinc-50 to-white rounded-2xl p-12 border border-zinc-200">
               <img 
-                src="/bottol-hero.png" 
+                src={getBottleImage(currentProduct.subtitle)} 
                 alt={currentProduct.title}
                 className="h-96 object-contain"
               />
@@ -96,11 +109,11 @@ const ProductDetails: React.FC = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-pink-600 mt-1">•</span>
-                    <span className="text-zinc-700">Pack of 15 PET bottles.</span>
+                    <span className="text-zinc-700">Pack of {getPackSize(currentProduct.id)} PET bottles.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-pink-600 mt-1">•</span>
-                    <span className="text-zinc-700">Origin Aravalli Hills. Enriched with calcium, magnesium and essential electrolytes.</span>
+                    <span className="text-zinc-700">Enriched with calcium, magnesium and essential electrolytes.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-pink-600 mt-1">•</span>
@@ -235,7 +248,7 @@ const ProductDetails: React.FC = () => {
               >
                 <div className="flex items-center justify-center bg-gradient-to-b from-zinc-50 to-white rounded-xl p-8 mb-4 border border-zinc-200">
                   <img
-                    src="/bottol-hero.png"
+                    src={getBottleImage(product.subtitle)}
                     alt={product.title}
                     className="h-40 object-contain"
                   />

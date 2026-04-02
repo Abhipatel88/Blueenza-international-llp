@@ -21,7 +21,7 @@ const WellsipHero: React.FC = () => {
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4 animate-fade-in-up opacity-0 translate-y-3 [animation-delay:0.18s]">
             <button className="relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-pink-500 via-pink-400 to-pink-500 px-6 py-2.5 text-sm font-medium tracking-tight text-white shadow-lg shadow-pink-500/40 transition-transform duration-300 hover:-translate-y-[1px]">
-              <span className="relative z-10">Order Now</span>
+              <span className="relative z-10">Get Now</span>
             </button>
             <button className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-light text-zinc-900 transition-colors duration-300 hover:border-pink-400 hover:bg-pink-50">
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-pink-50 text-[0.7rem] text-pink-500">
