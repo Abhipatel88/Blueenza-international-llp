@@ -117,7 +117,7 @@ const MineralComposition: React.FC = () => {
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div className="space-y-1">
               <p className="text-sm font-medium text-zinc-900">
-                Total Dissolved Solids (TDS): ~280-350  mg/L
+                Total Dissolved Solids (TDS): ~120-180  mg/L
               </p>
               <p className="text-[0.8rem] font-light text-zinc-600">
                 Optimal mineral content for a balanced, smooth taste and superior hydration.
