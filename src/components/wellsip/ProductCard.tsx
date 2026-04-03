@@ -25,7 +25,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
   const getBottleImage = (subtitle: string) => {
     if (subtitle.includes('200ml')) return '/200ml.png';
-    if (subtitle.includes('500ml')) return '/500ml.jpg';
+    if (subtitle.includes('750ml')) return '/500ml.jpg';
     return '/bottol-hero.png'; // default for other sizes
   };
 
