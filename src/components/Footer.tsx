@@ -27,7 +27,7 @@ const Footer = () => {
     { icon: Facebook, href: "#", name: "Facebook" },
     { icon: Twitter, href: "#", name: "Twitter" },
     { icon: Linkedin, href: "#", name: "LinkedIn" },
-    { icon: Instagram, href: "#", name: "Instagram" }
+    { icon: Instagram, href: "https://www.instagram.com/wellsip.in?igsh=bnh6bTl2OHBoeWFz", name: "Instagram" }
   ];
 
   return (

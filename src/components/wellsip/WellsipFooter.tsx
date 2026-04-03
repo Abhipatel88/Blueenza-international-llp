@@ -67,9 +67,9 @@ const WellsipFooter: React.FC = () => {
                   Contact
                 </a>
                 <div className="flex gap-2 pt-1">
-                  <button className="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-200 bg-white hover:border-pink-400 hover:bg-pink-50 transition-colors duration-200" aria-label="Instagram">
+                  <a href="https://www.instagram.com/wellsip.in?igsh=bnh6bTl2OHBoeWFz" target="_blank" rel="noopener noreferrer" className="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-200 bg-white hover:border-pink-400 hover:bg-pink-50 transition-colors duration-200" aria-label="Instagram">
                     <Instagram className="h-3.5 w-3.5 stroke-[1.5]" />
-                  </button>
+                  </a>
                   <button className="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-200 bg-white hover:border-pink-400 hover:bg-pink-50 transition-colors duration-200" aria-label="Twitter">
                     <Twitter className="h-3.5 w-3.5 stroke-[1.5]" />
                   </button>
