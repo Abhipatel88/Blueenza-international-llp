@@ -5,25 +5,25 @@ const ShopSection: React.FC = () => {
   const products = [
     {
       id: '1ltr-15pack',
-      title: '15-Pack',
+      title: '15-Bottels',
       subtitle: 'Wellsip 1 Ltr',
       price: '₹600',
     },
     {
       id: '750ml-15pack',
-      title: '15-Pack',
+      title: '15-Bottels',
       subtitle: 'Wellsip 750ml',
       price: '₹600',
     },
     {
       id: '500ml-24pack',
-      title: '24-Pack',
+      title: '24-Bottels',
       subtitle: 'Wellsip 500ml',
       price: '₹480',
     },
     {
       id: '200ml-35pack',
-      title: '35-Pack',
+      title: '35-Bottels',
       subtitle: 'Wellsip 200ml',
       price: '₹350',
     },
