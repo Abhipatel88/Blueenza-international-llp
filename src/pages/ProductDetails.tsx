@@ -36,7 +36,7 @@ const ProductDetails: React.FC = () => {
 
   const getBottleImage = (subtitle: string) => {
     if (subtitle.includes('200ml')) return '/200ml.png';
-    if (subtitle.includes('750ml')) return '/500ml.jpg';
+    if (subtitle.includes('750ml')) return '/500.jpeg';
     return '/bottol-hero.png'; // default for other sizes
   };
 
